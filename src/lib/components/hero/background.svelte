@@ -1,9 +1,9 @@
 <script lang="ts">
   import BottomLeft from "../../media/bottom_left.svg";
-  import BottomRight from "$lib/media/bottom_right.svg";
-  import TopRight from "$lib/media/top_right.svg";
-  import Left from "$lib/media/left_side.svg";
-  import Right from "$lib/media/right_side.svg";
+  import BottomRight from "../../media/bottom_right.svg";
+  import TopRight from "../../media/top_right.svg";
+  import Left from "../../media/left_side.svg";
+  import Right from "../../media/right_side.svg";
 </script>
 
 <div class="w-full h-full bg-[#FFF7F1]">
