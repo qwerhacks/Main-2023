@@ -9,3 +9,7 @@
 <Hero />
 <Mission />
 <Tracks />
+
+<svelte:head>
+	<title>QWER Hacks - Home</title>
+</svelte:head>

@@ -8,7 +8,7 @@ module.exports = {
           DEFAULT: "#FFF9F5"
         },
         sky: {
-					light: "#88AE`DC",
+					light: "#88AEDC",
 					DEFAULT: "#4079BD"
 				},
 				lime: {
@@ -31,6 +31,9 @@ module.exports = {
 				purple: {
 					DEFAULT: "#6F1E5E",
 					light: "#BF3D96"
+				},
+				teal: {
+					DEFAULT: "#7DCBC8"
 				}
       },
       fontFamily: {
