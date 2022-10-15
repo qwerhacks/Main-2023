@@ -4,9 +4,9 @@
 	import Logo from '$lib/components/hero/logo.svelte';
 </script>
 
-<div class="w-full h-100vw overflow-hidden overscroll-contain">
-	<div id="background" class="absolute w-full h-full -z-10">
-		<Background test={"eeeee"}/>
+<div class="w-full h-100vw overflow-hidden overscroll-contain relative">
+	<div id="background" class="absolute w-full h-full z-0">
+		<Background />
 	</div>
 	<div id="content" class="z-10 flex flex-col items-center justify-center w-screen h-screen p-10">
 		<div

@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Frog from '$lib/media/frog.svg';
 </script>
 
 <div id="logo-parent" class="w-full grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-5">
 	<div id="image" class="flex items-center justify-center">
-		<img src={Frog} alt="A stylized frog" class="w-9/12 md:w-11/12 h-11/12"/>
+		<img src="media/frog.svg" alt="A stylized frog" class="w-9/12 md:w-11/12 h-11/12"/>
 	</div>
 	<div id="text" class="">
 		<div id="name">
