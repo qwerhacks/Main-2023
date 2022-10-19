@@ -8,9 +8,9 @@ import Content from "$lib/components/general/content.svelte";
 
 </script>
 
-<div class="grid grid-cols-3 px-5 bg-teal">
+<div class="grid grid-rows-2 sm:grid-cols-3 sm:grid-rows-1 gap-10 py-5 px-40 lg:px-64 bg-teal justify-center">
   <!-- Frog -->
-  <Logo />
+  <img src="media/frog.svg" alt="A stylized frog" class="hidden sm:block h-32 justify-self-end"/>
   <!-- Contact -->
   <Contact />
   <!-- Links -->

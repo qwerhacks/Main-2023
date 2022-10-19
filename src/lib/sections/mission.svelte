@@ -6,7 +6,7 @@ import Subtitle from "$lib/components/general/subtitle.svelte";
 
 <Content>
 	<Subtitle>our mission</Subtitle>
-	<p class="text-center text-2xl">
+	<p class="text-center text-2xl max-w-prose">
 		QWER Hacks aims to <b class="font-black">mobilize</b> and bring together LGBTQIA+ individuals
 		and allies to <b class="font-black">uplift</b> marginalized communities, while
 		<b class="font-black">celebrating</b>
