@@ -2,7 +2,7 @@
 
 </script>
 
-<div class="w-full h- bg-[#FFF7F1]">
+<div class="w-full h-full bg-[#FFF7F1]">
   <img src="media/bottom_left.svg" alt="" class="absolute left-0 bottom-0 z-10 max-w-screen max-h-[50vh] w-[100%] md:max-w-[40vw]"/>
   <img src="media/bottom_right.svg" alt="" class="hidden md:block absolute right-0 bottom-0 z-10 max-w-[30vw] max-h-[50vh] w-[100%]"/>
   <img src="media/top_right.svg" alt="" class="absolute right-0 top-0 max-w-[80vw] md:max-w-[60vw] w-[100%]"/>
