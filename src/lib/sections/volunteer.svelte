@@ -2,33 +2,61 @@
 	import Content from '$lib/components/general/content.svelte';
 	import Position from '$lib/components/volunteer/position.svelte';
 
-	const positions: [string, string][] = [
+	const positions: [string, string, string][] = [
 		[
 			'workshop leads',
-			'know something fun, interesting, or cool you can teach? want to raise awareness about an identity? <br>help us host a workshop or talk! all ideas welcome, please fill out the form below and we may be in touch!',
+			'Have a passion in any technical or identity specific topics? We’d love to have YOU lead a workshop! Topics can be intro to web development, how to be a good ally, resume building, diversity in industry, or anything else relevant to our hackathon!',
+			'rgba(171, 215, 162, 128)',
 		],
-		['technical mentors', 'technical mentors'],
-		['identiy specific mentors', 'identity specific mentors'],
+		[
+			'technical mentors',
+			'Sometimes our hackers will get lost while creating their hacks! Sign up to help them with programming languages and debugging!',
+			'rgba(89, 198, 215, 0.5)',
+		],
+		[
+			'identiy specific mentors',
+			'Not only are we a hackathon, but we’d also like to build a community. In order to do this, we would love to have YOU be an identity specific mentor. This includes anyone identifying as bi/pan/omni, queer + questioning, and trans and gender non-conforming!',
+			'rgba(130, 172, 226, 0.5)',
+		],
 		[
 			'judges',
-			'interested in a low-time-commitment way to help out? help us judge submissions and give out fun prizes!',
+			'Love seeing hack creations? We’d love you to help us judge submissions based on predetermined criteria and choose our hackathon winners!',
+			'rgba(151, 71, 255, 0.31)',
 		],
 		[
 			'in person volunteers',
-			'all hands on deck! we need people to help with event logistics, from space setup and teardown to helping make sure hackers are fed. come help out and be a part of the team!',
+			'To make sure our hackathon goes smoothly, we’ll need volunteers to help with setup and maintenance of the in-person portion of the hackathon! This includes setting up the room, checking people in and helping participants find their places.',
+			'rgba(194, 69, 150, 0.5)',
 		],
 	];
 </script>
 
-<Content>
-	<h2>volunteer for qwerhacks!</h2>
-	<p>(we have free food!)</p>
-	<div class="grid grid-cols-4 gap-4">
-		{#each positions as [title, description] }
-			<!-- content here -->
-			<Position {title}>
-				<p>{@html description}</p>
-			</Position>
-		{/each}
+<Content wide={true}>
+	<div class="flex z-10 flex-col items-center gap-5">
+		<h2>volunteer for qwerhacks!</h2>
+		<p>(we have free food!)</p>
+		<div class="grid grid-cols-8 gap-7">
+			{#each positions as [title, description, color]}
+				<!-- content here -->
+				<Position {title} bg_color={color}>
+					<p class="text-lg">{@html description}</p>
+				</Position>
+			{/each}
+		</div>
+		<button class="bg-[#FDDE97] rounded-md px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]">
+			<p>Apply to be a colaborator here!</p>
+		</button>
+	</div>
+
+	<div slot="background" class="z-0">
+		<span class="absolute left-0 bottom-0 inline-block">
+			<img class="w-8/12" src="./media/component_assets/media/BottomLeft.svg" alt="" />
+		</span>
+		<img class="absolute right-0 bottom-0 max-w-[70%]" src="./media/component_assets/media/BottomRight.svg" alt="" />
+		<span class="absolute left-0 top-0 inline-block">
+			<img class="w-8/12" src="./media/component_assets/media/topleft.svg" alt="" />
+		</span>
+		<img class="absolute right-0 top-0 max-w-[70%]" src="./media/component_assets/media/TopRight.svg" alt="" style="  direction: rtl;			" />
+
 	</div>
 </Content>
