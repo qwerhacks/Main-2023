@@ -43,9 +43,9 @@
 				</Position>
 			{/each}
 		</div>
-		<button class="bg-[#FDDE97] rounded-md px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]">
+		<a class="bg-[#FDDE97] rounded-md px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]" href="https://forms.gle/ViXR2qANhuFsFptK9">
 			<p>Apply to be a colaborator here!</p>
-		</button>
+		</a>
 	</div>
 
 	<div slot="background" class="z-0">
