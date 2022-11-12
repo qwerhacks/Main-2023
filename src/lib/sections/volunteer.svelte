@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Content from '$lib/components/general/content.svelte';
-	import Position from '$lib/components/volunteer/position.svelte';
+	import PositionNarrow from '$lib/components/volunteer/PositionNarrow.svelte';
+	import PositionWide from '$lib/components/volunteer/PositionWide.svelte';
+	import Position from '$lib/components/volunteer/PositionWide.svelte';
+
+	let windowWidth: number;
 
 	const positions: [string, string, string][] = [
 		[
@@ -31,25 +35,42 @@
 	];
 </script>
 
-<Content wide={true}>
+<svelte:window bind:innerWidth={windowWidth} />
+
+<Content wide={windowWidth > 768}>
 	<div class="flex z-10 flex-col items-center gap-5">
 		<h2>volunteer for qwerhacks!</h2>
 		<p>(we have free food!)</p>
-		<div class="grid grid-cols-8 gap-7">
-			{#each positions as [title, description, color]}
-				<!-- content here -->
-				<Position {title} bg_color={color}>
+		{#if windowWidth > 768}
+			<div class="grid grid-cols-8 gap-7">
+				{#each positions as [title, description, color]}
+					<PositionWide
+						title={title}
+						bg_color={color}
+					>
 					<p class="text-lg">{@html description}</p>
-				</Position>
-			{/each}
-		</div>
+					</PositionWide>					
+					{/each}
+			</div>
+		{:else}
+			<div class="flex flex-col gap-5 p-8">
+				{#each positions as [title, description, color]}
+					<PositionNarrow
+						title={title}
+						bg_color={color}
+					>
+					<p class="text-lg">{@html description}</p>
+					</PositionNarrow>	
+				{/each}
+			</div>
+		{/if}
 		<a class="bg-[#FDDE97] rounded-md px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]" href="https://forms.gle/ViXR2qANhuFsFptK9">
 			<p>Apply to be a colaborator here!</p>
 		</a>
 	</div>
 
 	<div slot="background" class="z-0">
-		<span class="absolute left-0 bottom-0 inline-block">
+		<span class="absolute left-0 bottom-0 hidden md:inline-block">
 			<img class="w-8/12" src="./media/component_assets/media/BottomLeft.svg" alt="" />
 		</span>
 		<img class="absolute right-0 bottom-0 max-w-[70%]" src="./media/component_assets/media/BottomRight.svg" alt="" />
@@ -57,6 +78,5 @@
 			<img class="w-8/12" src="./media/component_assets/media/topleft.svg" alt="" />
 		</span>
 		<img class="absolute right-0 top-0 max-w-[70%]" src="./media/component_assets/media/TopRight.svg" alt="" style="  direction: rtl;			" />
-
 	</div>
 </Content>
