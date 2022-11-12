@@ -1,34 +1,48 @@
 <script lang="ts">
 	import Content from '$lib/components/general/content.svelte';
+
+	type Track = [string, string[]];
+
+	const tracks: Track[] = [
+		[
+			'food security',
+			['food banks', 'soup kitchen', 'affordable & healthy meals', 'community gardens'],
+		],
+		[
+			'housing access',
+			[
+				'homelessness',
+				'womens/LGBTQ+ shelters',
+				'zoning/gentrification',
+				'climate disaster relief',
+			],
+		],
+		[
+			'healthcare equity',
+			[
+				'mental health',
+				'abortion access',
+				'HRT & gender afferming care',
+				'HIV prevention / sex ex',
+			],
+		],
+	];
 </script>
 
 <Content>
-	<h2>theme & tracks</h2>
-	<h3 class="self-baseline pl-5">serving the underserved</h3>
+  <h2 class="">theme & tracks</h2>
+  <h1 class="text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">serving the under-served</h1>
 	<div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1">
-		<div>
-			<p class="text-2xl">food security</p>
-      <ul>
-        <li>eeeee</li>
-        <li>eeeee</li>
-        <li>eeeee</li>
-      </ul>
-		</div>
-		<div>
-			<p class="text-2xl">housing access</p>
-      <ul>
-        <li>eeeee</li>
-        <li>eeeee</li>
-        <li>eeeee</li>
-      </ul>
-		</div>
-		<div>
-			<p class="text-2xl">healthcare equality</p>
-      <ul>
-        <li>eeeee</li>
-        <li>eeeee</li>
-        <li>eeeee</li>
-      </ul>
-		</div>
+		{#each tracks as [title, subitems] (title)}
+			<div class="p-2">
+				<!-- content here -->
+				<p class="text-2xl mb-2">{title}</p>
+				<ul class="ml-10 list-outside">
+					{#each subitems as item (item)}
+						<li>{item}</li>
+					{/each}
+				</ul>
+			</div>
+		{/each}
 	</div>
 </Content>

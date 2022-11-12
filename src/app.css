@@ -15,6 +15,9 @@
 	h3 {
 		@apply font-ranille;
 	}
+	h1 {
+		@apply text-5xl lowercase;
+	}
   h2 {
     @apply text-4xl lowercase
   }
