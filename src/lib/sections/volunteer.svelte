@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Content from '$lib/components/general/content.svelte';
-	import PositionNarrow from '$lib/components/volunteer/PositionNarrow.svelte';
 	import PositionWide from '$lib/components/volunteer/PositionWide.svelte';
-	import Position from '$lib/components/volunteer/PositionWide.svelte';
+	import QuestionCard from '$lib/components/questions/QuestionCard.svelte';
 
 	let windowWidth: number;
 
@@ -38,10 +37,11 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <Content wide={windowWidth > 768}>
-	<div class="z-10 flex flex-col items-center gap-5">
+	<div class="z-10 flex flex-col items-center gap-5 w-full">
 		<h2>volunteer for qwerhacks!</h2>
 		<p>(we have free food!)</p>
 		{#if windowWidth > 768}
+<!--			wide mode -->
 			<div class="grid grid-cols-8 gap-7">
 				{#each positions as [title, description, color]}
 					<PositionWide {title} bg_color={color}>
@@ -50,11 +50,10 @@
 				{/each}
 			</div>
 		{:else}
-			<div class="flex flex-col gap-5 p-8">
+<!--			narrow mode-->
+			<div class="flex flex-col gap-5 py-8 w-full">
 				{#each positions as [title, description, color]}
-					<PositionNarrow {title} bg_color={color}>
-						<p class="text-lg">{@html description}</p>
-					</PositionNarrow>
+					<QuestionCard start_color={color} end_color={color} question={title} answer={description} />
 				{/each}
 			</div>
 		{/if}

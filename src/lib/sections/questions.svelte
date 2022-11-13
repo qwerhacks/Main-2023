@@ -1,10 +1,61 @@
-<script lang="ts">
+<script lang='ts'>
 	import Content from '$lib/components/general/content.svelte';
+	import QuestionCard from '$lib/components/questions/QuestionCard.svelte';
+
+	type Question = {
+		question: string;
+		answer: string;
+		start_color: string;
+		end_color: string;
+	};
+
+	const questions: Question[] = [
+		{
+			question: 'who can come?',
+			answer: `anyone who is 18 or older, a member (or ally) of the LGBTQIA+ community, and enrolled in a postsecondary academic institution is invited to participate!`,
+			start_color: '#D5E8CC',
+			end_color: '#ACE0E6',
+		},
+		{
+			question: 'how will teams work?',
+			answer: `you can sign up as a team of up to four members. but make sure that all your team members submit an application! if you don’t have a team before the event, don’t worry! we will help you find fellow hackers once the event starts :^)`,
+			start_color: '#ACE0E6',
+			end_color: '#C1D3EC',
+		},
+		{
+			question: 'what can i create?\n',
+			answer: `absolutely anything you want –– websites, apps, UI, you name it! we encourage you to create a product that positively impacts the LGBTQIA+ community or any other underrepresented group in tech.`,
+			start_color: '#C1D3EC',
+			end_color: '#DFC2F8',
+		},
+		{
+			question: 'how much does it cost?',
+			answer: `it's free, babey!`,
+			start_color: '#DFC2F8',
+			end_color: '#E19FC6',
+		},
+		{
+			question: 'can allies attend?',
+			answer: `yes! we welcome anyone who supports our mission of increasing the visibility of our community in tech :)`,
+			start_color: '#E19FC6',
+			end_color: '#FDDE97',
+		},
+		{
+			question: 'sounds great, how can i apply?',
+			answer:
+				'go <a href="https://tinyurl.com/QWERHacks23" class="underline">here</a> or click the apply button up above! just fill out the Google form and you are good to go.',
+			start_color: '#FDDE97',
+			end_color: '#D5E8CC',
+		},
+	];
+
 </script>
 
 <Content>
 	<h2>questions?</h2>
-	<h3 class="mt-[-1rem]">we've got answers!</h3>
+	<h3 class='mt-[-1rem]'>we've got answers!</h3>
 
-	some questions idk
+	{#each questions as { question, answer, start_color, end_color } (question)}
+		<QuestionCard {question} {answer} {start_color} {end_color} />
+	{/each}
 </Content>
