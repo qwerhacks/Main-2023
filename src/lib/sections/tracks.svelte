@@ -30,13 +30,15 @@
 </script>
 
 <Content>
-  <h2 class="">theme & tracks</h2>
-  <h1 class="text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">serving the under-served</h1>
-	<div class="grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1">
+	<h2 class="">theme & tracks</h2>
+	<h1 class="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-6xl text-transparent">
+		serving the under-served
+	</h1>
+	<div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1">
 		{#each tracks as [title, subitems] (title)}
 			<div class="p-2">
 				<!-- content here -->
-				<p class="text-2xl mb-2">{title}</p>
+				<p class="mb-2 text-2xl">{title}</p>
 				<ul class="ml-10 list-outside">
 					{#each subitems as item (item)}
 						<li>{item}</li>

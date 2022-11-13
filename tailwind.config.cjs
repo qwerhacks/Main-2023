@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-  theme: {
-    extend: {
-      colors: {
-        bg: {
-          DEFAULT: "#FFF9F5"
-        },
-        sky: {
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	theme: {
+		extend: {
+			colors: {
+				bg: {
+					DEFAULT: "#FFF9F5"
+				},
+				sky: {
 					light: "#88AEDC",
 					DEFAULT: "#4079BD"
 				},
@@ -35,13 +35,13 @@ module.exports = {
 				teal: {
 					DEFAULT: "#7DCBC8"
 				}
-      },
-      fontFamily: {
+			},
+			fontFamily: {
 				nighty: ["Nighty DEMO", "serif"],
 				ranille: ["Ranille Normal", "serif"],
 				nunito: ["Nunito", "sans"]
 			},
-    },
-  },
-  plugins: [],
+		},
+	},
+	plugins: [],
 }

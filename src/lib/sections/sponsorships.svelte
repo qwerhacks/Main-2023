@@ -13,24 +13,24 @@
 	<p>&#62; <a>sponsorship package</a> and <a>sponsorship form</a> &#x3C;</p>
 
 	<SponsorshipRow>
-		<div class="bg-gray-800 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
+		<div class="aspect-square w-full bg-gray-800" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
 	</SponsorshipRow>
 	<SponsorshipRow>
-		<div class="bg-gray-800 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
+		<div class="aspect-square w-full bg-gray-800" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
 	</SponsorshipRow>
 	<SponsorshipRow>
-		<div class="bg-gray-800 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
-		<div class="bg-gray-400 w-full aspect-square" />
+		<div class="aspect-square w-full bg-gray-800" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full bg-gray-400" />
 	</SponsorshipRow>
 </Content>

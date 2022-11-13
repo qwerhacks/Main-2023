@@ -4,13 +4,13 @@
 	import Logo from '$lib/components/hero/logo.svelte';
 </script>
 
-<div class="w-full h-100vw overflow-hidden overscroll-contain relative">
-	<div id="background" class="absolute w-full h-full z-0">
+<div class="h-100vw relative w-full overflow-hidden overscroll-contain">
+	<div id="background" class="absolute z-0 h-full w-full">
 		<Background />
 	</div>
-	<div id="content" class="z-10 flex flex-col items-center justify-center w-screen h-screen p-10">
+	<div id="content" class="z-10 flex h-screen w-screen flex-col items-center justify-center p-10">
 		<div
-			class="flex flex-col justify-center items-center gap-6 bg-white/1 backdrop-blur-[20px] p-10 md:p-14 rounded-xl w-max max-w-[85vw] md:max-w-[70vw]"
+			class="bg-white/1 flex w-max max-w-[85vw] flex-col items-center justify-center gap-6 rounded-xl p-10 backdrop-blur-[20px] md:max-w-[70vw] md:p-14"
 		>
 			<Logo />
 			<Button />

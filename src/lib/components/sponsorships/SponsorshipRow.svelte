@@ -3,13 +3,13 @@
 
 <div class="relative w-full">
 	{#if $$slots.background}
-		<div class="absolute z-1 w-full h-full overflow-hidden overscroll-contain">
+		<div class="z-1 absolute h-full w-full overflow-hidden overscroll-contain">
 			<slot name="background" />
 		</div>
 	{/if}
 	<div class="flex justify-center">
 		<div
-			class="grid grid-cols-5 z-10 items-center justify-center w-full px-5 py-1 sm:py-5 max-w-xl text-2xl gap-4 sm:gap-7"
+			class="z-10 grid w-full max-w-xl grid-cols-5 items-center justify-center gap-4 px-5 py-1 text-2xl sm:gap-7 sm:py-5"
 		>
 			<slot />
 		</div>
