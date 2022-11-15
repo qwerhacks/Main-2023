@@ -4,7 +4,7 @@
 
 <Content>
 	<h2>our mission</h2>
-	<p class="max-w-prose text-left text-xl sm:text-center sm:text-2xl">
+	<p class="max-w-prose text-center text-2xl">
 		QWER Hacks aims to <b class="font-black">mobilize</b> and bring together LGBTQIA+ individuals
 		and allies to <b class="font-black">uplift</b> marginalized communities, while
 		<b class="font-black">celebrating</b>

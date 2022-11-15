@@ -1,13 +1,12 @@
 <div>
-	<p>Links</p>
+	<h3>Links</h3>
 	<div class="grid grid-cols-2 justify-self-start">
 		<a>apply</a>
-		<a>apply</a>
-		<a>faq</a>
-		<a>faq</a>
-		<a>volunteer</a>
-		<a>volunteer</a>
+		<a>theme</a>
+		<a>home</a>
+		<a>FAQ</a>
 		<a>mission</a>
-		<a>mission</a>
+		<a>volunteer</a>
+		<a>resources</a>
 	</div>
 </div>

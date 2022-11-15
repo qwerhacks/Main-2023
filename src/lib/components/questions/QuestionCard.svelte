@@ -4,7 +4,7 @@
 	export let question: string;
 	export let answer: string;
 
-	export let open: boolean;
+	let open: boolean;
 </script>
 
 <div class='isolate flex flex-col gap-2 max-w-3xl w-full px-5'

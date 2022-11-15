@@ -29,7 +29,7 @@
 		[
 			'in person volunteers',
 			'To make sure our hackathon goes smoothly, we’ll need volunteers to help with setup and maintenance of the in-person portion of the hackathon! This includes setting up the room, checking people in and helping participants find their places.',
-			'rgba(194, 69, 150, 0.5)',
+			'rgba(194, 69, 150, 0.4)',
 		],
 	];
 </script>
