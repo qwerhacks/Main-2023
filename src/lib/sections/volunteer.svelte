@@ -61,25 +61,17 @@
 			class="rounded-md bg-[#FDDE97] px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]"
 			href="https://forms.gle/ViXR2qANhuFsFptK9"
 		>
-			<p>Apply to be a colaborator here!</p>
+			<p>Apply to be a collaborator here!</p>
 		</a>
 	</div>
 
 	<div slot="background" class="z-0">
-		<span class="absolute left-0 bottom-0 hidden md:inline-block">
-			<img class="w-8/12" src="./media/component_assets/media/BottomLeft.svg" alt="" />
+		<span class="absolute left-0 top-5 inline-block max-w-[270px]">
+			<img class="w-8/12" src="./media/component_assets/media/leftSide.svg" alt="" />
 		</span>
 		<img
-			class="absolute right-0 bottom-0 max-w-[70%]"
-			src="./media/component_assets/media/BottomRight.svg"
-			alt=""
-		/>
-		<span class="absolute left-0 top-0 inline-block">
-			<img class="w-8/12" src="./media/component_assets/media/topleft.svg" alt="" />
-		</span>
-		<img
-			class="absolute right-0 top-0 max-w-[70%]"
-			src="./media/component_assets/media/TopRight.svg"
+			class="absolute right-0 top-10 inline-block max-w-[100px]"
+			src="./media/component_assets/media/right.svg"
 			alt=""
 			style="  direction: rtl;			"
 		/>

@@ -33,6 +33,17 @@
 </script>
 
 <Content>
+	<div slot="background" class="z-0">
+		<span class="absolute left-0 top-15 inline-block max-w-[300px]">
+			<img class="w-8/12" src="./media/component_assets/media/leftSide2.svg" alt="" />
+		</span>
+		<img
+			class="absolute right-0 top-20 inline-block max-w-[200px]"
+			src="./media/component_assets/media/rightSide2.svg"
+			alt=""
+			style="  direction: rtl;			"
+		/>
+	</div>
 	<h2 class="">theme & tracks</h2>
 	<h1 class="bg-gradient-to-r from-[hsl(101,38%,70%)] via-[hsl(272,79%,73%)] to-[hsl(215,53%,70%)] bg-clip-text text-5xl sm:text-6xl text-transparent text-center">
 		serving the <span class="whitespace-nowrap">under-served</span>
