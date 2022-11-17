@@ -14,7 +14,7 @@
 			style="  direction: rtl;			"
 		/>
 	</div>
-	<h2>our mission</h2>
+	<h2 class="z-10">our mission</h2>
 	<p class="max-w-prose text-center text-2xl z-10">
 		QWER Hacks aims to <b class="font-black">mobilize</b> and bring together LGBTQIA+ individuals
 		and allies to <b class="font-black">uplift</b> marginalized communities, while
