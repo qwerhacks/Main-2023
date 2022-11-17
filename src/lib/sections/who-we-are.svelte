@@ -1,5 +1,16 @@
-<script lang="ts">
+<script lang="ts" defer>
 	import Content from '$lib/components/general/content.svelte';
+	import { fade, fly } from 'svelte/transition';
+
+	let transparency = 0;
+
+	function showName() {
+		transparency = 100;
+	}
+
+	function hideName() {
+		transparency = 0;
+	}
 
 	interface PersonDatum {
 		name: string;
@@ -77,8 +88,18 @@
 	}
 
 	.profile:hover {
-		box-shadow: 1px 1px 10px #545454;
-		opacity: 85%;
+		border-width: 5px;
+		border-color: #DFC2F8;
+	}
+
+	#overlay {
+		position: absolute;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		background-color: #DFC2F8;
+		border-radius: 1rem;
+		z-index: 1;
+		transform: 1s;
 	}
 </style>
 
@@ -86,7 +107,11 @@
 	<h2>who we are</h2>
 	<div class="grid grid-cols-5 gap-5">
 		{#each peopleData as { name, url } (name)}
-			<img class="profile" src={url} alt={name}/>
+		<div class="member">
+			<div id="overlay" style="opacity:{transparency}">{name}</div>
+			<img class="profile" src={url} alt={name} on:mouseover={showName} on:mouseout={hideName}/>
+		</div>
 		{/each}
 	</div>
 </Content>
+
