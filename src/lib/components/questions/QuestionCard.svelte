@@ -7,7 +7,7 @@
 	let open: boolean;
 </script>
 
-<div class='isolate flex flex-col gap-2 max-w-3xl w-full px-5'
+<div class='isolate flex flex-col gap-2 max-w-3xl w-full px-5 umami--click--{question.replace(/\s+/g, '-').toLowerCase()}'
 		 on:click={() => open = !open}
 		 style='--start-color: {start_color}; --end_color: {end_color}'>
 	<!--	header-->
