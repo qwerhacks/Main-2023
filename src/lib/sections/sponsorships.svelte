@@ -16,7 +16,7 @@
 	</div>
 	<h2>sponsors</h2>
 	<p>Thank you to all our sponsors!</p>
-	<p>
+	<p class="text-center">
 		This hackathon truly could not happen without your support. If you'd like to consider becoming a
 		sponsor, please check out our 
 		<a 

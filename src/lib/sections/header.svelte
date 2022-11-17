@@ -13,7 +13,7 @@
 				alt="A frog, on top of the letters QH. The QWER Hacks Logo."
 			/></a
 		>
-		<a class="font-nunito text-xl" href="/">Home</a>
+		<!-- <a class="font-nunito text-xl" href="/">Home</a> -->
 		<!-- <a class="font-nunito text-xl" href="/mission">Mission</a>
 		<a class="font-nunito text-xl" href="/resources">Resources</a> -->
 		<div class="ml-auto">
