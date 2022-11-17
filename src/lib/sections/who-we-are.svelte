@@ -6,9 +6,17 @@
 		url: string;
 	}
 
+	function showCaption() {
+		document.getElementById("caption").style.visibility = "visible";
+	}
+
+	function hideCaption() {
+		document.getElementById("caption").style.visibility = "hidden";
+	}
+
 	const peopleData: PersonDatum[] = [
 		{
-			name: '',
+			name: 'Margaret Capetz',
 			url: 'https://lh4.googleusercontent.com/a-3FzhdPTNAVPU8KKLDBTwHJllV0GIuWMMK0tk15x5VaXCNWl9iyAAbxULuAVOcn868=w2400',
 		},
 		{
@@ -70,11 +78,31 @@
 	];
 </script>
 
+<style>
+	#caption {
+		position: relative;
+		display: inline-block;
+		justify-content: center;
+		visibility: hidden;
+	}
+
+	.profile {
+		position: relative;
+	}
+
+	.profile:hover {
+		opacity: 85%;
+	}
+</style>
+
 <Content>
 	<h2>who we are</h2>
 	<div class="grid grid-cols-5 gap-5">
 		{#each peopleData as { name, url } (name)}
-			<img src={url} alt={name} />
+			<!--<h4 id="caption">
+				{name}
+			</h4>-->
+			<img class="profile" src={url} alt={name}/>
 		{/each}
 	</div>
 </Content>

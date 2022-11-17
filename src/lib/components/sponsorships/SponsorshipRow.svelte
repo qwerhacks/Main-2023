@@ -9,7 +9,7 @@
 	{/if}
 	<div class="flex justify-center">
 		<div
-			class="z-10 grid w-full max-w-xl grid-cols-5 items-center justify-center gap-4 px-5 py-1 text-2xl sm:gap-7 sm:py-5"
+			class="z-10 grid w-full max-w-xl grid-cols-7 items-center justify-center gap-4 px-2 py-1 text-2xl sm:gap-6 sm:py-5"
 		>
 			<slot />
 		</div>

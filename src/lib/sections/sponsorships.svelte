@@ -24,29 +24,45 @@
 
 	<SponsorshipRow>
 		<div class="aspect-square w-full">
-			<img src="./media/component_assets/media/goldfrog-03 2.png" alt="" />		
+			<img src="./media/component_assets/media/silver frog-02 2.png" alt="Silver Tadpole Sponsors" />		
 		</div>
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/northrop-grumman.png" alt="Northrop Grumman"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/directv.png" alt="DirecTV"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/aerospace-corp.png" alt="The Aerospace Corporation"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/boeing.png" alt="Boeing"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/crowdstrike.png" alt="Crowdstrike"/>
+		</div>
 	</SponsorshipRow>
 	<SponsorshipRow>
 		<div class="aspect-square w-full">
-			<img src="./media/component_assets/media/silver frog-02 2.png" alt="" />		
+			<img src="./media/component_assets/media/bronze tadpole-02 2.png" alt="Bronze Tadpole Sponsors" />		
 		</div>
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-	</SponsorshipRow>
-	<SponsorshipRow>
 		<div class="aspect-square w-full">
-			<img src="./media/component_assets/media/bronze tadpole-02 2.png" alt="" />		
+			<img src="./media/sponsor_logos/illumina.png" alt="Illumina"/>
 		</div>
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
-		<div class="aspect-square w-full bg-gray-400" />
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/visa.png" alt="Visa"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/marvell.png" alt="Marvell"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/lockheed.png" alt="Lockheed Martin"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/chevron.png" alt="Chevron"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/rivian.png" alt="Rivian"/>
+		</div>
 	</SponsorshipRow>
 </Content>
