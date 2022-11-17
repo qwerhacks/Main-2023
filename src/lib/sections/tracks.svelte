@@ -44,11 +44,11 @@
 			style="  direction: rtl;			"
 		/>
 	</div>
-	<h2 class="">theme & tracks</h2>
-	<h1 class="bg-gradient-to-r from-[hsl(101,38%,70%)] via-[hsl(272,79%,73%)] to-[hsl(215,53%,70%)] bg-clip-text text-5xl sm:text-6xl text-transparent text-center">
+	<h2 class="z-10">theme & tracks</h2>
+	<h1 class="z-10 bg-gradient-to-r from-[hsl(101,38%,70%)] via-[hsl(272,79%,73%)] to-[hsl(215,53%,70%)] bg-clip-text text-5xl sm:text-6xl text-transparent text-center">
 		serving the <span class="whitespace-nowrap">under-served</span>
 	</h1>
-	<div class="flex flex-col gap-8 md:flex-row justify-center items-center">
+	<div class="z-10 flex flex-col gap-8 md:flex-row justify-center items-center">
 		{#each tracks as [title, color, subitems] (title)}
 			<div
 				style="--color: {color}"
