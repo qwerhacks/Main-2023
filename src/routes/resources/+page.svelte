@@ -1,13 +1,12 @@
 <script lang="ts">
 	import Content from "$lib/components/general/content.svelte";
 	import Resources from "$lib/sections/resources.svelte";
+	import SmallHero from "$lib/sections/small_hero.svelte";
 	import Volunteer from "$lib/sections/volunteer.svelte";
 
 </script>
 
-<Content>
-  <h1 class="text-6xl">Resources</h1>
-</Content>
+<SmallHero title={"resources"} />
 
 <Resources />
 <Volunteer />
