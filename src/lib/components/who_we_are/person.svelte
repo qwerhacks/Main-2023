@@ -47,7 +47,7 @@
 		<div
 			in:fly={{ y: hover_thing, duration: 200 }}
 			out:fly={{ y: hover_thing, duration: 500 }}
-			class="absolute flex flex-col top-[60%] h-[40%] p-3 bg-white/70 backdrop-blur-sm"
+			class="absolute flex flex-col top-[60%] h-[40%] p-1 bg-white/70 backdrop-blur-sm"
 			class:rotate_normal
 			class:rotate_unnormal={!rotate_normal}
 			class:no_pronouns={datum.pronouns === undefined}
@@ -56,9 +56,9 @@
 			class:pridegradient={datum.prideflag === 'rainbow'}
 			class:bipridegradient={datum.prideflag === 'bi'}
 		>
-			<p class="text-center text-lg leading-4">{datum.name.split(' ')[0]}</p>
+			<p class="text-center text-base md:text-lg leading-1">{datum.name.split(' ')[0]}</p>
 			{#if datum.pronouns !== undefined}
-				<p class="text-center text-base">{datum.pronouns}</p>
+				<p class="text-center text-sm md:text-base  leading-1">{datum.pronouns}</p>
 			{/if}
 		</div>
 	{/if}

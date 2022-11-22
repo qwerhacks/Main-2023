@@ -33,7 +33,7 @@
 			name: 'Tara Char',
 			url: 'https://lh3.googleusercontent.com/cUH6paGvVDH-bWNAsB8YJd2ZTD_rDGjc9VxYoA99Gl9bobnJsjdpYogRYkpZn4JvZps=w2400',
 			pronouns: 'she/her',
-			prideflag: "bi"
+			prideflag: 'bi',
 		},
 		{
 			name: 'Maya B',
@@ -47,7 +47,7 @@
 			name: 'Julie Cover',
 			url: 'https://lh6.googleusercontent.com/f146PH-Zmdw4P7plmkLeXzAOrVbJo8D7aincLE9OdPRKwb6reFMcN9PmoA0ckC-qmUw=w2400',
 			pronouns: 'she/her',
-			prideflag: 'trans'
+			prideflag: 'trans',
 		},
 		{
 			name: 'Alicia',
@@ -57,7 +57,7 @@
 			name: 'Katie Kubiato',
 			url: 'https://lh3.googleusercontent.com/7e4IF-FuOEN8b_Sh1ilBdwJNENpWut4cuEbVaV2zbkXHSgTTMZs0kAxA4l5knAU4ca8=w2400',
 			pronouns: 'she/her',
-			prideflag: 'rainbow'
+			prideflag: 'rainbow',
 		},
 		{
 			name: 'Samika',
@@ -67,7 +67,7 @@
 			name: 'Tiff Peverilla',
 			url: 'https://lh3.googleusercontent.com/ltUn0lmxt-ngvtC4RO6Tv1UfJPpuToYVMsvp5OelKDSdgWAgmssesM3YK9Dei_JozVw=w2400',
 			pronouns: 'she/they',
-			prideflag: 'lesbian'
+			prideflag: 'lesbian',
 		},
 		{
 			name: 'Amanda Wang',
@@ -75,19 +75,47 @@
 		},
 	];
 
-	let rotate_normal = true
+	let rotate_normal = true;
 
 	function rotate() {
-		rotate_normal = !rotate_normal
-		return rotate_normal
+		rotate_normal = !rotate_normal;
+		return rotate_normal;
 	}
 </script>
 
-<Content>
-	<h2>who we are</h2>
-	<div class="grid grid-cols-5 gap-5">
+<Content wide={true}>
+	<h2 class="relative">
+		who we are
+		<div class="absolute -right-20 -bottom-3 -rotate-12 md:hidden"><p>tap me!</p></div>
+	</h2>
+	<div class="grid-container px-10 w-full">
 		{#each peopleData as datum}
-			<Person {datum}/>
+			<Person {datum} />
 		{/each}
 	</div>
 </Content>
+
+<style>
+	.grid-container {
+		/**
+   * User input values.
+   */
+		--grid-layout-gap: 1.25rem;
+		--grid-column-count: 5;
+		--grid-item--min-width: 100px;
+
+		/**
+   * Calculated values.
+   */
+		--gap-count: calc(var(--grid-column-count) - 1);
+		--total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+		--grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fill,
+			minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+		);
+		grid-gap: var(--grid-layout-gap);
+	}
+</style>
