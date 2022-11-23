@@ -58,10 +58,10 @@
 			</div>
 		{/if}
 		<a
-			class="rounded-md bg-[#FDDE97] px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]"
+			class="rounded-md bg-button px-10 py-4 hover:bg-button-active active:bg-button-active outline outline-2 outline-button-border"
 			href="https://forms.gle/ViXR2qANhuFsFptK9"
 		>
-			<p>Apply to be a collaborator here!</p>
+			<p class="font-bold">Apply to be a collaborator here!</p>
 		</a>
 	</div>
 

@@ -52,7 +52,7 @@
 		{#each tracks as [title, color, subitems] (title)}
 			<div
 				style="--color: {color}"
-				class="flex aspect-square w-100 max-w-[80%] md:max-w-[25%] items-center justify-center rounded-2xl bg-[color:var(--color)] p-2 box-border">
+				class="flex aspect-square w-100 max-w-[80%] md:max-w-[25%] items-center justify-center rounded-xl bg-[color:var(--color)] p-2 box-border">
 				<!-- content here -->
 				<p class="m-2 text-center text-4xl font-bold">{title}</p>
 			</div>

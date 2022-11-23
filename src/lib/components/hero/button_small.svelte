@@ -1,5 +1,5 @@
 <a
-	class="rounded-md bg-[#FDDE97] px-3 py-2 hover:bg-[#fee3a5] active:bg-[#ffeab8] text-xl whitespace-nowrap umami--click--button-small"
+	class="rounded-md bg-button px-3 py-2 hover:bg-button-active active:bg-button-active text-xl whitespace-nowrap  outline outline-2 outline-button-border umami--click--button-small"
 	href="https://tinyurl.com/QWERHacks23"
 >
 	Apply Now!
