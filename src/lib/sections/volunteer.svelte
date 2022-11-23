@@ -17,7 +17,7 @@
 			'rgba(89, 198, 215, 0.5)',
 		],
 		[
-			'identiy specific mentors',
+			'identity specific mentors',
 			'Not only are we a hackathon, but we’d also like to build a community. In order to do this, we would love to have YOU be an identity specific mentor. This includes anyone identifying as bi/pan/omni, queer + questioning, and trans and gender non-conforming!',
 			'rgba(130, 172, 226, 0.5)',
 		],
