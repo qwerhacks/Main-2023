@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/sections/hero.svelte';
 	import Mission from '$lib/sections/mission.svelte';
+	import Prizes from '$lib/sections/prizes.svelte';
 	import Questions from '$lib/sections/questions.svelte';
 	import Sponsorships from '$lib/sections/sponsorships.svelte';
 	import Tracks from '$lib/sections/tracks.svelte';
@@ -10,6 +11,7 @@
 <Hero />
 <Mission />
 <Tracks />
+<Prizes />
 <Questions />
 <Volunteer />
 <Sponsorships />
