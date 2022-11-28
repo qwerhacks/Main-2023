@@ -20,7 +20,9 @@
 </script>
 
 <Content>
-	{#if browser}
+	<h2>Info on our great prizes coming soon!</h2>
+
+	<!-- {#if browser}
 		<svelte:component
       this={CarouselObject}
     bind:this={carousel}
@@ -29,5 +31,5 @@
 		</svelte:component>
 	{/if}
 
-	<button on:click={handleNextClick}>Next</button>
+	<button on:click={handleNextClick}>Next</button> -->
 </Content>
