@@ -38,7 +38,7 @@
 
 <Content wide={windowWidth > 768}>
 	<div class="z-10 flex flex-col items-center gap-5 w-full">
-		<h2>volunteer for qwerhacks!</h2>
+		<h2 class="text-center">volunteer for qwerhacks!</h2>
 		<p>(we have free food!)</p>
 		{#if windowWidth > 768}
 <!--			wide mode -->

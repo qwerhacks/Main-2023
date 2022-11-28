@@ -8,8 +8,16 @@
 
 <SmallHero title={"resources"} />
 
-<Resources />
 <Volunteer />
+
+<Content>
+	<div class="z-10 flex flex-col items-center gap-5 w-full">
+		<h2 class="text-center">More coming soon...</h2>
+	</div>
+</Content>
+
+
+
 
 
 <svelte:head>

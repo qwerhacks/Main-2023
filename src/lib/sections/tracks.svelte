@@ -45,14 +45,20 @@
 		/>
 	</div>
 	<h2 class="z-10">theme & tracks</h2>
-	<h1 class="z-10 bg-gradient-to-r from-[hsl(101,38%,70%)] via-[hsl(272,79%,73%)] to-[hsl(215,53%,70%)] bg-clip-text text-5xl sm:text-6xl text-transparent text-center">
-		serving the <span class="whitespace-nowrap">under-served</span>
-	</h1>
+	<div class="bg-white/1 backdrop-blur-[20px] p-3 px-6">
+		<h1
+			class="z-10 bg-gradient-to-r from-[hsl(101,38%,70%)] via-[hsl(272,79%,73%)] to-[hsl(215,53%,70%)] bg-clip-text text-5xl sm:text-6xl text-transparent text-center w-min md:w-auto"
+		>
+			serving the <span class="whitespace-nowrap">under-served</span>
+		</h1>
+	</div>
+
 	<div class="z-10 flex flex-col gap-8 md:flex-row justify-center items-center">
 		{#each tracks as [title, color, subitems] (title)}
 			<div
 				style="--color: {color}"
-				class="flex aspect-square w-100 max-w-[80%] md:max-w-[25%] items-center justify-center rounded-xl bg-[color:var(--color)] p-2 box-border">
+				class="flex aspect-square w-100 max-w-[80%] md:max-w-[25%] items-center justify-center rounded-xl bg-[color:var(--color)] p-2 box-border"
+			>
 				<!-- content here -->
 				<p class="m-2 text-center text-4xl font-bold">{title}</p>
 			</div>
