@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Mission from "$lib/sections/mission.svelte";
 	import SmallHero from "$lib/sections/small_hero.svelte";
 	import WhoWeAre from "$lib/sections/who-we-are.svelte";
 
@@ -6,7 +7,7 @@
 
 <SmallHero title={"mission & history"} />
 
-
+<Mission />
 <WhoWeAre />
 
 
