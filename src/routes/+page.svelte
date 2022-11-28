@@ -11,7 +11,7 @@
 <Hero />
 <Tagline />
 <Tracks />
-<Prizes />
+<!-- <Prizes /> -->
 <Questions />
 <Volunteer />
 <Sponsorships />
