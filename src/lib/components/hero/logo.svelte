@@ -8,21 +8,23 @@
 	<div id="text" class="">
 		<div id="name">
 			<h1
-				class="text-center font-nighty text-8xl leading-[0.8] tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
+				class="text-center font-nighty text-8xl leading-[0.8] tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-[0.8] 2xl:text-[14rem]"
 			>
 				QWER
 			</h1>
 			<h1
-				class="text-center font-nighty text-8xl tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
+				class="text-center font-nighty text-8xl tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-[0.8] 2xl:text-[14rem]"
 			>
 				Hacks
 			</h1>
 		</div>
 		<div id="date">
 			<h2
-				class="text-center font-ranille text-4xl text-purple-light md:text-left md:text-4xl lg:text-6xl 2xl:text-8xl"
+				class="text-center font-ranille text-4xl text-purple-light md:text-left md:text-4xl lg:text-5xl 2xl:text-8xl"
 			>
 				jan 27-29
+				<br />
+				11AM-11PM
 			</h2>
 		</div>
 	</div>
