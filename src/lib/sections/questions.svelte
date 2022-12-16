@@ -30,8 +30,27 @@
 			end_color: '#C1D3EC',
 		},
 		{
-			question: 'what can i create?\n',
+			question: 'what can i create?',
 			answer: `Absolutely anything you want — websites, apps, UI, you name it! We encourage you to create a product that positively impacts the LGBTQIA+ community or any other underrepresented group in tech.`,
+			start_color: '#C1D3EC',
+			end_color: '#DFC2F8',
+		},
+		{
+			question: 'what\'s the schedule like?',
+			answer: `
+We have a ton planned, you're going to love it!
+<ul>
+	<li>Checkin at 8:30 AM! We'll have breakfast and coffee!!!</li>
+	<li>Opening ceramonies and intro talks to our tracks from REAL INDUSTRY MENTORS are right after</li>
+	<li>Hacking starts at 11AM</li>
+	<li>Tons of cool workshops, snacks, meals, and everything, plus tons of hacking until...</li>
+	<li>PITCHING TO JUDGES at 9AM</li>
+	<li>SUBMISSIONS DUE at 10:30AM</li>
+	<li>JUDGING 11-1PM</li>
+	<li>CLOSING + PRIZES 1PM-2PM</li>
+</ul>
+We'll also have more info up on workshpps, talks, and everything else in the middle soon. Stay tuned and apply to get updates!
+			`,
 			start_color: '#C1D3EC',
 			end_color: '#DFC2F8',
 		},

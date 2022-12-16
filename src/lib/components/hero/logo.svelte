@@ -22,9 +22,9 @@
 			<h2
 				class="text-center font-ranille text-4xl text-purple-light md:text-left md:text-4xl lg:text-5xl 2xl:text-8xl"
 			>
-				jan 27-29
+				jan 28-29
 				<br />
-				11AM-11PM
+				9AM-2PM
 			</h2>
 		</div>
 	</div>
