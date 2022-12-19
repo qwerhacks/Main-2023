@@ -8,11 +8,11 @@
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
 
+
   onMount(async () => {
     const module = await import('svelte-carousel');
     CarouselObject = module.default;
   });
-
 
 	const handleNextClick = () => {
 		carousel.goToNext();
@@ -29,7 +29,7 @@
     >
 			<GoodSleep />
 		</svelte:component>
-	{/if}
+	{/if} -->
 
-	<button on:click={handleNextClick}>Next</button> -->
+	<!-- <button on:click={handleNextClick}>Next</button> -->
 </Content>

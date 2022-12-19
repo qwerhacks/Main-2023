@@ -8,25 +8,33 @@
 			name: 'Margaret Capetz',
 			url: 'https://lh4.googleusercontent.com/a-3FzhdPTNAVPU8KKLDBTwHJllV0GIuWMMK0tk15x5VaXCNWl9iyAAbxULuAVOcn868=w2400',
 			pronouns: 'she/her',
+			prideflag: "rainbow"
 		},
 		{
 			name: 'Mia Luong',
+			pronouns: 'she/her',
+			prideflag: 'bi',
 			url: 'https://lh6.googleusercontent.com/FRP4kIqpuc4SW8W74Q35oL-PY9MvJQWQ8b_VHzE6fJ0a5cbYN1loYFVTEFEl1Fu6qkc=w2400',
 		},
 		{
 			name: 'Preyasi Gaur',
+			pronouns: 'she/her',
 			url: 'https://lh3.googleusercontent.com/2BsKtdoLpJhzKhFDR9Hg8bPXJR7hVR55FPfIbMsJrjsm7II9kvgXxDGeNoQKXNAS09g=w2400',
 		},
 		{
 			name: 'Isabella He',
+			pronouns: 'she/her',
 			url: 'https://lh5.googleusercontent.com/cazOufNw-nIqjVZVMErBt87Lm16a9neEeYD55CpVHwbL-TKiXEGWvg7uaXTYYBxmNG8=w2400',
 		},
 		{
 			name: 'Chantal Wang',
+			pronouns: 'she/her',
+			prideflag: 'bi',
 			url: 'https://lh5.googleusercontent.com/XKqQc7rSaAzjNzqNuIXo75ZzEGCC-IMQiyu2i7IC8IXc8Fgfqm24gs5QbwiNe5OPpuQ=w2400',
 		},
 		{
 			name: 'Shawdi Sani',
+			pronouns: 'she/her',
 			url: 'https://lh4.googleusercontent.com/6wAbyt0O-sIAkbrQ6CvSWUa3YLEm0h8EZ8dSNc5DF3TkPFfMMrxK2SZgdtYLPGLFn1s=w2400',
 		},
 		{
@@ -36,11 +44,14 @@
 			prideflag: 'bi',
 		},
 		{
-			name: 'Maya B',
+			name: 'Maya Balakrishnan',
+			pronouns: 'she/her',
+			prideflag: 'lesbian',
 			url: 'https://lh6.googleusercontent.com/Y-L0wCJKdnKLB6TgnTiSBy_0toM_Yb-5KChhz6ivPWSoFym21aK4Rs3-t6D5Sr2xcVk=w2400',
 		},
 		{
 			name: 'Shivani Hukkeri',
+			pronouns: 'she/her',
 			url: 'https://lh6.googleusercontent.com/Am12aRIvHI079uFmeUeKwr1TNV914ZJNlQ7Coy8SD_4sp91W03bAJcewQVADxexbZEg=w2400',
 		},
 		{
@@ -50,7 +61,9 @@
 			prideflag: 'trans',
 		},
 		{
-			name: 'Alicia',
+			name: 'Alicia Yu',
+			pronouns: 'she/her',
+			prideflag: 'lesbian',
 			url: 'https://lh6.googleusercontent.com/wEFI65DFkMtBaJnO0Y7CY4P5ke1QgLnF2V10rE6tWUYfHL8jhTX6ov3_38FgNatxr8o=w2400',
 		},
 		{
@@ -60,7 +73,8 @@
 			prideflag: 'rainbow',
 		},
 		{
-			name: 'Samika',
+			name: 'Samika Karthik',
+			pronouns: 'she/her',
 			url: 'https://lh6.googleusercontent.com/nl0j70ZNK98Hn11k_DITJWf3TweLvp-DxuRuxZnIslfANoC-0SJhbRJeXB0_QsLfzpU=w2400',
 		},
 		{
@@ -71,6 +85,8 @@
 		},
 		{
 			name: 'Amanda Wang',
+			pronouns: 'she/her',
+			prideflag: 'bi',
 			url: 'https://lh5.googleusercontent.com/ZLQxTK8APmS-3Y0qxdzruOsUX_TwHPuRkVDf37JrHgjSWPgvs8kfyFf8oeTXlyUYryQ=w2400',
 		},
 	];
