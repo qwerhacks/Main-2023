@@ -68,7 +68,7 @@
 			<img src="./media/sponsor_logos/rivian.png" alt="Rivian"/>
 		</div>
 		<div class="aspect-square w-full">
-			<img src="./media/sponsor_logos/standout-stickers-logo-3F97EA25B3-seeklogo.com.png" alt="Standout Stickers"/>
+			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank"><img src="./media/sponsor_logos/standout-stickers-logo-3F97EA25B3-seeklogo.com.png" alt="Standout Stickers"/></a>
 		</div>
 	</SponsorshipRow>
 </Content>
