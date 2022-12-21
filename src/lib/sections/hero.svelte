@@ -10,7 +10,7 @@
 	</div>
 	<div id="content" class="z-10 flex h-screen w-screen flex-col items-center justify-center p-10">
 		<div
-			class="bg-white/1 flex w-max max-w-[85vw] flex-col items-center justify-center gap-6 rounded-xl p-10 backdrop-blur-[20px] md:max-w-[70vw] md:p-14"
+			class="bg-white/1 flex w-max max-w-[90vw] flex-col items-center justify-center gap-6 rounded-xl p-10 backdrop-blur-[20px] md:max-w-[80vw] md:p-14"
 		>
 			<Logo />
 			<Button />

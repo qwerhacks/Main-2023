@@ -34,6 +34,11 @@ module.exports = {
 				},
 				teal: {
 					DEFAULT: "#7DCBC8"
+				},
+				button: {
+					DEFAULT: "#FDDE97",
+					active: "hsl(42,96%,70%)",
+					border: "hsl(42,96%,65%)"
 				}
 			},
 			fontFamily: {

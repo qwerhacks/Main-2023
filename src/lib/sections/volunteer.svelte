@@ -17,7 +17,7 @@
 			'rgba(89, 198, 215, 0.5)',
 		],
 		[
-			'identiy specific mentors',
+			'identity specific mentors',
 			'Not only are we a hackathon, but we’d also like to build a community. In order to do this, we would love to have YOU be an identity specific mentor. This includes anyone identifying as bi/pan/omni, queer + questioning, and trans and gender non-conforming!',
 			'rgba(130, 172, 226, 0.5)',
 		],
@@ -38,7 +38,7 @@
 
 <Content wide={windowWidth > 768}>
 	<div class="z-10 flex flex-col items-center gap-5 w-full">
-		<h2>volunteer for qwerhacks!</h2>
+		<h2 class="text-center">volunteer for qwerhacks!</h2>
 		<p>(we have free food!)</p>
 		{#if windowWidth > 768}
 <!--			wide mode -->
@@ -58,10 +58,10 @@
 			</div>
 		{/if}
 		<a
-			class="rounded-md bg-[#FDDE97] px-10 py-4 hover:bg-[#fee3a5] active:bg-[#ffeab8]"
+			class="rounded-md bg-button px-10 py-4 hover:bg-button-active active:bg-button-active outline outline-2 outline-button-border"
 			href="https://forms.gle/ViXR2qANhuFsFptK9"
 		>
-			<p>Apply to be a collaborator here!</p>
+			<p class="font-bold">Apply to be a collaborator here!</p>
 		</a>
 	</div>
 
