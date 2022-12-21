@@ -3,7 +3,7 @@
 	import RowCard from './card_templates/row_card.svelte';
 </script>
 
-<img src="/Users/aliciayu/Main-2023/static/media/component_assets/prizes/sleep/good_sleep.svg" alt="Good Sleep Pack"/>
+<img src="./media/component_assets/prizes/sleep/good_sleep.svg" alt="Good Sleep Pack"/>
 
 <!--<RowCard title="Good Sleep Pack">
 	<svelte:fragment slot="row-1">
