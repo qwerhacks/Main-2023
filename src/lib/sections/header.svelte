@@ -4,7 +4,7 @@
 
 <div class="bg-white/1 fixed top-0 left-0 z-20 w-full p-4 backdrop-blur-[20px]">
 	<div
-		class="flex flex-row  items-center justify-center gap-2 sm:gap-4 md:mx-40 md:justify-start md:gap-10"
+		class="flex flex-row  items-center justify-center gap-2 sm:gap-4 md:mx-40 md:justify-start md:gap-10 mr-28 md:mr-40"
 	>
 		<a href="/"
 			><img

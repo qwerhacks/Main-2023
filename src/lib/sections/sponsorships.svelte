@@ -16,11 +16,14 @@
 	</div>
 	<h2>sponsors</h2>
 	<p>Thank you to all our sponsors!</p>
-	<p>
+	<p class="text-center">
 		This hackathon truly could not happen without your support. If you'd like to consider becoming a
-		sponsor, please check out our
+		sponsor, please check out our 
+		<a 
+			class="underline"
+			href='https://drive.google.com/file/d/1-LU9MYjEtRahXcjW9rPDqXXhbEBlg_IU/view?usp=sharing'
+		>sponsorship package</a>.
 	</p>
-	<p>&#62; <a href='#'>sponsorship package</a> and <a href='#'>sponsorship form</a> &#x3C;</p>
 
 	<SponsorshipRow>
 		<div class="aspect-square w-full">

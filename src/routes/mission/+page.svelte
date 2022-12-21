@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Content from "$lib/components/general/content.svelte";
+	import SmallHero from "$lib/sections/small_hero.svelte";
 	import WhoWeAre from "$lib/sections/who-we-are.svelte";
 
 </script>
 
-<Content>
-  <h1 class="text-6xl">mission & history</h1>
-</Content>
+<SmallHero title={"mission & history"} />
+
 
 <WhoWeAre />
 

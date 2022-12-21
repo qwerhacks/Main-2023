@@ -8,12 +8,12 @@
 	<div id="text" class="">
 		<div id="name">
 			<h1
-				class="text-center font-nighty text-7xl leading-[0.8] tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
+				class="text-center font-nighty text-8xl leading-[0.8] tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
 			>
 				QWER
 			</h1>
 			<h1
-				class="text-center font-nighty text-7xl tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
+				class="text-center font-nighty text-8xl tracking-wide text-coral md:text-left md:text-8xl xl:text-[10rem] xl:leading-none 2xl:text-[14rem]"
 			>
 				Hacks
 			</h1>
