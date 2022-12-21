@@ -3,7 +3,9 @@
 	import RowCard from './card_templates/row_card.svelte';
 </script>
 
-<RowCard title="Read More">
+<img src= "/Users/aliciayu/Main-2023/static/media/component_assets/prizes/read/reading_pack.svg" alt="Read All About It"/>
+
+<!--<RowCard title="Read More">
 	<svelte:fragment slot="row-1">
 		<ImageWrapper
 			src={'media/component_assets/prizes/sleep/Rectangle 5.png'}
@@ -47,4 +49,4 @@
 			</ul>
 		</div>
 	</svelte:fragment>
-</RowCard>
+</RowCard>-->

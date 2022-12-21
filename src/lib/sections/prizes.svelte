@@ -11,6 +11,7 @@
 	import LearnANewHobby from '$lib/components/prizes/learn_a_new_hobby.svelte';
 	import MakingMemories from '$lib/components/prizes/making_memories.svelte';
 	import WorkoutPack from '$lib/components/prizes/workout_pack.svelte';
+	import TravelMore from '$lib/components/prizes/travel_more.svelte';
 
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
@@ -32,14 +33,15 @@
       this={CarouselObject}
     bind:this={carousel}
     >
-			<GoodSleep />
-			<OrganizedLife />
-			<SpaDayKit />
-			<ReadMore />
 			<GoTouchGrass />
+			<OrganizedLife />
 			<LearnANewHobby />
-			<MakingMemories />
+			<GoodSleep />
+			<ReadMore />
 			<WorkoutPack />
+			<TravelMore />
+			<SpaDayKit />
+			<MakingMemories />
 		</svelte:component>
 	{/if}
 
