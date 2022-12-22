@@ -3,16 +3,18 @@
 	import RowCard from './card_templates/row_card.svelte';
 </script>
 
-<RowCard title="Good Sleep Pack">
+<img src="/Users/aliciayu/Main-2023/static/media/component_assets/prizes/sleep/good_sleep.svg" alt="Good Sleep Pack"/>
+
+<!--<RowCard title="Good Sleep Pack">
 	<svelte:fragment slot="row-1">
 		<ImageWrapper
 			src={'media/component_assets/prizes/sleep/Rectangle 5.png'}
 			alt="Weighted blanket"
-      bg_color="rgba(255, 144, 119, 0.13)"
+      bg_color="rgba(255, 144, 119, 0.1)"
 		/>
 		<ImageWrapper
 			src={'media/component_assets/prizes/sleep/Rectangle 2.png'}
-			alt="Weighted blanket"
+			alt="Deep sleep pillow spray"
       bg_color="rgb(45, 64, 97)"
 		/>
 		<ImageWrapper
@@ -42,4 +44,4 @@
 			</ul>
 		</div>
 	</svelte:fragment>
-</RowCard>
+</RowCard>-->
