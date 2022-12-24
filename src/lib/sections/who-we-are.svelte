@@ -89,6 +89,16 @@
 			prideflag: 'bi',
 			url: 'https://lh5.googleusercontent.com/ZLQxTK8APmS-3Y0qxdzruOsUX_TwHPuRkVDf37JrHgjSWPgvs8kfyFf8oeTXlyUYryQ=w2400',
 		},
+		{
+			name: 'Genevieve Chin',
+			pronouns: 'she/her',
+			url: 'https://lh5.googleusercontent.com/1Q2z44SdF1mhxbq4OyB3Ei4zuXp2ndkZ',
+		},
+		{
+			name: 'Vanessa Chen',
+			pronouns: 'she/her',
+			url: 'https://lh5.googleusercontent.com/1F8N_hHcZxBBN931YJwJNb0LMIYFuD1cj',
+		}
 	];
 
 	let rotate_normal = true;
@@ -117,7 +127,7 @@
    * User input values.
    */
 		--grid-layout-gap: 1.25rem;
-		--grid-column-count: 5;
+		--grid-column-count: 6;
 		--grid-item--min-width: 100px;
 
 		/**
