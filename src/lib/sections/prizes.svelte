@@ -28,11 +28,13 @@
 </script>
 
 <Content>
+	<h2>prizes</h2>
+	<h3>prizes by track</h3>
+	<h3 class='mt-[-18rem]'></h3>
 	{#if browser}
 		<svelte:component
       this={CarouselObject}
-    bind:this={carousel}
-    >
+    bind:this={carousel}>
 			<GoTouchGrass />
 			<OrganizedLife />
 			<LearnANewHobby />
@@ -44,6 +46,8 @@
 			<MakingMemories />
 		</svelte:component>
 	{/if}
+	<h3 class='mt-[-17rem]'></h3> 
+	
 
-	<button on:click={handleNextClick}>Next</button>
+<!--<button on:click={handleNextClick}>Next</button>-->
 </Content>
