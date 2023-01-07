@@ -25,10 +25,9 @@
 		>sponsorship package</a>.
 	</p>
 
+	<img style="width:20%" src="./media/component_assets/media/silver frog-02 2.png" alt="" />	
+	<h3>silver phroglet sponsors</h3>	
 	<SponsorshipRow>
-		<div class="aspect-square w-full">
-			<img src="./media/component_assets/media/silver frog-02 2.png" alt="Silver Tadpole Sponsors" />		
-		</div>
 		<div class="aspect-square w-full">
 			<img src="./media/sponsor_logos/northrop-grumman.png" alt="Northrop Grumman"/>
 		</div>
@@ -45,10 +44,9 @@
 			<img src="./media/sponsor_logos/crowdstrike.png" alt="Crowdstrike"/>
 		</div>
 	</SponsorshipRow>
+	<img style="width:20%" src="./media/component_assets/media/bronze tadpole-02 2.png" alt="" />		
+	<h3>bronze tadpole sponsors</h3>
 	<SponsorshipRow>
-		<div class="aspect-square w-full">
-			<img src="./media/component_assets/media/bronze tadpole-02 2.png" alt="Bronze Tadpole Sponsors" />		
-		</div>
 		<div class="aspect-square w-full">
 			<img src="./media/sponsor_logos/illumina.png" alt="Illumina"/>
 		</div>
@@ -68,7 +66,7 @@
 			<img src="./media/sponsor_logos/rivian.png" alt="Rivian"/>
 		</div>
 		<div class="aspect-square w-full">
-			<img src="./media/sponsor_logos/standout-stickers-logo-3F97EA25B3-seeklogo.com.png" alt="Standout Stickers"/>
+			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank"><img src="./media/sponsor_logos/standout-stickers-logo-3F97EA25B3-seeklogo.com.png" alt="Standout Stickers"/></a>
 		</div>
 	</SponsorshipRow>
 </Content>

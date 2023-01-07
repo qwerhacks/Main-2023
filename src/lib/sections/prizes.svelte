@@ -44,10 +44,20 @@
 	};
 </script>
 
+<style>
+	@media screen and (min-width: 480px) {
+		body {
+			background-color: lightgreen;
+		}
+	}
+
+
+
+</style>
+
 <Content>
 	<h2>prizes</h2>
 	<h3>prizes by track</h3>
-	<h3 class='mt-[-18rem]'></h3>
 	{#if browser}
 		<svelte:component
       this={CarouselObject}
@@ -65,8 +75,6 @@
 	{/if}<br>
 
 	<h3>prizes by category</h3>
-	<h3 class='mt-[-19rem]'></h3> 
-
 	{#if browser}
 		<svelte:component
       this={CarouselObject}
