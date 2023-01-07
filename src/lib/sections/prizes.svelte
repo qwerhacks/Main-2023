@@ -3,6 +3,7 @@
 	import { browser } from '$app/environment';
 	import Content from '$lib/components/general/content.svelte';
 	import { onMount } from 'svelte';
+
 	import GoodSleep from '$lib/components/prizes/good_sleep.svelte';
 	import OrganizedLife from '$lib/components/prizes/organized_life.svelte';
 	import SpaDayKit from '$lib/components/prizes/spa_day_kit.svelte';
@@ -12,6 +13,22 @@
 	import MakingMemories from '$lib/components/prizes/making_memories.svelte';
 	import WorkoutPack from '$lib/components/prizes/workout_pack.svelte';
 	import TravelMore from '$lib/components/prizes/travel_more.svelte';
+
+	import MostQwer from '$lib/components/prizes/categories/most_qwer.svelte';
+	import BestImpact from '$lib/components/prizes/categories/best_impact.svelte';
+	import BestMachineLearning from '$lib/components/prizes/categories/best_machine_learning.svelte';
+	import BestTechnical from '$lib/components/prizes/categories/best_technical.svelte';
+	import BestMobileApp from '$lib/components/prizes/categories/best_mobile_app.svelte';
+	import BestWebApp from '$lib/components/prizes/categories/best_web_app.svelte';
+	import MostInnovative from '$lib/components/prizes/categories/most_innovative.svelte';
+	import MostAccessible from '$lib/components/prizes/categories/most_accessible.svelte';
+	import MostLikelyToUnicorn from '$lib/components/prizes/categories/most_likely_to_unicorn.svelte';
+	import ComebackBaby from '$lib/components/prizes/categories/comeback_baby.svelte';
+	import BestIdea from '$lib/components/prizes/categories/best_idea.svelte';
+	import MostSlayfulUi from '$lib/components/prizes/categories/most_slayful_ui.svelte';
+	import BiggestFail from '$lib/components/prizes/categories/biggest_fail.svelte';
+	import BestUrl from '$lib/components/prizes/categories/best_url.svelte';
+	import MostBasic from '$lib/components/prizes/categories/most_basic.svelte';
 
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
@@ -45,8 +62,32 @@
 			<SpaDayKit />
 			<MakingMemories />
 		</svelte:component>
+	{/if}<br>
+
+	<h3>prizes by category</h3>
+	<h3 class='mt-[-19rem]'></h3> 
+
+	{#if browser}
+		<svelte:component
+      this={CarouselObject}
+    bind:this={carousel}>
+			<MostQwer />
+			<BestImpact />
+			<BestMachineLearning />
+			<BestTechnical />
+			<BestMobileApp />
+			<BestWebApp />
+			<MostInnovative />
+			<MostAccessible />
+			<MostLikelyToUnicorn />
+			<ComebackBaby />
+			<BestIdea />
+			<MostSlayfulUi />
+			<BiggestFail />
+			<BestUrl />
+			<MostBasic />
+		</svelte:component>
 	{/if}
-	<h3 class='mt-[-17rem]'></h3> 
 	
 
 <!--<button on:click={handleNextClick}>Next</button>-->
