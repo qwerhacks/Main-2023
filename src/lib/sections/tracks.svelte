@@ -59,9 +59,9 @@
 				style="--color: {color}"
 				class="flex aspect-square w-100 max-w-[80%] md:max-w-[25%] items-center justify-center rounded-xl bg-[color:var(--color)] p-2 box-border"
 			>
-				<!-- content here -->
 				<p class="m-2 text-center text-4xl font-bold">{title}</p>
 			</div>
 		{/each}
 	</div>
+	<p><a class="underline" href="https://medium.com/@qwerhacks/2023-track-specific-hacker-resources-eb29bc920c46">Have questions? Learn more about the tracks here!</a></p>
 </Content>
