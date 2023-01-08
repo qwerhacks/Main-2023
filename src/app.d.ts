@@ -33,7 +33,7 @@ declare module 'svelte-carousel' {
 	}
 
 	interface CarouselEvents {
-		pageChange: (event: PageChangeEvent) => void;
+		pageChange: PageChangeEvent;
 	}
 
 	interface CarouselSlots {

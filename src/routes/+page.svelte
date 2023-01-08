@@ -17,5 +17,5 @@
 <Sponsorships />
 
 <svelte:head>
-	<title>QWERHacks - Home</title>
+	<title>QWER Hacks - Home</title>
 </svelte:head>

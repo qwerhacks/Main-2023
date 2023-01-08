@@ -1,7 +1,10 @@
-<script lang="ts">
+<script lang="ts" defer>
 	import Content from '$lib/components/general/content.svelte';
-	import Person from '$lib/components/who_we_are/person.svelte';
-	import type { PersonDatum } from '$lib/components/who_we_are/person.svelte';
+
+	interface PersonDatum {
+		name: string;
+		url: string;
+	}
 
 	const peopleData: PersonDatum[] = [
 		{
@@ -109,14 +112,11 @@
 	}
 </script>
 
-<Content wide={true}>
-	<h2 class="relative">
-		who we are
-		<div class="absolute -right-20 -bottom-3 -rotate-12 md:hidden"><p>tap me!</p></div>
-	</h2>
-	<div class="grid-container px-10 w-full">
-		{#each peopleData as datum}
-			<Person {datum} />
+<Content>
+	<h2>who we are</h2>
+	<div class="grid grid-cols-5 gap-5">
+		{#each peopleData as { name, url } (name)}
+			<img class="profile" src={url} alt={name}/>
 		{/each}
 	</div>
 </Content>
@@ -143,5 +143,16 @@
 			minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
 		);
 		grid-gap: var(--grid-layout-gap);
+	}
+
+
+	.profile {
+		position: relative;
+		border-radius: 1000px;
+	}
+
+	.profile:hover {
+		box-shadow: 1px 1px 10px #545454;
+		opacity: 85%;
 	}
 </style>

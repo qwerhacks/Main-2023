@@ -21,7 +21,7 @@
 			question: 'who can come?',
 			answer: `Anyone who is 18 or older, a member (or ally) of the LGBTQIA+ community, and enrolled in a postsecondary academic institution is invited to participate! The event will be at UCLA in Los Angeles, so please keep travel in mind.`,
 			start_color: '#D5E8CC',
-			end_color: '#ACE0E6',
+			end_color: '#c4e9ed',
 		},
 		{
 			question: 'how will teams work?',
@@ -72,7 +72,7 @@ We'll also have more info up on workshpps, talks, and everything else in the mid
 				'Go <a href="https://tinyurl.com/QWERHacks23" class="underline">here</a> or click the apply button up above! Just fill out the Google form and you are good to go.',
 			start_color: '#FDDE97',
 			end_color: '#D5E8CC',
-		},
+		}
 	];
 
 </script>
