@@ -29,6 +29,7 @@
 	import BiggestFail from '$lib/components/prizes/categories/biggest_fail.svelte';
 	import BestUrl from '$lib/components/prizes/categories/best_url.svelte';
 	import MostBasic from '$lib/components/prizes/categories/most_basic.svelte';
+	import TrackPrizeElement from '$lib/components/prizes/prize_elements/track_prize_element.svelte';
 
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
@@ -44,37 +45,29 @@
 	};
 </script>
 
-<style>
-	@media screen and (min-width: 480px) {
-		body {
-			background-color: lightgreen;
-		}
-	}
-
-
-
-</style>
-
 <Content>
-	<h2>prizes</h2>
-	<h3>prizes by track</h3>
-	{#if browser}
-		<svelte:component
-      this={CarouselObject}
-    bind:this={carousel}>
-			<GoTouchGrass />
-			<OrganizedLife />
-			<LearnANewHobby />
-			<GoodSleep />
-			<ReadMore />
-			<WorkoutPack />
-			<TravelMore />
-			<SpaDayKit />
-			<MakingMemories />
-		</svelte:component>
-	{/if}<br>
+	<h2>track prizes</h2>
+	<p>If you project is one of the best in it's track, (click to expand!)</p>
 
-	<h3>prizes by category</h3>
+	<TrackPrizeElement track_title={"healthcare equity"}>
+		<GoTouchGrass />
+		<OrganizedLife />
+		<LearnANewHobby />
+	</TrackPrizeElement>
+
+	<TrackPrizeElement track_title={"food security"}>
+		<GoodSleep />
+		<ReadMore />
+		<WorkoutPack />
+	</TrackPrizeElement>
+
+	<TrackPrizeElement track_title={"housing access"}>
+		<TravelMore />
+		<SpaDayKit />
+		<MakingMemories />
+	</TrackPrizeElement>
+
+	<h2>special category prizes</h2>
 	{#if browser}
 		<svelte:component
       this={CarouselObject}

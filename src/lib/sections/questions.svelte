@@ -30,8 +30,24 @@
 			end_color: '#C1D3EC',
 		},
 		{
-			question: 'what can i create?\n',
+			question: 'what can i create?',
 			answer: `Absolutely anything you want — websites, apps, UI, you name it! We encourage you to create a product that positively impacts the LGBTQIA+ community or any other underrepresented group in tech.`,
+			start_color: '#C1D3EC',
+			end_color: '#DFC2F8',
+		},
+		{
+			question: 'what\'s with prizes?',
+			answer: `
+We are bored with your usual hackathon prizes, and so we've decided to shake things up for QWERHacks this year!
+<br>
+All too often, prizes end up being single large objects that you might already have or don't really need, like an extra monitor or an air fryer or something. Instead, we've made 3 packs of cool and related prizes, sourced from queer small buisnesses where possible, that you can win!
+<br>
+Furthermore, we know that your team might weight the packs differently, so we're giving winning teams their choice of the 3 packs in the tracks they won! The first place team gets to pick which pack they want, then the second place team gets to pick from the remaining two, and so on.
+<br>
+Finally, each team member will get all listed items, but your team needs to agree on one pack that you'll all get. If you can't agree, we'll pick for you!
+<br>
+Don't worry if this seems a bit complicated, we'll be around to explain it more at the event.
+			`,
 			start_color: '#C1D3EC',
 			end_color: '#DFC2F8',
 		},
