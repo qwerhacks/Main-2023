@@ -6,11 +6,11 @@
 
 <div class="relative w-full overflow-hidden overscroll-contain">
 	<!-- Background -->
-	<!--<div class="absolute z-0 h-full w-full">
+	<!-- <div class="absolute z-0 h-full w-full">
 		<span class="absolute left-10 bottom-0 inline-block">
 			<img class="w-8/12" src="./media/component_assets/media/BottomLeft.svg" alt="" />
 		</span>
-	</div>-->
+	</div> -->
 
 	<!-- Foreground -->
 	<div class="z-10 mx-auto flex w-full flex-col items-center gap-5 text-2xl">

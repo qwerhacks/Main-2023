@@ -38,7 +38,7 @@
 	<!--	body-->
 	{#if open}
 		<div
-			class="p-3 pl-4 rounded-xl"
+			class="popout p-3 pl-4 rounded-xl"
 			id={`popuot-${clean_question}`}
 			role="region"
 			aria-labelledby={`button-${clean_question}`}
@@ -49,7 +49,7 @@
 </div>
 
 <style>
-	#popout {
+	.popout {
 		background-image: linear-gradient(to bottom, var(--start-color), var(--end_color));
 	}
 </style>

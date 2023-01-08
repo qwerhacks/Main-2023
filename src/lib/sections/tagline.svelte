@@ -18,7 +18,7 @@
 	</div>
 	<p class="bg-white/1 backdrop-blur-[20px] p-3 rounded-lg text-center text-2xl z-10 max-w-prose">
 		As UCLA's only LGBTQIA+ hackathon, QWER Hacks is an opportunity for all the girls, gays, theys
-		and allies to showcase their passion for a better and more equal world. 
+		and allies to showcase their passion for a better and more equitable world. 
 		<br />
 		<br />
 		Trust me, you don't wanna miss it!
