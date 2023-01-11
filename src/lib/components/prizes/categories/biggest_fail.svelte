@@ -1,5 +1,10 @@
 <script lang="ts">
+	import BiggestFail from './biggest_fail.svelte'
 	import SvgCard from '$lib/components/prizes/card_templates/svg_card.svelte';
 </script>
 
-<SvgCard src="./media/component_assets/prizes/categories/biggest_fail.svg" alt="Biggest Fail" />
+<SvgCard
+	src="./media/component_assets/prizes/categories/biggest_fail.svg"
+	alt="Biggest Fail"
+	this_component={BiggestFail}
+/>

@@ -30,6 +30,7 @@
 	import BestUrl from '$lib/components/prizes/categories/best_url.svelte';
 	import MostBasic from '$lib/components/prizes/categories/most_basic.svelte';
 	import TrackPrizeElement from '$lib/components/prizes/prize_elements/track_prize_element.svelte';
+	import CategoryPrizeElement from '$lib/components/prizes/prize_elements/category_prize_element.svelte';
 
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
@@ -47,7 +48,7 @@
 
 <Content>
 	<h2>track prizes</h2>
-	<p>If you project is one of the best in it's track, (click to expand!)</p>
+	<p>If you project is one of the best in it's track, you could earn one of these packs! (click to expand)</p>
 
 	<TrackPrizeElement track_title={"healthcare equity"}>
 		<GoTouchGrass />
@@ -68,7 +69,25 @@
 	</TrackPrizeElement>
 
 	<h2>special category prizes</h2>
-	{#if browser}
+	<CategoryPrizeElement>
+		<MostQwer />
+		<BestImpact />
+		<BestMachineLearning />
+		<BestTechnical />
+		<BestMobileApp />
+		<BestWebApp />
+		<MostInnovative />
+		<MostAccessible />
+		<MostLikelyToUnicorn />
+		<ComebackBaby />
+		<BestIdea />
+		<MostSlayfulUi />
+		<BiggestFail />
+		<BestUrl />
+		<MostBasic />
+	</CategoryPrizeElement>
+
+	<!--{#if browser}
 		<svelte:component
       this={CarouselObject}
     bind:this={carousel}>
@@ -88,7 +107,7 @@
 			<BestUrl />
 			<MostBasic />
 		</svelte:component>
-	{/if}
+	{/if}-->
 	
 
 <!--<button on:click={handleNextClick}>Next</button>-->
