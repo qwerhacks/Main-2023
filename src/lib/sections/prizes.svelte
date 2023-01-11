@@ -29,6 +29,8 @@
 	import BiggestFail from '$lib/components/prizes/categories/biggest_fail.svelte';
 	import BestUrl from '$lib/components/prizes/categories/best_url.svelte';
 	import MostBasic from '$lib/components/prizes/categories/most_basic.svelte';
+	import TrackPrizeElement from '$lib/components/prizes/prize_elements/track_prize_element.svelte';
+	import CategoryPrizeElement from '$lib/components/prizes/prize_elements/category_prize_element.svelte';
 
 	let carousel: Carousel; // for calling methods of the carousel instance
   let CarouselObject: ConstructorOfATypedSvelteComponent; // for calling methods of the carousel instance
@@ -44,38 +46,48 @@
 	};
 </script>
 
-<style>
-	@media screen and (min-width: 480px) {
-		body {
-			background-color: lightgreen;
-		}
-	}
-
-
-
-</style>
-
 <Content>
-	<h2>Info on our great prizes coming soon!</h2>
+	<h2>track prizes</h2>
+	<p>If you project is one of the best in it's track, you could win one of these packs! (click to expand)</p>
 
-	<!-- {#if browser}
-		<svelte:component
-      this={CarouselObject}
-    bind:this={carousel}>
-			<GoTouchGrass />
-			<OrganizedLife />
-			<LearnANewHobby />
-			<GoodSleep />
-			<ReadMore />
-			<WorkoutPack />
-			<TravelMore />
-			<SpaDayKit />
-			<MakingMemories />
-		</svelte:component>
-	{/if}<br>
+	<TrackPrizeElement track_title={"healthcare equity"}>
+		<GoTouchGrass />
+		<OrganizedLife />
+		<LearnANewHobby />
+	</TrackPrizeElement>
 
-	<h3>prizes by category</h3>
-	{#if browser}
+	<TrackPrizeElement track_title={"food security"}>
+		<GoodSleep />
+		<ReadMore />
+		<WorkoutPack />
+	</TrackPrizeElement>
+
+	<TrackPrizeElement track_title={"housing access"}>
+		<TravelMore />
+		<SpaDayKit />
+		<MakingMemories />
+	</TrackPrizeElement>
+
+	<h2>special category prizes</h2>
+	<CategoryPrizeElement>
+		<MostQwer />
+		<BestImpact />
+		<BestMachineLearning />
+		<BestTechnical />
+		<BestMobileApp />
+		<BestWebApp />
+		<MostInnovative />
+		<MostAccessible />
+		<MostLikelyToUnicorn />
+		<ComebackBaby />
+		<BestIdea />
+		<MostSlayfulUi />
+		<BiggestFail />
+		<BestUrl />
+		<MostBasic />
+	</CategoryPrizeElement>
+
+	<!--{#if browser}
 		<svelte:component
       this={CarouselObject}
     bind:this={carousel}>

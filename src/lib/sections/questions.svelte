@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
 	import Content from '$lib/components/general/content.svelte';
 	import QuestionCard from '$lib/components/questions/QuestionCard.svelte';
 
@@ -36,7 +36,7 @@
 			end_color: '#DFC2F8',
 		},
 		{
-			question: 'what\'s the schedule like?',
+			question: "what's the schedule like?",
 			answer: `
 We have a ton planned, you're going to love it! <br>
 <span class="emphasis">On Saturday:</span>
@@ -53,7 +53,22 @@ We have a ton planned, you're going to love it! <br>
 	<li>JUDGING 11-1PM</li>
 	<li>CLOSING + PRIZES 1PM-2PM</li>
 </ul>
-We'll also have more info up on workshops, talks, and everything else in the middle soon. Stay tuned and apply to get updates!
+We'll also have more info up on workshops, talks, and everything else in the middle soon. Stay tuned and apply to get updates!`,
+			start_color: '#C1D3EC',
+			end_color: '#DFC2F8',
+		},
+		{
+			question: "what's with prizes?",
+			answer: `
+We are bored with your usual hackathon prizes, and so we've decided to shake things up for QWERHacks this year!
+<br>
+All too often, prizes end up being single large objects that you might already have or don't really need, like an extra monitor or an air fryer or something. Instead, we've made 3 packs of cool and related prizes, sourced from queer small buisnesses where possible, that you can win!
+<br>
+Furthermore, we know that your team might weight the packs differently, so we're giving winning teams their choice of the 3 packs in the tracks they won! The first place team gets to pick which pack they want, then the second place team gets to pick from the remaining two, and so on.
+<br>
+Finally, each team member will get all listed items, but your team needs to agree on one pack that you'll all get. If you can't agree, we'll pick for you!
+<br>
+Don't worry if this seems a bit complicated, we'll be around to explain it more at the event.
 			`,
 			start_color: '#C1D3EC',
 			end_color: '#DFC2F8',
@@ -76,14 +91,13 @@ We'll also have more info up on workshops, talks, and everything else in the mid
 				'Go <a href="https://tinyurl.com/QWERHacks23" class="underline">here</a> or click the apply button up above! Just fill out the Google form and you are good to go.',
 			start_color: '#FDDE97',
 			end_color: '#D5E8CC',
-		}
+		},
 	];
-
 </script>
 
 <Content>
 	<h2>questions?</h2>
-	<h3 class='mt-[-1rem]'>we've got answers!</h3>
+	<h3 class="mt-[-1rem]">we've got answers!</h3>
 
 	{#each questions as { question, answer, start_color, end_color } (question)}
 		<QuestionCard {question} {answer} {start_color} {end_color} />
