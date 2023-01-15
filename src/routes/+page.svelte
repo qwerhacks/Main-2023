@@ -7,15 +7,18 @@
 	import Tagline from '$lib/sections/tagline.svelte';
 	import Tracks from '$lib/sections/tracks.svelte';
 	import Volunteer from '$lib/sections/volunteer.svelte';
+    import Schedule from '$lib/sections/schedule.svelte';
 </script>
 
 <Hero />
+<Schedule />
 <Tagline />
 <Resources show_links={false} />
 <Prizes />
 <Questions />
 <Volunteer />
 <Sponsorships />
+
 
 <svelte:head>
 	<title>QWER Hacks - Home</title>

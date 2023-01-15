@@ -31,5 +31,9 @@
 		"typescript": "^4.9.4",
 		"vite": "^4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"sass": "^1.57.1",
+		"sass-loader": "^13.2.0"
+	}
 }
