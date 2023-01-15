@@ -68,5 +68,8 @@
 		<div class="aspect-square w-full">
 			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank"><img src="./media/sponsor_logos/standout-stickers-logo-3F97EA25B3-seeklogo.com.png" alt="Standout Stickers"/></a>
 		</div>
+		<div class="aspect-square w-full">
+			<a href="https://www.echo3d.com/product" target="_blank"><img src="./media/sponsor_logos/echo3d.png" alt="Echo3D"/></a>
+		</div>
 	</SponsorshipRow>
 </Content>
