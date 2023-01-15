@@ -16,7 +16,7 @@
 		[
 			'housing access 🏘️',
 			'#f2d1e4',
-			'While homeownership in the U.S. is currently around 65%, LGBTQIA homeowner rates are lower, at about 49%. How can tech benefit stakeholders like existing organizations, i.e. homeless shelters, community service organizations, to build upon their existing infrastructure of support?',
+			'While homeownership in the U.S. is currently around 65%, LGBTQIA homeowner rates are lower, at about 49%. How can tech benefit stakeholders like existing organizations (i.e. homeless shelters and community service organizations) build upon their existing infrastructure of support?',
 		],
 		[
 			'healthcare equity ❤️‍🩹',
