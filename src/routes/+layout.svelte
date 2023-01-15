@@ -11,7 +11,7 @@
 		<Header />
 		<a
 			id="mlh-trust-badge"
-			class="block max-w-[100px] min-w-[60px] fixed right-[40px] top-[62px] md:top-0 w-[10%] z-30"
+			class="block max-w-[100px] min-w-[60px] fixed right-[40px] top-[62px] md:top-0 w-[10%] z-[201]"
 			href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=yellow"
 			target="_blank"
 			rel="noopener noreferrer"

@@ -153,15 +153,115 @@
             minute_start: 0,
             length_minutes: 60,
             display_width: 2,
-            display_column: 1,
+            display_column: 0,
             color: 'green',
+        },
+        {
+            title: 'Careers in Game Dev',
+            hour_start: 8,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 2,
+            display_column: 1,
+            color: 'coral',
+        },
+        {
+            title: 'Impostor Syndrome',
+            hour_start: 9,
+            minute_start: 0,
+            length_minutes: 30,
+            display_width: 2,
+            display_column: 0,
+            color: 'blue',
+        },
+        {
+            title: 'Thinking Traps and Beyond',
+            hour_start: 9,
+            minute_start: 30,
+            length_minutes: 30,
+            display_width: 2,
+            display_column: 0,
+            color: 'yellow',
+        },
+        {
+            title: 'CTF',
+            hour_start: 10,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 3,
+            display_column: 0,
+            color: 'coral',
+        },
+        {
+            title: 'Dinner',
+            hour_start: 11,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 3,
+            display_column: 0,
+            color: 'green',
+        },
+        {
+            title: 'Intro to Deep Learning',
+            hour_start: 12,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 2,
+            display_column: 1,
+            color: 'yellow',
+        },
+        {
+            title: 'Identity Specific Workshop 1',
+            hour_start: 13,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 2,
+            display_column: 0,
+            color: 'coral',
+        },
+        // {
+        //     title: '??',
+        //     hour_start: 14,
+        //     minute_start: 0,
+        //     length_minutes: 60,
+        //     display_width: 2,
+        //     display_column: 0,
+        //     color: 'coral',
+        // },
+        {
+            title: 'Snacks',
+            hour_start: 15,
+            minute_start: 0,
+            length_minutes: 60,
+            display_width: 3,
+            display_column: 0,
+            color: 'green',
+        },
+        {
+            title: 'Tie Dye',
+            hour_start: 15,
+            minute_start: 0,
+            length_minutes: 120,
+            display_width: 1,
+            display_column: 2,
+            color: 'yellow',
+        },
+        {
+            title: 'Movie',
+            hour_start: 15,
+            minute_start: 0,
+            length_minutes: 180,
+            display_width: 1,
+            display_column: 1,
+            color: 'coral',
         },
     ]
 
     const hours = [ {index: 0, string: '8am'}, {index: 1, string: '9am'}, {index: 2, string: '10am'}, {index: 3, string: '11am'}, 
                     {index: 4, string: '12pm'}, {index: 5, string: '1pm'}, {index: 6, string: '2pm'}, {index: 7, string: '3pm'},
                     {index: 8, string: '4pm'}, {index: 9, string: '5pm'}, {index: 10, string: '6pm'}, {index: 11, string: '7pm'},
-                    {index: 12, string: '8pm'}, {index: 13, string: '9pm'}, {index: 14, string: '10pm'}, {index: 15, string: '11pm'},];
+                    {index: 12, string: '8pm'}, {index: 13, string: '9pm'}, {index: 14, string: '10pm'}, {index: 15, string: '11pm'},
+                    {index: 16, string: '12am'}, {index: 17, string: '1am'}, {index: 18, string: '2am'}, {index: 19, string: '3am'},];
 
     let eventIsHovered = false;
 
@@ -178,7 +278,10 @@
             {/each}
         <div class='events'>
             {#each events as event}
-                <div on:mouseover={() => {eventIsHovered = true;}} on:mouseout={() => {eventIsHovered = false;}} class='event h{((event.hour_start * 6) + (Math.floor(event.minute_start / 10)))} {event.color} w{event.display_width} l{Math.ceil(event.length_minutes / 10)} c{event.display_column} {eventIsHovered ? ' hovered' : ''}'>{event.title}</div>
+                <div on:mouseover={() => {eventIsHovered = true;}} on:mouseout={() => {eventIsHovered = false;}} class='event h{((event.hour_start * 6) + (Math.floor(event.minute_start / 10)))} {event.color} w{event.display_width} l{Math.ceil(event.length_minutes / 10)} c{event.display_column} {eventIsHovered ? ' hovered' : ''}'>
+                    {event.title}
+                    <!-- <span class='inner'> &nbsp;({event.length_minutes})</span> -->
+                </div>
             {/each}
         </div>
     </div>
@@ -189,8 +292,8 @@
     // schedule spacing variables
         $hour-scale: 150px;
         $inset-margin: 2px;         // how much the box should be squished inwards
-        $outline-width: 3px;          // width of background-colored border
-        $shorten-margin: 10px;       // how much should be taken off the end (a la google calendar)
+        $outline-width: 3px;        // width of background-colored border
+        $shorten-margin: 5px;       // how much should be taken off the bottom (a la google calendar)
 
         $bg: #fff9f5;
 
@@ -210,12 +313,12 @@
         }
         .content {
             width: 65%;
-            min-width: 200px;
             height: 100%;
-            padding-top: 2rem;
+            margin-top: 2rem;
             overflow-y: scroll;
             display: grid;
             grid-template-columns: 1fr;
+
 
             .events {
                 position: relative;
@@ -318,9 +421,15 @@
                 opacity: 0.9;
                 &:hover {
                     opacity: 1 !important;
+                    .inner {
+                        visibility: visible;
+                    }
                 }
                 &.hovered {
                     opacity: 0.5;
+                }
+                .inner {
+                    visibility: hidden;
                 }
             }
             @for $tensofminutes from 0 through 144 {
@@ -346,11 +455,23 @@
                     // }
                 }
             }
-            @for $tenminuteslength from 1 through 12 {
+            @for $tenminuteslength from 1 through 18 {
                 .event[class*="h"].l#{$tenminuteslength} { 
                     height: ($tenminuteslength * $hour-scale * (1/6)) - $shorten-margin - $inset-margin;// - 4px;
                 }
             }
         }
     }
+
+    @media screen and (max-width: 600px) {
+        
+        .schedule-container {
+            padding: 0;
+            width: 100%;
+        }
+        .content {
+            width: 90% !important;
+        }
+    }
+
 </style>
