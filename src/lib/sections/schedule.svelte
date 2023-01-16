@@ -265,6 +265,16 @@
 
     let eventIsHovered = false;
 
+    function updateTrackerTime() {
+        //let startDate = new Date('January 27, 2023 08:00 GMT-08');        // Use this time in prod build
+        let startDate = new Date('January 15, 2023 08:00 GMT-08');
+        let currentDateTime = Date.now()
+        let timeSinceStartHours = currentDateTime - (startDate.getTime());
+        timeSinceStartHours /= (1000 * 60 * 60)
+        return timeSinceStartHours;
+    }
+    
+
 </script>
 
 <div class='schedule-container'>
@@ -284,6 +294,9 @@
                 </div>
             {/each}
         </div>
+        <div class='tracker h{Math.floor(updateTrackerTime() * 6)} {updateTrackerTime() < 0 ? ' hidden' : ''}'>
+            <div class='circle'></div>
+        </div>
     </div>
 </div>
 
@@ -296,6 +309,7 @@
         $shorten-margin: 5px;       // how much should be taken off the bottom (a la google calendar)
 
         $bg: #fff9f5;
+        $bg-dark: hsl(24, 3%, 69%);
 
     .schedule-container {
         padding: 3.5rem;
@@ -306,9 +320,6 @@
         flex-direction: column;
         align-items: center;
         .header h2 {
-            // font-family: 'Nighty DEMO', serif;
-            // font-weight: 400;
-            // font-size: 6rem;   //
             margin-block-start: 0;
         }
         .content {
@@ -327,11 +338,6 @@
                 left: 10%;
                 display: grid;
                 grid-template-columns: 1fr;
-                // &:hover {
-                //     .event:not(:hover) {
-                //         opacity: 0.6;
-                //     }
-                // }
             }
 
             div {
@@ -351,11 +357,37 @@
                 span {
                     outline: solid $bg 8px;
                     outline-offset: 0px;
+                    border-radius: 10px;
                     background: $bg;
                     position: relative;
                     top: -1rem;
+                    left: 1rem;
                 }
             }
+
+            .tracker {
+                background: #F15F7255;
+                border-bottom: solid 4px #F15F72;
+                height: 500vh;
+                min-width: 100%;
+                position: relative;
+                //mix-blend-mode: multiply;
+                z-index: 150;
+                backdrop-filter: saturate(0);
+                &[class*="hidden"] {
+                    display: none;
+                }
+                .circle {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 1.5rem;
+                    background: #F15F72;
+                    position: relative;
+                    top: calc(500vh - 0.75rem);
+                    left: -0.75rem;
+                }
+            }
+
             .event {
                 position: relative;
                 display: flex;
@@ -461,6 +493,9 @@
                     // &::before {
                     //     content: $hr;
                     // }
+                }
+                .tracker.h#{$tensofminutes} {
+                    top: calc(( $tensofminutes * $hour-scale * (1/6) ) - 500vh + 2px);
                 }
             }
             @for $tenminuteslength from 1 through 18 {
