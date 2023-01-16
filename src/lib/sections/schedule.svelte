@@ -273,7 +273,7 @@
     </div>
     <div class='content'>
             {#each hours as hour}
-                <div class="spacer h{hour.index * 6}">{hour.string}</div>
+                <div class="spacer h{hour.index * 6}"><span>{hour.string}</span></div>
                 <div class="spacer h{hour.index * 6} half"></div>
             {/each}
         <div class='events'>
@@ -314,7 +314,8 @@
         .content {
             width: 65%;
             height: 100%;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
             overflow-y: scroll;
             display: grid;
             grid-template-columns: 1fr;
@@ -346,6 +347,13 @@
                 font-size: smaller;
                 &.half {
                     border-top: solid 1px rgb(199, 199, 199);
+                }
+                span {
+                    outline: solid $bg 8px;
+                    outline-offset: 0px;
+                    background: $bg;
+                    position: relative;
+                    top: -1rem;
                 }
             }
             .event {
