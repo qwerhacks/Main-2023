@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/read/reading_pack.svg"
+	src="./media/component_assets/prizes/read/reading_pack.png"
 	alt="Read All About It"
 	this_component={ReadMore}
 />

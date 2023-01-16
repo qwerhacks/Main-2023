@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/travel/travel_more.svg"
+	src="./media/component_assets/prizes/travel/travel_more.png"
 	alt="Travel More"
 	this_component={TravelMore}
 />

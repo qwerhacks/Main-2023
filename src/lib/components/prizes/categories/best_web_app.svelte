@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_web_app.svg"
+	src="./media/component_assets/prizes/categories/best_web_app.png"
 	alt="Best Web App"
 	this_component={BestWebApp}
 />

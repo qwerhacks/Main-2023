@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_url.svg"
+	src="./media/component_assets/prizes/categories/best_url.png"
 	alt="Best Url"
 	this_component={BestUrl}
 />

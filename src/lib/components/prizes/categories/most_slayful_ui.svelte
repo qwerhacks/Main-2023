@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/most_slayful_ui.svg"
+	src="./media/component_assets/prizes/categories/most_slayful_ui.png"
 	alt="Most Slayful UI"
 	this_component={MostSlayfulUi}
 />

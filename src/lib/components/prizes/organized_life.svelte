@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/organized_life/organized_life.svg"
+	src="./media/component_assets/prizes/organized_life/organized_life.png"
 	alt="Spark Joy"
 	this_component={OrganizedLife}
 />

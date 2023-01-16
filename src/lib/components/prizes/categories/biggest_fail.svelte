@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/biggest_fail.svg"
+	src="./media/component_assets/prizes/categories/biggest_fail.png"
 	alt="Biggest Fail"
 	this_component={BiggestFail}
 />

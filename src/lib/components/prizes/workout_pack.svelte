@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/workout/workout_pack.svg"
+	src="./media/component_assets/prizes/workout/workout_pack.png"
 	alt="Meet Me at the Gym"
 	this_component={WorkoutPack}
 />

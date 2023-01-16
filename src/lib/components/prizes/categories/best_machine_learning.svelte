@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_machine_learning.svg"
+	src="./media/component_assets/prizes/categories/best_machine_learning.png"
 	alt="Best Machine Learning"
 	this_component={BestMachineLearning}
 />

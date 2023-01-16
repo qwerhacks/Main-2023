@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/most_qwer.svg"
+	src="./media/component_assets/prizes/categories/most_qwer.png"
 	alt="Most Qwer"
 	this_component={MostQwer}
 />

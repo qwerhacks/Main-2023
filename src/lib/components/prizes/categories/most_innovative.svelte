@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/most_innovative.svg"
+	src="./media/component_assets/prizes/categories/most_innovative.png"
 	alt="Most Innovative"
 	this_component={MostInnovative}
 />
