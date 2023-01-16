@@ -264,24 +264,32 @@
                     {index: 16, string: '12am'}, {index: 17, string: '1am'}, {index: 18, string: '2am'}, {index: 19, string: '3am'},];
 
     let eventIsHovered = false;
-
+    let trackerTime = 0;
     function updateTrackerTime() {
-        //let startDate = new Date('January 27, 2023 08:00 GMT-08');        // Use this time in prod build
-        let startDate = new Date('January 15, 2023 08:00 GMT-08');
+        //let startDate = new Date('January 27, 2023 08:00 GMT-08');        // Use this time in prod
+        let startDate = new Date(`January ${new Date().getDate()}, 2023 08:00 GMT-08`);
         let currentDateTime = Date.now()
         let timeSinceStartHours = currentDateTime - (startDate.getTime());
-        timeSinceStartHours /= (1000 * 60 * 60)
-        return timeSinceStartHours;
+            timeSinceStartHours /= (1000 * 60 * 60)     // milliseconds per hour
+        let timeSinceStartTenMinutes = Math.floor(timeSinceStartHours * 6)
+
+        // jump to current time on pageload
+        let content = document.querySelector('#schedule-content');
+        if (content) {
+            console.log(content);
+            content.scroll({top: ( timeSinceStartTenMinutes * (150) * (1/6) ) - 100, behavior: 'smooth'})
+        }
+        trackerTime = timeSinceStartTenMinutes;
+        return null;
     }
     
 
 </script>
-
-<div class='schedule-container'>
+<div class='schedule-container' on:loadstart={updateTrackerTime()}>
     <div class='header'>
         <h2>day of events</h2>
     </div>
-    <div class='content'>
+    <div class='content' id='schedule-content'>
             {#each hours as hour}
                 <div class="spacer h{hour.index * 6}"><span>{hour.string}</span></div>
                 <div class="spacer h{hour.index * 6} half"></div>
@@ -294,7 +302,7 @@
                 </div>
             {/each}
         </div>
-        <div class='tracker h{Math.floor(updateTrackerTime() * 6)} {updateTrackerTime() < 0 ? ' hidden' : ''}'>
+        <div class='tracker h{trackerTime} {trackerTime < 0 ? ' hidden' : ''}'>
             <div class='circle'></div>
         </div>
     </div>
@@ -323,6 +331,7 @@
             margin-block-start: 0;
         }
         .content {
+            outline: solid 1px black;
             width: 65%;
             height: 100%;
             margin-top: 1.5rem;
