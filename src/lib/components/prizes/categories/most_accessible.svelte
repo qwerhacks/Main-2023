@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/most_accessible.svg"
+	src="./media/component_assets/prizes/categories/most_accessible.png"
 	alt="Most Accessible"
 	this_component={MostAccessible}
 />

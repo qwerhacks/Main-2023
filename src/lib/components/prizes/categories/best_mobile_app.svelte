@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_mobile_app.svg"
+	src="./media/component_assets/prizes/categories/best_mobile_app.png"
 	alt="Best Mobile App"
 	this_component={BestMobileApp}
 />

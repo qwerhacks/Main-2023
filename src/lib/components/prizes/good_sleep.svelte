@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/sleep/good_sleep.svg"
+	src="./media/component_assets/prizes/sleep/good_sleep.png"
 	alt="Good Sleep Pack"
 	this_component={GoodSleep}
 />

@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_technical.svg"
+	src="./media/component_assets/prizes/categories/best_technical.png"
 	alt="Best Technical"
 	this_component={BestTechnical}
 />

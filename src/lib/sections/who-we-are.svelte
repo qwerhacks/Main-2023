@@ -40,7 +40,7 @@
 			pronouns: 'she/her',
 			url: 'https://lh4.googleusercontent.com/6wAbyt0O-sIAkbrQ6CvSWUa3YLEm0h8EZ8dSNc5DF3TkPFfMMrxK2SZgdtYLPGLFn1s=w2400',
 		},
-		{
+		{ 
 			name: 'Tara Char',
 			url: 'https://lh3.googleusercontent.com/cUH6paGvVDH-bWNAsB8YJd2ZTD_rDGjc9VxYoA99Gl9bobnJsjdpYogRYkpZn4JvZps=w2400',
 			pronouns: 'she/her',

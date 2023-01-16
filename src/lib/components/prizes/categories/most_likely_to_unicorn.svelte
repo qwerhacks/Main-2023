@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/most_likely_to_unicorn.svg"
+	src="./media/component_assets/prizes/categories/most_likely_to_unicorn.png"
 	alt="Most Likely to Unicorn"
 	this_component={MostLikelyToUnicorn}
 />

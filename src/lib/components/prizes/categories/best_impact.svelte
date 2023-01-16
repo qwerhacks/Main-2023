@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/best_impact.svg"
+	src="./media/component_assets/prizes/categories/best_impact.png"
 	alt="Best Impact"
 	this_component={BestImpact}
 />

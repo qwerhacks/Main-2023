@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/categories/comeback_baby.svg"
+	src="./media/component_assets/prizes/categories/comeback_baby.png"
 	alt="Comeback Baby"
 	this_component={ComebackBaby}
 />

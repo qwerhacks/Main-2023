@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/touch_grass/go_touch_grass.svg"
+	src="./media/component_assets/prizes/touch_grass/go_touch_grass.png"
 	alt="Go Touch Grass"
 	this_component={GoTouchGrass}
 />

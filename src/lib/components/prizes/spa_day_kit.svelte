@@ -4,7 +4,7 @@
 </script>
 
 <SvgCard
-	src="./media/component_assets/prizes/spa/spa_pack.svg"
+	src="./media/component_assets/prizes/spa/spa_pack.png"
 	alt="Refresh Day"
 	this_component={SpaDayKit}
 />
