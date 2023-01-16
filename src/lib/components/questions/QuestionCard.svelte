@@ -36,17 +36,16 @@
 		</div>
 	</button>
 	<!--	body-->
-	{#if open}
 		<div
 			class="p-3 pl-4 rounded-xl popout"
 			id={`popuot-${clean_question}`}
 			role="region"
 			aria-labelledby={`button-${clean_question}`}
+			class:hidden={!open}
 		>
 			<p>{@html answer}</p>
 		</div>
-	{/if}
-</div>
+	</div>
 
 <style>
 	.popout {
