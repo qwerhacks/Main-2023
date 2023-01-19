@@ -1,6 +1,6 @@
 <div class="m-10">
     <h3>suggested links</h3>
-    <ul>
+    <ul class="list-disc list-outside">
         <li><a href="https://www.publicservicedegrees.org/public-assistance/food-security-hunger-help/"
             target="_blank" rel="noreferrer">
                 <p class="underline">More Information</p>
