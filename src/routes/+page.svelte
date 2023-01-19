@@ -2,6 +2,7 @@
 	import Hero from '$lib/sections/hero.svelte';
 	import Prizes from '$lib/sections/prizes.svelte';
 	import Questions from '$lib/sections/questions.svelte';
+	import Resources from '$lib/sections/resources.svelte';
 	import Sponsorships from '$lib/sections/sponsorships.svelte';
 	import Tagline from '$lib/sections/tagline.svelte';
 	import Tracks from '$lib/sections/tracks.svelte';
@@ -10,7 +11,7 @@
 
 <Hero />
 <Tagline />
-<Tracks />
+<Resources show_links={false} />
 <Prizes />
 <Questions />
 <Volunteer />

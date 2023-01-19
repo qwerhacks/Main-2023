@@ -31,14 +31,8 @@
 </script>
 
 <Content>
-	<h2>track prizes</h2>
-	<p>If you project is one of the best in it's track, you could win one of these packs! (click to expand)</p>
-
-	<TrackPrizeElement track_title={"healthcare equity"}>
-		<GoTouchGrass />
-		<OrganizedLife />
-		<LearnANewHobby />
-	</TrackPrizeElement>
+	<h2 class="text-center">track prizes</h2>
+	<p class="text-center">If you project is one of the best in it's track, you could win one of these packs! (click to expand)</p>
 
 	<TrackPrizeElement track_title={"food security"}>
 		<GoodSleep />
@@ -51,8 +45,14 @@
 		<SpaDayKit />
 		<MakingMemories />
 	</TrackPrizeElement>
+	
+	<TrackPrizeElement track_title={"healthcare equity"}>
+		<GoTouchGrass />
+		<OrganizedLife />
+		<LearnANewHobby />
+	</TrackPrizeElement>
 
-	<h2>special category prizes</h2>
+	<h2 class="text-center">special category prizes</h2>
 	<CategoryPrizeElement>
 		<MostQwer />
 		<BestImpact />
