@@ -26,50 +26,38 @@
 	];
 </script>
 
-<!--<Content>
-	<h2>resources</h2>
-
-	<h3>Hacker Support</h3>
-	<div class="h-96 bg-gray-500" />
-
-	<h3>LGBTQIA+ reading ></h3>
-	<div class="h-96 bg-gray-500" />
-
-	<h3>project gallery (?)</h3>
-	<div class="h-96 bg-gray-500" />
-</Content>-->
-
 <TrackResourceLayout>
-	<h1 class="max-w-[80%] z-10 bg-gradient-to-r from-[hsl(194,39%,70%)] via-[hsl(272,79%,73%)] to-[hsl(327,53%,70%)] bg-clip-text text-5xl
-	sm:text-5xl text-transparent text-center w-min md:w-auto">
-			2023 track-specific hacker resources
-	</h1>
-
-	<a class="rounded-md bg-button px-10 py-4 hover:bg-button-active active:bg-button-active outline outline-2 outline-button-border"
-	href="https://medium.com/@qwerhacks/2023-track-specific-hacker-resources-eb29bc920c46" target="_blank" rel="noreferrer">
-		<p>click here for more information!</p>
-	</a>
-
+	<h2
+		class="text-center"
+	>
+		2023 track-specific hacker resources
+	</h2>
 	<div class="z-10 flex flex-col gap-4 md:flex-row justify-center items-stretch">
 		{#each resources as [title, color, description] (title)}
 			<div
 				style="--color: {color}"
 				class="flex-row flex-wrap md:max-w-[33%] max-w-[100%] items-center justify-center rounded-xl bg-[color:var(--color)] p-2 box-border"
 			>
-				<br><p class="m-2 text-center text-4xl font-bold">{title}</p>
-				<p class="m-10">{description}</p>
+				<br />
+				<p class="m-2 text-center text-4xl font-bold">{title}</p>
+				<p class="m-8">{description}</p>
 
-				{#if (title=='food security 🥕')}
+				{#if title == 'food security 🥕'}
 					<FoodSecurity />
-				{:else if (title=='housing access 🏘️')}
+				{:else if title == 'housing access 🏘️'}
 					<HousingAccess />
-				{:else if (title=='healthcare equity ❤️‍🩹')}
+				{:else if title == 'healthcare equity ❤️‍🩹'}
 					<HealthcareEquity />
 				{/if}
 			</div>
 		{/each}
 	</div>
+	<a
+		class="rounded-md bg-button px-10 py-4 hover:bg-button-active active:bg-button-active outline outline-2 outline-button-border"
+		href="https://medium.com/@qwerhacks/2023-track-specific-hacker-resources-eb29bc920c46"
+		target="_blank"
+		rel="noreferrer"
+	>
+		<p>click here for more information!</p>
+	</a>
 </TrackResourceLayout>
-
-
-
