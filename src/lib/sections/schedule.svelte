@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
+	import { onDestroy, onMount } from "svelte";
 
     type Event = {
 		title: string;
@@ -261,10 +263,17 @@
                     {index: 4, string: '12pm'}, {index: 5, string: '1pm'}, {index: 6, string: '2pm'}, {index: 7, string: '3pm'},
                     {index: 8, string: '4pm'}, {index: 9, string: '5pm'}, {index: 10, string: '6pm'}, {index: 11, string: '7pm'},
                     {index: 12, string: '8pm'}, {index: 13, string: '9pm'}, {index: 14, string: '10pm'}, {index: 15, string: '11pm'},
-                    {index: 16, string: '12am'}, {index: 17, string: '1am'}, {index: 18, string: '2am'}, {index: 19, string: '3am'},];
+                    {index: 16, string: '12am'}, {index: 17, string: '1am'}, {index: 18, string: '2am'}, {index: 19, string: '3am'},
+                    {index: 20, string: '4am'}, {index: 21, string: '5am'}, {index: 22, string: '6am'}, {index: 23, string: '7am'},
+                    {index: 24, string: '8am'}, {index: 25, string: '9am'}, {index: 26, string: '10am'}, {index: 27, string: '11am'},
+                    {index: 28, string: '12pm'}, {index: 29, string: '1pm'}, {index: 30, string: '2pm'}, {index: 31, string: '3pm'},
+                
+                ];
 
     let eventIsHovered = false;
     let trackerTime = 0;
+    let content: HTMLDivElement;
+
     function updateTrackerTime() {
         //let startDate = new Date('January 27, 2023 08:00 GMT-08');        // Use this time in prod
         let startDate = new Date(`January ${new Date().getDate()}, 2023 08:00 GMT-08`);
@@ -274,31 +283,50 @@
         let timeSinceStartTenMinutes = Math.floor(timeSinceStartHours * 6)
 
         // jump to current time on pageload
-        let content = document.querySelector('#schedule-content');
-        if (content) {
-            console.log(content);
-            content.scroll({top: ( timeSinceStartTenMinutes * (150) * (1/6) ) - 100, behavior: 'smooth'})
+        if (browser) {
+            let content = document.querySelector('#schedule-content');
+            console.log("setting scroll")
+            content.scrollTop = ( timeSinceStartTenMinutes * (150) * (1/6) ) - 100
         }
         trackerTime = timeSinceStartTenMinutes;
         return null;
     }
-    
 
+    let interval: number;
+
+    updateTrackerTime();
+
+    onMount(() => {
+        // updateTrackerTime();
+
+        // update tracker every 10 minutes
+        interval = setInterval(() => {
+            if (!eventIsHovered) {
+                trackerTime += 1;
+                content.scrollTop = ( trackerTime * (150) * (1/6) ) - 100
+            }
+        }, 1000 * 60 * 10) as unknown as number;
+    });
+
+    onDestroy(() => {
+        clearInterval(interval);
+    });
 </script>
-<div class='schedule-container' on:loadstart={updateTrackerTime()}>
+
+
+<div class='schedule-container'>
     <div class='header'>
         <h2>day of events</h2>
     </div>
-    <div class='content' id='schedule-content'>
+    <div class='content' id='schedule-content' bind:this={content}>
             {#each hours as hour}
                 <div class="spacer h{hour.index * 6}"><span>{hour.string}</span></div>
                 <div class="spacer h{hour.index * 6} half"></div>
             {/each}
         <div class='events'>
             {#each events as event}
-                <div on:mouseover={() => {eventIsHovered = true;}} on:mouseout={() => {eventIsHovered = false;}} class='event h{((event.hour_start * 6) + (Math.floor(event.minute_start / 10)))} {event.color} w{event.display_width} l{Math.ceil(event.length_minutes / 10)} c{event.display_column} {eventIsHovered ? ' hovered' : ''}'>
+                <div on:mouseover={() => {eventIsHovered = true;}} on:focus={() => {eventIsHovered = true;}} on:mouseout={() => {eventIsHovered = false;}} on:blur={() => {eventIsHovered = false;}} class='event h{((event.hour_start * 6) + (Math.floor(event.minute_start / 10)))} {event.color} w{event.display_width} l{Math.ceil(event.length_minutes / 10)} c{event.display_column} {eventIsHovered ? ' hovered' : ''}'>
                     {event.title}
-                    <!-- <span class='inner'> &nbsp;({event.length_minutes})</span> -->
                 </div>
             {/each}
         </div>
@@ -356,7 +384,7 @@
 
             .spacer {
                 border-top: solid 1px gray;
-                min-height: $hour-scale;
+                // min-height: $hour-scale;
                 min-width: 100%;
                 position: relative;
                 font-size: smaller;
@@ -436,10 +464,10 @@
                     Width logic
                 */
                 &[class*="w1"] {
-                    width: (1/3) * 100%;
+                    width: calc((1/3) * 100%);
                 }
                 &[class*="w2"] {
-                    width: (2/3) * 100%;
+                    width: calc((2/3) * 100%);
                 }
                 &[class*="w3"] {
                     width: 100%;
@@ -451,10 +479,10 @@
                     left: 0%;
                 }
                 &[class*="c1"] {
-                    left: (1/3) * 100%;
+                    left: calc((1/3) * 100%);
                 }
                 &[class*="c2"] {
-                    left: (2/3) * 100%;
+                    left: calc((2/3) * 100%);
                 }
 
                 // /*
@@ -481,9 +509,9 @@
                     visibility: hidden;
                 }
             }
-            @for $tensofminutes from 0 through 144 {
+            @for $tensofminutes from 0 through 186 {
                 .event.h#{$tensofminutes} { 
-                    top: ($tensofminutes) * $hour-scale * (1/6) + $inset-margin;   // + ($tensofminutes * (1/6))
+                    top: calc(($tensofminutes) * $hour-scale * (1/6) + $inset-margin);   // + ($tensofminutes * (1/6))
                     &[class*="c0"] {
                         z-index: $tensofminutes;
                     }
@@ -495,9 +523,10 @@
                     }
                 }
                 .spacer.h#{$tensofminutes} { 
-                    top: $tensofminutes * $hour-scale * (1/6);
+                    top: calc($tensofminutes * $hour-scale * (1/6));
+                    height: calc($hour-scale * (1/12));
                     &[class*="half"] {
-                        top: $tensofminutes * $hour-scale * (1/6) + ($hour-scale * 0.5);
+                        top: calc($tensofminutes * $hour-scale * (1/6) + ($hour-scale * 0.5));
                     }
                     // &::before {
                     //     content: $hr;
@@ -509,7 +538,7 @@
             }
             @for $tenminuteslength from 1 through 18 {
                 .event[class*="h"].l#{$tenminuteslength} { 
-                    height: ($tenminuteslength * $hour-scale * (1/6)) - $shorten-margin - $inset-margin;// - 4px;
+                    height: calc(($tenminuteslength * $hour-scale * (1/6)) - $shorten-margin - $inset-margin);// - 4px;
                 }
             }
         }
