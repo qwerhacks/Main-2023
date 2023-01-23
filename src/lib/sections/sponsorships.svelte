@@ -43,6 +43,9 @@
 		<div class="aspect-square w-full">
 			<img src="./media/sponsor_logos/crowdstrike.png" alt="Crowdstrike"/>
 		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/qualcomm_logo.png" alt="Qualcomm"/>
+		</div>
 	</SponsorshipRow>
 	<img style="width:20%" src="./media/component_assets/media/bronze tadpole-02 2.png" alt="" />		
 	<h3>bronze tadpole sponsors</h3>
@@ -70,6 +73,18 @@
 		</div>
 		<div class="aspect-square w-full">
 			<a href="https://www.echo3d.com/product" target="_blank"><img src="./media/sponsor_logos/echo3d.png" alt="Echo3D"/></a>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/intel.png" alt="Intel"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/socalgas.png" alt="Southern California Gas Company"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/ladwp.png" alt="Los Angeles Department of Water and Power"/>
+		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/grindr_logo.png" alt="Grindr"/>
 		</div>
 	</SponsorshipRow>
 </Content>
