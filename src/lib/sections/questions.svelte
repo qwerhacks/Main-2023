@@ -41,8 +41,8 @@
 We have a ton planned, you're going to love it! Here's a just a small slice: <br>
 <span class="emphasis">On Saturday:</span>
 <ul>
-	<li>Checkin at 8:30 AM! We'll have breakfast and coffee!!!</li>
-	<li>Opening ceramonies and intro talks to our tracks from REAL INDUSTRY MENTORS are right after</li>
+	<li>Check-in at 8:30 AM! We'll have breakfast and coffee!!!</li>
+	<li>Opening ceremonies and intro talks to our tracks from REAL INDUSTRY MENTORS are right after</li>
 	<li>Hacking starts at 11AM</li>
 	<li>Tons of cool workshops, snacks, meals, and everything, plus tons of hacking until...</li>
 </ul>
