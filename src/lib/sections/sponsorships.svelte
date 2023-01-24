@@ -46,6 +46,9 @@
 		<div class="aspect-square w-full">
 			<img src="./media/sponsor_logos/qualcomm_logo.png" alt="Qualcomm"/>
 		</div>
+		<div class="aspect-square w-full">
+			<img src="./media/sponsor_logos/ppg.png" alt="PPG"/>
+		</div>
 	</SponsorshipRow>
 	<img style="width:20%" src="./media/component_assets/media/bronze tadpole-02 2.png" alt="" />		
 	<h3>bronze tadpole sponsors</h3>
@@ -86,5 +89,6 @@
 		<div class="aspect-square w-full">
 			<img src="./media/sponsor_logos/grindr_logo.png" alt="Grindr"/>
 		</div>
+
 	</SponsorshipRow>
 </Content>
