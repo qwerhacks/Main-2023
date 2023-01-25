@@ -50,7 +50,7 @@
 		length_minutes / 10,
 	)} c{display_column} {eventIsHovered
 		? ' hovered'
-		: ''} p-3 sm:p-4 md:p-5 break-all	overflow-hidden"
+		: ''} p-3 sm:p-4 md:p-5 break-all overflow-hidden cursor-pointer"
 >
 	{title}
 </div>
