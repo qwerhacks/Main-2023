@@ -25,7 +25,7 @@
 		},
 		{
 			question: 'how will teams work?',
-			answer: `You can sign up as a team of up to four members. but make sure that all your team members submit an application! if you don’t have a team before the event, don’t worry! we will help you find fellow hackers once the event starts :^)`,
+			answer: `You can sign up as a team of two to four members. but make sure that all your team members submit an application! if you don’t have a team before the event, don’t worry! we will help you find fellow hackers once the event starts :^)`,
 			start_color: '#ACE0E6',
 			end_color: '#C1D3EC',
 		},
