@@ -1,10 +1,7 @@
-<script lang="ts" defer>
+<script lang="ts">
 	import Content from '$lib/components/general/content.svelte';
-
-	interface PersonDatum {
-		name: string;
-		url: string;
-	}
+	import Person from '$lib/components/who_we_are/person.svelte';
+	import type { PersonDatum } from '$lib/components/who_we_are/person.svelte';
 
 	const peopleData: PersonDatum[] = [
 		{
@@ -40,7 +37,7 @@
 			pronouns: 'she/her',
 			url: 'https://lh4.googleusercontent.com/6wAbyt0O-sIAkbrQ6CvSWUa3YLEm0h8EZ8dSNc5DF3TkPFfMMrxK2SZgdtYLPGLFn1s=w2400',
 		},
-		{ 
+		{
 			name: 'Tara Char',
 			url: 'https://lh3.googleusercontent.com/cUH6paGvVDH-bWNAsB8YJd2ZTD_rDGjc9VxYoA99Gl9bobnJsjdpYogRYkpZn4JvZps=w2400',
 			pronouns: 'she/her',
@@ -95,12 +92,12 @@
 		{
 			name: 'Genevieve Chin',
 			pronouns: 'she/her',
-			url: 'https://drive.google.com/uc?export=view&id=1Q2z44SdF1mhxbq4OyB3Ei4zuXp2ndkZ-',
+			url: 'https://lh5.googleusercontent.com/1Q2z44SdF1mhxbq4OyB3Ei4zuXp2ndkZ',
 		},
 		{
 			name: 'Vanessa Chen',
 			pronouns: 'she/her',
-			url: 'https://drive.google.com/uc?export=view&id=1F8N_hHcZxBBN931YJwJNb0LMIYFuD1cj',
+			url: 'https://lh5.googleusercontent.com/1F8N_hHcZxBBN931YJwJNb0LMIYFuD1cj',
 		}
 	];
 
@@ -112,11 +109,14 @@
 	}
 </script>
 
-<Content>
-	<h2>who we are</h2>
-	<div class="grid grid-cols-5 gap-5">
-		{#each peopleData as { name, url } (name)}
-			<img class="profile" src={url} alt={name}/>
+<Content wide={true}>
+	<h2 class="relative">
+		who we are
+		<div class="absolute -right-20 -bottom-3 -rotate-12 md:hidden"><p>tap me!</p></div>
+	</h2>
+	<div class="grid-container px-10 w-full">
+		{#each peopleData as datum}
+			<Person {datum} />
 		{/each}
 	</div>
 </Content>
@@ -143,16 +143,5 @@
 			minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
 		);
 		grid-gap: var(--grid-layout-gap);
-	}
-
-
-	.profile {
-		position: relative;
-		border-radius: 1000px;
-	}
-
-	.profile:hover {
-		box-shadow: 1px 1px 10px #545454;
-		opacity: 85%;
 	}
 </style>
