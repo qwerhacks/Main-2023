@@ -92,12 +92,12 @@
 		{
 			name: 'Genevieve Chin',
 			pronouns: 'she/her',
-			url: 'https://lh5.googleusercontent.com/1Q2z44SdF1mhxbq4OyB3Ei4zuXp2ndkZ',
+			url: 'https://drive.google.com/uc?export=view&id=1Q2z44SdF1mhxbq4OyB3Ei4zuXp2ndkZ-',
 		},
 		{
 			name: 'Vanessa Chen',
 			pronouns: 'she/her',
-			url: 'https://lh5.googleusercontent.com/1F8N_hHcZxBBN931YJwJNb0LMIYFuD1cj',
+			url: 'https://drive.google.com/uc?export=view&id=1F8N_hHcZxBBN931YJwJNb0LMIYFuD1cj',
 		}
 	];
 
@@ -127,7 +127,7 @@
    * User input values.
    */
 		--grid-layout-gap: 1.25rem;
-		--grid-column-count: 6;
+		--grid-column-count: 5;
 		--grid-item--min-width: 100px;
 
 		/**
