@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import EventModal from './event_modal.svelte';
 
 	import './schedule.scss';
@@ -20,10 +21,12 @@
 		isModalOpen = !isModalOpen;
 	}
 
-	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape') {
-			isModalOpen = false;
-		}
+	onMount(() => {
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				isModalOpen = false;
+			}
+		});
 	});
 </script>
 
@@ -45,7 +48,9 @@
 	class="event h{hour_start * 6 +
 		Math.floor(minute_start / 10)} {color} w{display_width} l{Math.ceil(
 		length_minutes / 10,
-	)} c{display_column} {eventIsHovered ? ' hovered' : ''} p-3 sm:p-4 md:p-5 break-all	overflow-hidden"
+	)} c{display_column} {eventIsHovered
+		? ' hovered'
+		: ''} p-3 sm:p-4 md:p-5 break-all	overflow-hidden"
 >
 	{title}
 </div>
