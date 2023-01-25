@@ -18,7 +18,7 @@
 	const events: Event[] = [
 		{
 			title: 'Check-In',
-			description: "Meet us at <olace>. Culpa labore cupidatat et dolor mollit consectetur elit aliqua elit eu laborum anim exercitation irure fugiat est amet duis tempor aute magna aute occaecat adipisicing proident exercitation consequat reprehenderit incididunt quis laborum velit non pariatur ea irure dolore enim sunt ullamco occaecat culpa commodo duis laboris enim eu reprehenderit aute eiusmod laborum occaecat cupidatat ad mollit non anim do sunt enim esse et eu irure incididunt deserunt enim excepteur minim culpa non sint dolore cillum duis do ipsum eu et Lorem occaecat non sit velit et culpa commodo non non amet laboris sit ex quis laborum et Lorem magna consequat.",
+			description: "",
 			hour_start: 0,
 			minute_start: 0,
 			length_minutes: 60,
@@ -72,7 +72,7 @@
 			color: 'coral',
 		},
 		{
-			title: 'Hacking Begins',
+			title: 'Hacking Begins!!',
 			hour_start: 3,
 			minute_start: 0,
 			length_minutes: 10,
@@ -403,7 +403,8 @@
 
 <div class="schedule-container" on:loadstart={updateTrackerTime()} on:mouseup>
 	<div class="header">
-		<h2>day of events</h2>
+		<h2 class="text-center">day of events</h2>
+		<p>We're so excited to see you all here! Here's a sneak peek at what we'll have going on:</p>
 	</div>
 	<div class="content h-20" id="schedule-content" bind:this={content}>
 		{#each hours as hour}

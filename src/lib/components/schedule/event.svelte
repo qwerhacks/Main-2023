@@ -45,7 +45,7 @@
 	class="event h{hour_start * 6 +
 		Math.floor(minute_start / 10)} {color} w{display_width} l{Math.ceil(
 		length_minutes / 10,
-	)} c{display_column} {eventIsHovered ? ' hovered' : ''}"
+	)} c{display_column} {eventIsHovered ? ' hovered' : ''} p-3 sm:p-4 md:p-5 break-all	overflow-hidden"
 >
 	{title}
 </div>

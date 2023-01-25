@@ -23,18 +23,18 @@
 
 <div
 	class="flex items-center justify-center fixed inset-0 z-[300] overflow-y-auto bg-white/1 backdrop-blur-[10px]"
-	on:click={() => {
-		$modal_open = false;
-	}}
-	on:keydown={(e) => {
-		console.log('keydown');
-		if (e.key === 'Escape') {
-			$modal_open = false;
-		}
-	}}
 >
-	<div class="max-w-[90%] sm:max-w-[60%] max-h-[80%]">
-		<div class="container bg-bg p-24 pt-20 pb-20">
+	<div class="max-w-[90%] lg:max-w-[60%] max-h-[80%]">
+		<div class="container bg-bg sm:p-24 sm:pt-20 sm:pb-20 p-10"
+    on:click={(e) => {
+      e.stopPropagation()
+    }}
+    on:keydown={(e) => {
+      console.log('keydown');
+      if (e.key === 'Escape') {
+        $modal_open = false;
+      }
+    }}>
 			<h3>{title}</h3>
 			<span>{time_start} to {time_end}</span>
 			{#if description !== undefined}

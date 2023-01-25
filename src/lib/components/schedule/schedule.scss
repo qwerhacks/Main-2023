@@ -22,7 +22,7 @@ $bg-dark: hsl(24, 3%, 69%);
 	.content {
 		outline: solid 1px black;
 		width: 65%;
-		min-width: calc(0.9 * 600px);
+		// min-width: calc(0.9 * 600px);
 		height: 100%;
 		margin-top: 1.5rem;
 		padding-top: 1rem;
@@ -93,8 +93,7 @@ $bg-dark: hsl(24, 3%, 69%);
 			align-items: flex-start;
 			box-sizing: border-box;
 			border-radius: 20px;
-			padding: 20px;
-			padding-top: 5px;
+			padding-top: 4px;
 			padding-bottom: 30px;
 			font-family: 'Nunito', sans-serif;
 			font-size: smaller;
