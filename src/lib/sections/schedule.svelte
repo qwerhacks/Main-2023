@@ -126,15 +126,6 @@
 			color: 'green',
 		},
 		{
-			title: 'MLH Mini Event 2',
-			hour_start: 6,
-			minute_start: 15,
-			length_minutes: 30,
-			display_width: 1,
-			display_column: 2,
-			color: 'yellow',
-		},
-		{
 			title: 'Python',
 			hour_start: 6,
 			minute_start: 45,
@@ -143,15 +134,6 @@
 			display_column: 0,
 			color: 'coral',
 		},
-		// {
-		//     title: 'TBD',
-		//     hour_start: 6,
-		//     minute_start: 45,
-		//     length_minutes: 45,
-		//     display_width: 2,
-		//     display_column: 0,
-		//     color: 'coral',
-		// },
 		{
 			title: 'Snacks',
 			hour_start: 8,
