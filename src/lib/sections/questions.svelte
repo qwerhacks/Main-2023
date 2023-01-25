@@ -36,28 +36,6 @@
 			end_color: '#DFC2F8',
 		},
 		{
-			question: "what's the schedule like?",
-			answer: `
-We have a ton planned, you're going to love it! Here's a just a small slice: <br>
-<span class="emphasis">On Saturday:</span>
-<ul>
-	<li>Check-in at 8:30 AM! We'll have breakfast and coffee!!!</li>
-	<li>Opening ceremonies and intro talks to our tracks from REAL INDUSTRY MENTORS are right after</li>
-	<li>Hacking starts at 11AM</li>
-	<li>Tons of cool workshops, snacks, meals, and everything, plus tons of hacking until...</li>
-</ul>
-<span class="emphasis">On Sunday:</span>
-<ul>
-	<li>PITCHING TO JUDGES at 9AM</li>
-	<li>SUBMISSIONS DUE at 10:30AM</li>
-	<li>JUDGING 11-1PM</li>
-	<li>CLOSING + PRIZES 1PM-2PM</li>
-</ul>
-We'll also have more info up on workshops, talks, and everything else in the middle soon. Stay tuned and apply to get updates!`,
-			start_color: '#C1D3EC',
-			end_color: '#DFC2F8',
-		},
-		{
 			question: "what's with prizes?",
 			answer: `
 We are bored with your usual hackathon prizes, and so we've decided to shake things up for QWERHacks this year!
