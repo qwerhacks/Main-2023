@@ -400,11 +400,11 @@
 </script>
 
 <div class="schedule-container" on:loadstart={updateTrackerTime()} on:mouseup>
-	<div class="header flex flex-col items-center">
+	<div class="header flex flex-col items-center px-6 max-w-full">
 		<h2 class="text-center">day of events</h2>
-		<p>We're so excited to see you all here! Here's a sneak peek at what we'll have going on:</p>
+		<p class="text-center">We're so excited to see you all here! Here's a sneak peek at what we'll have going on:</p>
 
-		<div class="flex flex-row gap-4 mt-2">
+		<div class="flex flex-row gap-x-4 mt-2 max-w-full flex-wrap justify-center">
 			{#each Object.entries(ColorMap) as [category, name]}
 				<div class="category flex flex-row items-center gap-2">
 					<div class="rounded-full w-4 h-4 {name} inline-block" />

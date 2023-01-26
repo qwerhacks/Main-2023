@@ -16,8 +16,8 @@
 		<a class="font-nunito text-xl" href="/">Home</a>
 		<a class="font-nunito text-xl" href="/mission">Mission</a>
 		<a class="font-nunito text-xl" href="/resources">Resources</a>
-		<div class="ml-auto">
+		<!-- <div class="ml-auto">
 			<ButtonSmall />
-		</div>
+		</div> -->
 	</div>
 </div>
