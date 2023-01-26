@@ -4,6 +4,17 @@
 	import Event from '../components/schedule/event.svelte';
 	import '../components/schedule/schedule.scss';
 
+	const ColorMap = {
+		food: 'green',
+		workshop: 'lightblue',
+		talk: 'coral',
+		fun: 'yellow',
+		other: 'plum',
+	} as const;
+
+	type Categories = keyof typeof ColorMap;
+	type Colors = (typeof ColorMap)[Categories];
+
 	type Event = {
 		title: string;
 		description?: string;
@@ -12,28 +23,28 @@
 		length_minutes: number;
 		display_width: number;
 		display_column: number;
-		color: string;
+		category: Categories;
 	};
 
 	const events: Event[] = [
 		{
 			title: 'Check-In',
-			description: "",
+			description: '',
 			hour_start: 0,
 			minute_start: 0,
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'green',
+			category: 'other',
 		},
 		{
 			title: 'Breakfast/Snacks',
 			hour_start: 0,
 			minute_start: 30,
 			length_minutes: 30,
-			display_width: 1,
+			display_width: 2,
 			display_column: 1,
-			color: 'blue',
+			category: 'food',
 		},
 		{
 			title: 'Opening Presentation',
@@ -42,7 +53,7 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'coral',
+			category: 'talk',
 		},
 		{
 			title: 'Track Speaker -- Food Security',
@@ -51,7 +62,7 @@
 			length_minutes: 20,
 			display_width: 2,
 			display_column: 0,
-			color: 'blue',
+			category: 'talk',
 		},
 		{
 			title: 'Track Speaker -- Housing Access',
@@ -60,7 +71,7 @@
 			length_minutes: 20,
 			display_width: 2,
 			display_column: 1,
-			color: 'green',
+			category: 'talk',
 		},
 		{
 			title: 'Track Speaker -- Healthcare Equity',
@@ -69,7 +80,7 @@
 			length_minutes: 20,
 			display_width: 2,
 			display_column: 0,
-			color: 'coral',
+			category: 'talk',
 		},
 		{
 			title: 'Hacking Begins!!',
@@ -78,7 +89,7 @@
 			length_minutes: 10,
 			display_width: 3,
 			display_column: 0,
-			color: 'yellow',
+			category: 'other',
 		},
 		{
 			title: 'Hackathon Survival Guide & Team Formation',
@@ -87,7 +98,7 @@
 			length_minutes: 45,
 			display_width: 2,
 			display_column: 1,
-			color: 'coral',
+			category: 'workshop',
 		},
 		{
 			title: 'Git / Version Control',
@@ -96,7 +107,7 @@
 			length_minutes: 45,
 			display_width: 1,
 			display_column: 0,
-			color: 'blue',
+			category: 'workshop',
 		},
 		{
 			title: 'MLH Mini Event 1',
@@ -105,7 +116,7 @@
 			length_minutes: 45,
 			display_width: 1,
 			display_column: 2,
-			color: 'yellow',
+			category: 'workshop',
 		},
 		{
 			title: 'Intro to React',
@@ -114,7 +125,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 1,
-			color: 'coral',
+			category: 'workshop',
 		},
 		{
 			title: 'Lunch',
@@ -123,16 +134,7 @@
 			length_minutes: 75,
 			display_width: 3,
 			display_column: 0,
-			color: 'green',
-		},
-		{
-			title: 'MLH Mini Event 2',
-			hour_start: 6,
-			minute_start: 15,
-			length_minutes: 30,
-			display_width: 1,
-			display_column: 2,
-			color: 'yellow',
+			category: 'food',
 		},
 		{
 			title: 'Python',
@@ -141,17 +143,8 @@
 			length_minutes: 45,
 			display_width: 2,
 			display_column: 0,
-			color: 'coral',
+			category: 'workshop',
 		},
-		// {
-		//     title: 'TBD',
-		//     hour_start: 6,
-		//     minute_start: 45,
-		//     length_minutes: 45,
-		//     display_width: 2,
-		//     display_column: 0,
-		//     color: 'coral',
-		// },
 		{
 			title: 'Snacks',
 			hour_start: 8,
@@ -159,7 +152,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			color: 'green',
+			category: 'food',
 		},
 		{
 			title: 'Careers in Game Dev',
@@ -168,7 +161,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 1,
-			color: 'coral',
+			category: 'talk',
 		},
 		{
 			title: 'Impostor Syndrome',
@@ -177,7 +170,7 @@
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 0,
-			color: 'blue',
+			category: 'talk',
 		},
 		{
 			title: 'Thinking Traps and Beyond',
@@ -185,8 +178,8 @@
 			minute_start: 30,
 			length_minutes: 30,
 			display_width: 2,
-			display_column: 0,
-			color: 'yellow',
+			display_column: 1,
+			category: 'talk',
 		},
 		{
 			title: 'CTF',
@@ -195,7 +188,7 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'coral',
+			category: 'fun',
 		},
 		{
 			title: 'Dinner',
@@ -204,7 +197,7 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'green',
+			category: 'food',
 		},
 		{
 			title: 'Intro to Deep Learning',
@@ -213,7 +206,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 1,
-			color: 'yellow',
+			category: 'talk',
 		},
 		{
 			title: 'Identity Specific Workshop 1',
@@ -222,7 +215,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			color: 'coral',
+			category: 'workshop',
 		},
 		{
 			title: 'Snacks',
@@ -231,25 +224,25 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'green',
+			category: 'food',
 		},
 		{
 			title: 'Tie Dye',
-			hour_start: 15,
+			hour_start: 14,
 			minute_start: 0,
 			length_minutes: 120,
-			display_width: 1,
-			display_column: 2,
-			color: 'yellow',
+			display_width: 2,
+			display_column: 1,
+			category: 'fun',
 		},
 		{
 			title: 'Movie',
 			hour_start: 15,
 			minute_start: 0,
-			length_minutes: 180,
+			length_minutes: 120,
 			display_width: 1,
 			display_column: 1,
-			color: 'coral',
+			category: 'fun',
 		},
 		{
 			title: 'Breakfast',
@@ -258,16 +251,16 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			color: 'yellow',
+			category: 'food',
 		},
 		{
-			title: 'Pitching (by QWER Hacks Team)',
+			title: 'Pitching Workshop',
 			hour_start: 25,
 			minute_start: 30,
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 0,
-			color: 'green',
+			category: 'workshop',
 		},
 		{
 			title: 'Devpost Submission Due',
@@ -276,7 +269,7 @@
 			length_minutes: 10,
 			display_width: 3,
 			display_column: 0,
-			color: 'blue',
+			category: 'other',
 		},
 		{
 			title: 'Hacking Ends',
@@ -285,7 +278,7 @@
 			length_minutes: 10,
 			display_width: 3,
 			display_column: 0,
-			color: 'coral',
+			category: 'other',
 		},
 		{
 			title: 'Identity Specific Workshop 2',
@@ -294,16 +287,16 @@
 			length_minutes: 30,
 			display_width: 1,
 			display_column: 1,
-			color: 'yellow',
+			category: 'workshop',
 		},
 		{
 			title: 'Judging',
 			hour_start: 27,
 			minute_start: 30,
 			length_minutes: 120,
-			display_width: 3,
+			display_width: 2,
 			display_column: 0,
-			color: 'green',
+			category: 'other',
 		},
 		{
 			title: 'Tie-dye, Just dance',
@@ -312,7 +305,7 @@
 			length_minutes: 90,
 			display_width: 1,
 			display_column: 2,
-			color: 'blue',
+			category: 'fun',
 		},
 		{
 			title: 'Closing Presentation',
@@ -321,11 +314,16 @@
 			length_minutes: 30,
 			display_width: 3,
 			display_column: 0,
-			color: 'yellow',
+			category: 'other',
 		},
 	];
 
-	const hours = [
+	interface Hour {
+		index: number;
+		string: string;
+	}
+
+	const hours: Hour[] = [
 		{ index: 0, string: '8am' },
 		{ index: 1, string: '9am' },
 		{ index: 2, string: '10am' },
@@ -364,7 +362,7 @@
 	let content: HTMLDivElement;
 
 	function updateTrackerTime() {
-		let startDate = new Date('January 27, 2023 08:00 GMT-08');        // Use this time in prod
+		let startDate = new Date('January 27, 2023 08:00 GMT-08'); // Use this time in prod
 		// let startDate = new Date(`January 24, 2023 08:00 GMT-08`);
 		let currentDateTime = Date.now();
 		let timeSinceStartHours = currentDateTime - startDate.getTime();
@@ -402,9 +400,18 @@
 </script>
 
 <div class="schedule-container" on:loadstart={updateTrackerTime()} on:mouseup>
-	<div class="header">
+	<div class="header flex flex-col items-center">
 		<h2 class="text-center">day of events</h2>
 		<p>We're so excited to see you all here! Here's a sneak peek at what we'll have going on:</p>
+
+		<div class="flex flex-row gap-4 mt-2">
+			{#each Object.entries(ColorMap) as [category, name]}
+				<div class="category flex flex-row items-center gap-2">
+					<div class="rounded-full w-4 h-4 {name} inline-block" />
+					{category}
+				</div>
+			{/each}
+		</div>
 	</div>
 	<div class="content h-20" id="schedule-content" bind:this={content}>
 		{#each hours as hour}
@@ -421,7 +428,7 @@
 					length_minutes={event.length_minutes}
 					display_width={event.display_width}
 					display_column={event.display_column}
-					color={event.color}
+					color={ColorMap[event.category]}
 					{eventIsHovered}
 				/>
 			{/each}
