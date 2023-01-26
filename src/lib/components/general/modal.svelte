@@ -36,7 +36,7 @@
   }}
 >
   <div class="max-w-[90%] sm:max-w-[60%] max-h-[80%]">
-    <svelte:component this={component_to_display} props={component_to_display_props} />
+    <svelte:component this={component_to_display} props={component_to_display_props} aria-modal="{$modal_open}" role="dialog"/>
   </div>
 </div>
 

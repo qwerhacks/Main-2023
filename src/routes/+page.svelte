@@ -16,7 +16,7 @@
 <Resources show_links={false} />
 <Prizes />
 <Questions />
-<Volunteer />
+<!-- <Volunteer /> -->
 <Sponsorships />
 
 

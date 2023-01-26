@@ -23,7 +23,8 @@
 
 <div
 	class="flex items-center justify-center fixed inset-0 z-[300] overflow-y-auto bg-white/1 backdrop-blur-[10px]"
->
+	aria-modal="{$modal_open}" role="dialog"
+	>
 	<div class="max-w-[90%] lg:max-w-[60%] max-h-[80%]">
 		<div class="container bg-bg sm:p-24 sm:pt-20 sm:pb-20 p-10"
     on:click={(e) => {
