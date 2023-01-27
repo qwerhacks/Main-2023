@@ -15,6 +15,10 @@
 		{
 			title: "volunteer",
 			url: "https://forms.gle/ViXR2qANhuFsFptK9"
+		},
+		{
+			title: "MLH Code of Conduct",
+			url: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
 		}
 	];
 </script>
