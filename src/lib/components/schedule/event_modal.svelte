@@ -1,14 +1,15 @@
 <script lang="ts">
 	export let title: string;
 	export let description: string | undefined;
+	export let location: string | undefined;
 	export let hour_start: number;
 	export let minute_start: number;
 	export let length_minutes: number;
 
-	import { writable, type Writable } from 'svelte/store';
-	export let modal_open = writable(false);
-
+	import { writable } from 'svelte/store';
 	import './schedule.scss';
+
+	export let modal_open = writable(false);
 
 	let time_start = `${(hour_start + 8) % 12 == 0 ? '12' : (hour_start + 8) % 12}:${
 		minute_start < 10 ? '0' + minute_start : minute_start
@@ -22,24 +23,32 @@
 </script>
 
 <div
-	class="flex items-center justify-center fixed inset-0 z-[300] overflow-y-auto bg-white/1 backdrop-blur-[10px]"
-	aria-modal="{$modal_open}" role="dialog"
-	>
-	<div class="max-w-[90%] lg:max-w-[60%] max-h-[80%]">
-		<div class="container bg-bg sm:p-24 sm:pt-20 sm:pb-20 p-10"
-    on:click={(e) => {
-      e.stopPropagation()
-    }}
-    on:keydown={(e) => {
-      console.log('keydown');
-      if (e.key === 'Escape') {
-        $modal_open = false;
-      }
-    }}>
-			<h3>{title}</h3>
-			<span>{time_start} to {time_end}</span>
+	aria-modal="{$modal_open}"
+	class="bg-white/1 fixed inset-0 z-[300] flex items-center justify-center overflow-y-auto backdrop-blur-[10px]"
+	role="dialog"
+>
+	<div class="max-h-[80%] max-w-[90%] lg:max-w-[60%]">
+		<div
+			class="container divide-y-2 divide-dashed flex flex-col gap-3 bg-bg p-10 sm:p-24 sm:pt-20 sm:pb-20"
+			on:click={(e) => {
+				e.stopPropagation();
+			}}
+			on:keydown={(e) => {
+				console.log('keydown');
+				if (e.key === 'Escape') {
+					$modal_open = false;
+				}
+			}}
+		>
+			<div>
+				<h3>{title}</h3>
+				<span>{time_start} to {time_end}</span>
+			</div>
+			{#if location !== undefined}
+				<p class="whitespace-pre-line">Location: {@html location}</p>
+			{/if}
 			{#if description !== undefined}
-				<p>{description}</p>
+				<p class="whitespace-pre-line">{@html description}</p>
 			{/if}
 		</div>
 	</div>

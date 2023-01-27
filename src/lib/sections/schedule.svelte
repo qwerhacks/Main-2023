@@ -15,9 +15,10 @@
 	type Categories = keyof typeof ColorMap;
 	type Colors = (typeof ColorMap)[Categories];
 
-	type Event = {
+	type EventType = {
 		title: string;
 		description?: string;
+		location?: "hermosa room" | "main room" | string;
 		hour_start: number;
 		minute_start: number;
 		length_minutes: number;
@@ -26,10 +27,15 @@
 		category: Categories;
 	};
 
-	const events: Event[] = [
+	const events: EventType[] = [
 		{
 			title: 'Check-In',
-			description: '',
+			description: `Checkin starts now!
+
+plz come up t0 carnesale commons (pacific palisades room) at UCLA (directions down below)
+
+PS there will be cool swag we promise.`,
+			location: `Carnesale Commons at UCLA - <a class="underline" href="https://goo.gl/maps/9zUegz42XzzPcjYk8">251 Charles E Young Drive West, Los Angeles, CA 90095</a>. If you\'re a UCLA student, it\'s the building right above BPlate.`,
 			hour_start: 0,
 			minute_start: 0,
 			length_minutes: 60,
@@ -39,6 +45,12 @@
 		},
 		{
 			title: 'Breakfast/Snacks',
+			description: `MILF: Man I love Food 🥐
+
+FREE snacks and drinks from Corner Bakery cafe are waiting 4 u right here at palisades room 😋
+
+And YES they are vegan <3`,
+			location: "main room",
 			hour_start: 0,
 			minute_start: 30,
 			length_minutes: 30,
@@ -48,6 +60,10 @@
 		},
 		{
 			title: 'Opening Presentation',
+			description: `give it up for ARIEL HART (they/them), our first presenter of the day!!! 🤩
+
+Ariel is a 5th year Ph.D. student in Sociology and part of the Medical Scientist Training Program at UCLA`,
+			location: "main room",
 			hour_start: 1,
 			minute_start: 0,
 			length_minutes: 60,
@@ -57,6 +73,8 @@
 		},
 		{
 			title: 'Track Speaker -- Food Security',
+			description: `What do food and queerness have in common? Come learn from Alvaro's unique approach to food systems`,
+			location: "main room",
 			hour_start: 2,
 			minute_start: 0,
 			length_minutes: 20,
@@ -66,6 +84,7 @@
 		},
 		{
 			title: 'Track Speaker -- Housing Access',
+			location: "main room",
 			hour_start: 2,
 			minute_start: 20,
 			length_minutes: 20,
@@ -75,6 +94,9 @@
 		},
 		{
 			title: 'Track Speaker -- Healthcare Equity',
+			description:
+							`Learn all about how healthcare biases 🩺impact trans folks 🏳️‍⚧️ with speaker and workshop host May Márquez!!`,
+			location: "main room",
 			hour_start: 2,
 			minute_start: 40,
 			length_minutes: 20,
@@ -93,6 +115,10 @@
 		},
 		{
 			title: 'Hackathon Survival Guide & Team Formation',
+			description: `We wish all newbie hackers a very hope u survive 😻
+
+Jk, Evy Nguyen from ACM W is here to help you 👩‍❤️‍💋‍👩u literally do not have to worry at all ok mwah`,
+			location: "hermosa room",
 			hour_start: 3,
 			minute_start: 0,
 			length_minutes: 45,
@@ -102,15 +128,25 @@
 		},
 		{
 			title: 'Git / Version Control',
+			description: `Still confused about Git/Version Control? Don’t GIT too sad ab it (heheh) 😏
+
+Evy Nguyen from ACM W is here to the rescue!!!!! She will answer all ur silly qs`,
 			hour_start: 3,
+			location: "hermosa room",
 			minute_start: 45,
 			length_minutes: 45,
-			display_width: 1,
+			display_width: 2,
 			display_column: 0,
 			category: 'workshop',
 		},
 		{
 			title: 'MLH Mini Event 1',
+			location: "main room",
+			description: `AND FOR OUR FIRST MLH EVENT OF THE NIGHT….
+
+Cup stacking 🥂
+
+May the best stacker win 😉`,
 			hour_start: 3,
 			minute_start: 45,
 			length_minutes: 45,
@@ -120,6 +156,12 @@
 		},
 		{
 			title: 'Intro to React',
+			description: `React? Who even is she?
+
+Dw besties, TeachLA’s got ur back 🎉
+
+Learn basics of web development to get started on your web app hack!`,
+			location: "hermosa room",
 			hour_start: 4,
 			minute_start: 30,
 			length_minutes: 60,
@@ -129,6 +171,10 @@
 		},
 		{
 			title: 'Lunch',
+			description: `The B in LGBT stands for BELLA PITA 🥙
+
+Go grab ur scrumdiddly yum lunch now, u deserve it <3`,
+			location: "main room",
 			hour_start: 5,
 			minute_start: 0,
 			length_minutes: 75,
@@ -136,17 +182,44 @@
 			display_column: 0,
 			category: 'food',
 		},
+		// {
+		// 	title: 'MLH Mini Event 2',
+		// 	hour_start: 6,
+		// 	minute_start: 15,
+		// 	length_minutes: 30,
+		// 	display_width: 3,
+		// 	display_column: 0,
+		// 	category: 'workshop',
+		// },
 		{
 			title: 'Python',
+			description: `Need some help with Python?
+
+U should *def* 😏come to slayer May’s Python basics workshop !!`,
+			location: "hermosa room",
 			hour_start: 6,
 			minute_start: 45,
 			length_minutes: 45,
 			display_width: 2,
-			display_column: 0,
+			display_column: 1,
 			category: 'workshop',
 		},
 		{
+			title: 'Navigating Identity in Workplace Life and ERGs',
+			description:
+							`Listen to Allie Garland from The Aerospace Corp share about her first hand experience of an athlete turned engineer and how she found an identity of her own outside of her changing titles. 😻`,
+			location: "hermosa room",
+			hour_start: 7,
+			minute_start: 30,
+			length_minutes: 30,
+			display_width: 2,
+			display_column: 0,
+			category: 'talk',
+		},
+		{
 			title: 'Snacks',
+			description:
+							`I can see ur health bars running low besties… maybe it’s time to take a snack break 🥞❗`,
 			hour_start: 8,
 			minute_start: 0,
 			length_minutes: 60,
@@ -156,6 +229,9 @@
 		},
 		{
 			title: 'Careers in Game Dev',
+			description: `gay mergirl? 🧜 No, it’s gamer girl. 🎮
+
+Come listen to Linden Reid’s workshop on careers in game dev 👾!!! this is the one time u can be a gamer (non-derogatory).`,
 			hour_start: 8,
 			minute_start: 0,
 			length_minutes: 60,
@@ -165,6 +241,9 @@
 		},
 		{
 			title: 'Impostor Syndrome',
+			description: `Tired of relating to Taylor Swift’s “mirrorball”? 🪩😞
+
+Come listen to Evy Nguyen from ACM W talk about imposter syndrome and how to overcome it!!`,
 			hour_start: 9,
 			minute_start: 0,
 			length_minutes: 30,
@@ -174,6 +253,9 @@
 		},
 		{
 			title: 'Thinking Traps and Beyond',
+			description: `QWER Hacks founders Sharvani and Arjun from Queer in AI are back! 🥳
+
+Listen to them talk about traps and beyond at their amazing workshop!!! 💫`,
 			hour_start: 9,
 			minute_start: 30,
 			length_minutes: 30,
@@ -182,16 +264,22 @@
 			category: 'talk',
 		},
 		{
-			title: 'CTF',
+			title: 'Identity Specific Workshop 1',
+			description: `Our friend Fiona from TechTogether is here all the way from Boston! ✈️
+
+Join us to discuss identity-specific topics. 💥`,
 			hour_start: 10,
 			minute_start: 0,
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			category: 'fun',
+			category: 'workshop',
 		},
 		{
 			title: 'Dinner',
+			description: `COME GET YALL JUICEEEE 🧃
+
+Plz go and get ur dinner, friends. It is sponsored by the one and only Fresh Corn Grill 🌽`,
 			hour_start: 11,
 			minute_start: 0,
 			length_minutes: 60,
@@ -201,6 +289,8 @@
 		},
 		{
 			title: 'Intro to Deep Learning',
+			description:
+							`Gay ppl in stem be like “I know a place 🌈” and it’s the ACM AI DEEP LEARNING 🧑‍💻 workshop at QWER hacks (happening now btw so don’t miss it).`,
 			hour_start: 12,
 			minute_start: 0,
 			length_minutes: 60,
@@ -209,16 +299,22 @@
 			category: 'talk',
 		},
 		{
-			title: 'Identity Specific Workshop 1',
+			title: 'CTF - Capture The Flag',
+			description:
+							`Wooo CTF!! Come capture flags, solve puzzles, and even try to phish the organizers!
+
+Put on by your very own Julie Cover, it's bound to be a blast!`,
 			hour_start: 13,
 			minute_start: 0,
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'fun',
 		},
 		{
 			title: 'Snacks',
+			description:
+							`We hope you’re hungry…. For a fresh new batch of snacks !!!! pls feel free to take all the snacks u want 🍩`,
 			hour_start: 15,
 			minute_start: 0,
 			length_minutes: 60,
@@ -228,6 +324,9 @@
 		},
 		{
 			title: 'Tie Dye',
+			description: `Still not sick of all our cool sexy swag yet? 😎
+
+Come to the TIE DYE 🌈station to get a special QWER Hacks shirt 👕, customized to ur liking !`,
 			hour_start: 14,
 			minute_start: 0,
 			length_minutes: 120,
@@ -237,6 +336,9 @@
 		},
 		{
 			title: 'Movie',
+			description: `“my favorite thing about the movie is, like, it feels like a movie” - harry styles 🎥
+
+Come watch a movie w us and log it on Letterboxd afterwards idk up to u !`,
 			hour_start: 15,
 			minute_start: 0,
 			length_minutes: 120,
@@ -246,6 +348,9 @@
 		},
 		{
 			title: 'Breakfast',
+			description: `Brekkie time 🍳
+
+Come to the food table and get some vegan-friendly bagels <3 🥯`,
 			hour_start: 24,
 			minute_start: 30,
 			length_minutes: 60,
@@ -255,6 +360,9 @@
 		},
 		{
 			title: 'Pitching Workshop',
+			description: `JUST A FEW MORE HOURS BESTIES 💪
+
+Meanwhile, enjoy our workshop on how to pitch to judges for a maximized joint slay between u and ur teammates 🤓`,
 			hour_start: 25,
 			minute_start: 30,
 			length_minutes: 30,
@@ -264,6 +372,7 @@
 		},
 		{
 			title: 'Devpost Submission Due',
+			description: `⚠️Submit ur hacks on Devpost now!!!! ⚠️`,
 			hour_start: 26,
 			minute_start: 0,
 			length_minutes: 10,
@@ -273,6 +382,8 @@
 		},
 		{
 			title: 'Hacking Ends',
+			description: `⚠️LAST CALL!!!
+Submit your hacks on Devpost now !! ⚠️`,
 			hour_start: 27,
 			minute_start: 0,
 			length_minutes: 10,
@@ -281,11 +392,25 @@
 			category: 'other',
 		},
 		{
-			title: 'Identity Specific Workshop 2',
+			title: 'Digital Art: P5.js',
+			description: `She’s artsy 🎨or whatever… and tech-y 💻
+
+Come join Maya as she talks about her work in digital art!!! She slays we promise 💅`,
 			hour_start: 27,
 			minute_start: 0,
 			length_minutes: 30,
-			display_width: 1,
+			display_width: 3,
+			display_column: 0,
+			category: 'talk',
+		},
+		{
+			title: "Yen's workshop",
+			description:
+							`Yen Tan is a co-founder of Kona, an employee wellbeing platform that puts people first. Yen has spoken at Google, GiLab Commit, and other remote work conferences and podcasts. Yen will be speaking about finding confidence and fighting burnout.`,
+			hour_start: 28,
+			minute_start: 0,
+			length_minutes: 30,
+			display_width: 2,
 			display_column: 1,
 			category: 'workshop',
 		},
@@ -299,16 +424,34 @@
 			category: 'other',
 		},
 		{
-			title: 'Tie-dye, Just dance',
-			hour_start: 27,
-			minute_start: 0,
-			length_minutes: 90,
+			title: 'Just dance',
+			description: `feeling in the mood to dance after submitting your hack? 🕺
+
+Join us in a game of Just Dance!!! bet u can’t beat my score for Rasputin 😈`,
+			hour_start: 28,
+			minute_start: 30,
+			length_minutes: 60,
 			display_width: 1,
 			display_column: 2,
 			category: 'fun',
 		},
 		{
+			title: 'Closing Speaker - Fiona',
+			description:
+							`TechTogether's lovely Fiona is back as our closing speaker! 🤯`,
+			hour_start: 29,
+			minute_start: 30,
+			length_minutes: 30,
+			display_width: 3,
+			display_column: 0,
+			category: 'other',
+		},
+		{
 			title: 'Closing Presentation',
+			description:
+							`DRUMROLL PLEASE… 🥁
+
+Time to see which cool prizes u won in our closing presentation <3 🏆`,
 			hour_start: 30,
 			minute_start: 0,
 			length_minutes: 30,
@@ -372,7 +515,10 @@
 		// jump to current time on pageload
 		if (content) {
 			console.log(content);
-			content.scroll({ top: timeSinceStartTenMinutes * 150 * (1 / 6) - 130, behavior: 'smooth' });
+			content.scroll({
+				top: timeSinceStartTenMinutes * 150 * (1 / 6) - 130,
+				behavior: 'smooth',
+			});
 		}
 		trackerTime = timeSinceStartTenMinutes;
 		return null;
@@ -400,20 +546,24 @@
 </script>
 
 <div class="schedule-container" on:loadstart={updateTrackerTime()} on:mouseup>
-	<div class="header flex flex-col items-center px-6 max-w-full">
+	<div class="header flex max-w-full flex-col items-center px-6">
 		<h2 class="text-center">day of events</h2>
-		<p class="text-center">We're so excited to see you all here! Here's a sneak peek at what we'll have going on:</p>
+		<p class="text-center">
+			We're so excited to see you all soon! Here's a sneak peek at what we'll
+			have happening:
+			<br />(click for more info)
+		</p>
 
-		<div class="flex flex-row gap-x-4 mt-2 max-w-full flex-wrap justify-center">
+		<div class="mt-2 flex max-w-full flex-row flex-wrap justify-center gap-x-4">
 			{#each Object.entries(ColorMap) as [category, name]}
 				<div class="category flex flex-row items-center gap-2">
-					<div class="rounded-full w-4 h-4 {name} inline-block" />
+					<div class="h-4 w-4 rounded-full {name} inline-block" />
 					{category}
 				</div>
 			{/each}
 		</div>
 	</div>
-	<div class="content h-20" id="schedule-content" bind:this={content}>
+	<div bind:this={content} class="content h-20" id="schedule-content">
 		{#each hours as hour}
 			<div class="spacer h{hour.index * 6}"><span>{hour.string}</span></div>
 			<div class="spacer h{hour.index * 6} half" />
@@ -423,6 +573,7 @@
 				<Event
 					title={event.title}
 					description={event.description}
+					location={event.location}
 					hour_start={event.hour_start}
 					minute_start={event.minute_start}
 					length_minutes={event.length_minutes}

@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import EventModal from './event_modal.svelte';
+	import { fade } from 'svelte/transition';
 
 	import './schedule.scss';
 
 	export let title: string;
 	export let description: string | undefined;
+	export let location: string | undefined;
 	export let hour_start: number;
 	export let minute_start: number;
 	export let length_minutes: number;
@@ -50,12 +52,19 @@
 		length_minutes / 10,
 	)} c{display_column} {eventIsHovered
 		? ' hovered'
-		: ''} p-3 sm:p-4 md:p-5 break-all overflow-hidden cursor-pointer"
+		: ''} cursor-pointer overflow-hidden break-all p-3 sm:p-4 md:p-5"
 >
 	{title}
 </div>
+
+
 {#if isModalOpen}
-	<div on:click={() => toggleModal()} on:keydown={() => toggleModal()}>
-		<EventModal {title} {description} {hour_start} {minute_start} {length_minutes} />
+	<div
+					transition:fade={{duration: 50}}
+					on:click={() => toggleModal()}
+					on:keydown={() => toggleModal()}
+	>
+		<EventModal {title} {description} {location} {hour_start} {minute_start}
+								{length_minutes} />
 	</div>
 {/if}
