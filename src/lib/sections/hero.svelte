@@ -13,7 +13,7 @@
 			class="bg-white/1 flex w-max max-w-[90vw] flex-col items-center justify-center gap-6 rounded-xl p-10 backdrop-blur-[20px] md:max-w-[80vw] md:p-14"
 		>
 			<Logo />
-			<Button />
+			<!-- <Button /> -->
 		</div>
 	</div>
 </div>

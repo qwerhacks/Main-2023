@@ -8,6 +8,22 @@ $tracker-height: ($hour-scale * 32);
 $bg: #fff9f5;
 $bg-dark: hsl(24, 3%, 69%);
 
+.green {
+    background: #9DD191;
+}
+.lightblue {
+    background: #A4DFE6;
+}
+.plum {
+    background: #E1A0C5;
+}
+.coral {
+    background: #f15f72;
+}
+.yellow {
+    background: #FCD885;
+}
+
 .schedule-container {
 	padding: 3.5rem;
 	height: $hour-scale * 6;
@@ -114,16 +130,19 @@ $bg-dark: hsl(24, 3%, 69%);
 			background: #abd7a2;
 			border-top-color: #00000044;
 			&[class*='green'] {
-				background: #72c6a4;
+				background: #9DD191;
 			}
-			&[class*='blue'] {
-				background: #59c6d7;
+			&[class*='lightblue'] {
+				background: #A4DFE6;
 			}
+            &[class*='plum'] {
+                background: #E1A0C5;
+            }
 			&[class*='coral'] {
 				background: #f15f72;
 			}
 			&[class*='yellow'] {
-				background: #fcdf98;
+				background: #FCD885;
 			}
 			/*
             Width logic
