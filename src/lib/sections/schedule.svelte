@@ -32,7 +32,7 @@
 			title: 'Check-In',
 			description: `Checkin starts now!
 
-plz come up t0 carnesale commons (pacific palisades room) at UCLA (directions down below)
+plz come up to carnesale commons (pacific palisades room) at UCLA (directions down below)
 
 PS there will be cool swag we promise.`,
 			location: `Carnesale Commons at UCLA - <a class="underline" href="https://goo.gl/maps/9zUegz42XzzPcjYk8">251 Charles E Young Drive West, Los Angeles, CA 90095</a>. If you\'re a UCLA student, it\'s the building right above BPlate.`,
