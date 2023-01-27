@@ -140,13 +140,11 @@ Evy Nguyen from ACM W is here to the rescue!!!!! She will answer all ur silly qs
 			category: 'workshop',
 		},
 		{
-			title: 'MLH Mini Event 1',
+			title: 'MLH CTF',
 			location: "main room",
-			description: `AND FOR OUR FIRST MLH EVENT OF THE NIGHT….
+			description: `Ur ex’s red flags aren’t the only flags u need to be worrying ab tonight 😏🚩
 
-Cup stacking 🥂
-
-May the best stacker win 😉`,
+Sit back and relax for CTF, put on by our friends at MLH!`,
 			hour_start: 3,
 			minute_start: 45,
 			length_minutes: 45,
@@ -182,15 +180,19 @@ Go grab ur scrumdiddly yum lunch now, u deserve it <3`,
 			display_column: 0,
 			category: 'food',
 		},
-		// {
-		// 	title: 'MLH Mini Event 2',
-		// 	hour_start: 6,
-		// 	minute_start: 15,
-		// 	length_minutes: 30,
-		// 	display_width: 3,
-		// 	display_column: 0,
-		// 	category: 'workshop',
-		// },
+		{
+			title: 'MLH Cup Stacking',
+			description: `MLH EVENT NUMBER 22222222...
+Cup stacking 🥂
+
+May the best stacker win 😉`,
+			hour_start: 6,
+			minute_start: 15,
+			length_minutes: 30,
+			display_width: 3,
+			display_column: 0,
+			category: 'workshop',
+		},
 		{
 			title: 'Python',
 			description: `Need some help with Python?
