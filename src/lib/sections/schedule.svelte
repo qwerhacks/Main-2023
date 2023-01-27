@@ -85,6 +85,7 @@ Ariel is a 5th year Ph.D. student in Sociology and part of the Medical Scientist
 		{
 			title: 'Track Speaker -- Housing Access',
 			location: "main room",
+			description: "Show up for Jesse Goldshear’s insightful talk on: “Insecure Survival: The Material and Social Lives of Unhoused People Who Use Drugs”",
 			hour_start: 2,
 			minute_start: 20,
 			length_minutes: 20,
