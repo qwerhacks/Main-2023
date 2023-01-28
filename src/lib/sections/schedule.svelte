@@ -508,7 +508,7 @@ Time to see which cool prizes u won in our closing presentation <3 🏆`,
 	let content: HTMLDivElement;
 
 	function updateTrackerTime() {
-		let startDate = new Date('January 27, 2023 08:00 GMT-08'); // Use this time in prod
+		let startDate = new Date('January 28, 2023 08:00 GMT-08'); // Use this time in prod
 		// let startDate = new Date(`January 24, 2023 08:00 GMT-08`);
 		let currentDateTime = Date.now();
 		let timeSinceStartHours = currentDateTime - startDate.getTime();
