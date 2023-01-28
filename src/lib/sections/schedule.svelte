@@ -38,7 +38,7 @@ PS there will be cool swag we promise (some is limited so hurry!! first come fir
 			location: `Carnesale Commons at UCLA - <a class="underline" href="https://goo.gl/maps/9zUegz42XzzPcjYk8">251 Charles E Young Drive West, Los Angeles, CA 90095</a>. If you\'re a UCLA student, it\'s the building right above BPlate.`,
 			hour_start: 0,
 			minute_start: 0,
-			length_minutes: 60,
+			length_minutes: 100,
 			display_width: 3,
 			display_column: 0,
 			category: 'other',
@@ -53,20 +53,20 @@ And YES they are vegan <3`,
 			location: "main room",
 			hour_start: 0,
 			minute_start: 30,
-			length_minutes: 30,
+			length_minutes: 60,
 			display_width: 2,
 			display_column: 1,
 			category: 'food',
 		},
 		{
 			title: 'Opening Presentation',
-			description: `give it up for ARIEL HART (they/them), our first presenter of the day!!! 🤩
-
-Ariel is a 5th year Ph.D. student in Sociology and part of the Medical Scientist Training Program at UCLA`,
+			description: `Welcome to QWER Hacks!!! Can't wait to see you here! 
+			
+Learn about our event and what's going on!`,
 			location: "main room",
 			hour_start: 1,
-			minute_start: 0,
-			length_minutes: 60,
+			minute_start: 40,
+			length_minutes: 20,
 			display_width: 3,
 			display_column: 0,
 			category: 'talk',
@@ -267,7 +267,7 @@ Listen to them talk about traps and beyond at their amazing workshop!!! 💫`,
 			category: 'talk',
 		},
 		{
-			title: 'Identity Specific Workshop 1',
+			title: 'Identity Specific Workshop/Panel',
 			description: `Our friend Fiona from TechTogether is here all the way from Boston! ✈️
 
 Join us to discuss identity-specific topics. 💥`,
