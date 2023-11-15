@@ -35,6 +35,12 @@ module.exports = {
 				teal: {
 					DEFAULT: "#7DCBC8"
 				},
+				lavender: {
+					DEFAULT: "#B682DA"
+				},
+				darkblue: {
+					DEFAULT: '#200B3A'
+				},
 				button: {
 					DEFAULT: "#FDDE97",
 					active: "hsl(42,96%,70%)",
@@ -44,7 +50,8 @@ module.exports = {
 			fontFamily: {
 				nighty: ["Nighty DEMO", "serif"],
 				ranille: ["Ranille Normal", "serif"],
-				nunito: ["Nunito", "sans"]
+				nunito: ["Nunito", "sans"],
+				reactor7: ["Reactor7", "mono"]
 			},
 		},
 	},
