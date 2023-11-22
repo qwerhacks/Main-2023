@@ -181,8 +181,6 @@
 			$baseState.x = new_x;
 			$baseState.y = new_y;
 
-			console.debug(interactiveState);
-
 			makeInvisibleDiv();
       bringToTop(name)
 		}
@@ -193,7 +191,6 @@
 	function dragHandler(event: DragEvent | MouseEvent) {
 		if (interactiveState) {
 			if (interactiveState.isDragging) {
-				console.debug('dragHandler');
 				const clientX = event instanceof DragEvent ? event.clientX : event.clientX;
 				const clientY = event instanceof DragEvent ? event.clientY : event.clientY;
 
