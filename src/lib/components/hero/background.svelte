@@ -16,6 +16,7 @@
 <style>
 	.gradient {
 		background: linear-gradient(180deg, #180230 0%, #AA50B5 100%);
+		background-size: 100px;
 	}
 	.trans {
 		opacity: 0.5;

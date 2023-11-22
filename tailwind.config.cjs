@@ -41,6 +41,9 @@ module.exports = {
 				darkblue: {
 					DEFAULT: '#200B3A'
 				},
+				indigo: {
+					DEFAULT: "#3A0B75"
+				},
 				button: {
 					DEFAULT: "#FDDE97",
 					active: "hsl(42,96%,70%)",

@@ -1,13 +1,14 @@
 <script lang="ts">
 </script>
 
-<div id="logo-parent" class="w-full">
+<div id="logo-parent" class="w-full grid justify-items-center">
 	<img
 		src="media/logo.svg"
 		alt=""
+		class="w-[90%]"
 	/>
 	<div class="text"> 
-		JAN 26 - 28, 2024 @UCLA
+		FEB 2-4, 2024 @UCLA
 	</div>
 </div>
 
