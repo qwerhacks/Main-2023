@@ -54,7 +54,8 @@ module.exports = {
 				nighty: ["Nighty DEMO", "serif"],
 				ranille: ["Ranille Normal", "serif"],
 				nunito: ["Nunito", "sans"],
-				reactor7: ["Reactor7", "mono"]
+				reactor7: ["Reactor7", "mono"],
+				deadjim: ["DEADJIM", "sans-serif"]
 			},
 		},
 	},
