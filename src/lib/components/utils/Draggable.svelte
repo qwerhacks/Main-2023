@@ -188,8 +188,8 @@
 	function dragStartHandler(event: MouseEvent | TouchEvent) {
 		console.debug('dragStartHandler');
 		if (interactiveState && !interactiveState.isMaximized) {
-			const pageX = event instanceof TouchEvent ? event.touches[0].pageX : event.pageX;
-			const pageY = event instanceof TouchEvent ? event.touches[0].pageY : event.pageY;
+			const pageX = ('TouchEvent' in window && event instanceof TouchEvent) ? event.touches[0].pageX : event.pageX;
+			const pageY = ('TouchEvent' in window && event instanceof TouchEvent) ? event.touches[0].pageY : event.pageY;
 
 			const rect = slotRef.getBoundingClientRect();
 
