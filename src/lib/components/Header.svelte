@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import RetroButton from './utils/RetroButton.svelte';
-
-	let timeUntil = new Date('January 2, 2024 00:00 GMT-08').getTime() - Date.now();
+	
+	let applicationsOpenTime = new Date('January 2, 2024 00:00 GMT-08').getTime()
+	let timeUntil = applicationsOpenTime - Date.now();
 	setInterval(() => {
-		timeUntil = new Date('January 2, 2024 00:00 GMT-08').getTime() - Date.now();
+		timeUntil = applicationsOpenTime - Date.now();
+		timeUntil = new Date(timeUntil)
+		timeUntil = timeUntil.toLocaleDateString("en-US", {day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'});
 	}, 1000);
 
 	export let height: number = 0;
