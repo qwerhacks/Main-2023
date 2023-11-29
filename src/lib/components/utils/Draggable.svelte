@@ -262,8 +262,8 @@
 		if (interactiveState) {
 			interactiveState.isDragging = false;
 
-			document.body.style.cursor = 'default';
 			document.body.style.userSelect = 'auto';
+			document.body.style.removeProperty('cursor');
 			draggableTargetRef.style.removeProperty('cursor');
 		}
 	}

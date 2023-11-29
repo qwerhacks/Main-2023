@@ -32,7 +32,7 @@
 			bind:this={draggableTargetRef}
 			style="background: {background_val}"
 		>
-			<h4>{title}</h4>
+			<h4 class="blk px-2 text-2xl">{title}</h4>
 			<button class="ml-auto" bind:this={maximizeRef} tabindex="-1">O</button>
 			<button tabindex="-1">-</button>
 			<button tabindex="-1">X</button>
@@ -46,3 +46,11 @@
 		</div>
 	</div>
 </Draggable>
+
+<style>
+	.blk {
+		margin-block: 0;
+		display: grid;
+		align-items: center;
+	}
+</style>

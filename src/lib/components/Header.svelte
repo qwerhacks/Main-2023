@@ -3,12 +3,27 @@
 	import RetroButton from './utils/RetroButton.svelte';
 	
 	let applicationsOpenTime = new Date('January 2, 2024 00:00 GMT-08').getTime()
+	const seconds = 1000;
+	const minutes = seconds * 60;
+	const hours = minutes * 60;
+	const days = hours * 24;
 	let timeUntil = applicationsOpenTime - Date.now();
 	setInterval(() => {
 		timeUntil = applicationsOpenTime - Date.now();
-		timeUntil = new Date(timeUntil)
-		timeUntil = timeUntil.toLocaleDateString("en-US", {day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'});
+		let d = timeUntil / days;
+		timeUntil = timeUntil % days;
+		let h = timeUntil / hours;
+		timeUntil = timeUntil % hours;
+		let m = timeUntil / minutes;
+		timeUntil = timeUntil % minutes;
+		let s = timeUntil / seconds;
+		timeUntil = timeUntil % seconds;
+		timeUntil = `${Math.floor(d)}:${formatTwoDigit(Math.floor(h))}:${formatTwoDigit(Math.floor(m))}:${formatTwoDigit(Math.floor(s))}`
 	}, 1000);
+
+	const formatTwoDigit = (n: number) => {
+		return n < 10 ? `0${n}` : `${n}`;
+	}
 
 	export let height: number = 0;
 
@@ -48,7 +63,9 @@
 			</RetroButton>
 		</div>
 		<div class="flex flex-row items-center">
-			<a class="apply" href="/apply">{timeUntil}</a>
+			<RetroButton classList="active">
+				<a class="apply" href="/apply">{timeUntil}</a>
+			</RetroButton>
 		</div>
 	</div>
 </div>
