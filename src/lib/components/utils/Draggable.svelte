@@ -24,7 +24,7 @@
 	export let slotRef: HTMLElement;
 
 	export let draggableTargetRef: HTMLElement;
-	export let maximizeRef: HTMLElement | undefined;
+	export let maximizeRef: HTMLElement | undefined = undefined;
 
 	export let has_invis_div: boolean = false;
 
@@ -104,10 +104,11 @@
 		// Kick the loading of this onMount to after the child component
 		// https://stackoverflow.com/a/57489500/5623598
 		tick().then(() => {
-			const { x, y, width, height } = slotRef.getBoundingClientRect();
+			const { top, left, width, height } = slotRef.getBoundingClientRect();
+			console.log("height", height);
 			baseState.set({
-				x,
-				y,
+				x: left + window.scrollX,
+				y: top + window.scrollY,
 				width,
 				height
 			});
@@ -136,6 +137,11 @@
 		// Only make the invisible div if it doesn't already exist
 		if (!has_invis_div) {
 			has_invis_div = true;
+
+			// Set the initial height and width again
+			const { width, height } = slotRef.getBoundingClientRect();
+			$baseState.width = width;
+			$baseState.height = height;
 
 			// Switch out the div for a blank div to avoid reflow
 			const blankDiv = document.createElement('div');
@@ -182,19 +188,25 @@
 	function dragStartHandler(event: MouseEvent | TouchEvent) {
 		console.debug('dragStartHandler');
 		if (interactiveState && !interactiveState.isMaximized) {
-			const clientX = event instanceof TouchEvent ? event.touches[0].clientX : event.clientX;
-			const clientY = event instanceof TouchEvent ? event.touches[0].clientY : event.clientY;
+			const pageX = event instanceof TouchEvent ? event.touches[0].pageX : event.pageX;
+			const pageY = event instanceof TouchEvent ? event.touches[0].pageY : event.pageY;
+
+			const rect = slotRef.getBoundingClientRect();
 
 			interactiveState.isDragging = {
-				initialX: clientX - slotRef.getBoundingClientRect().x,
-				initialY: clientY - slotRef.getBoundingClientRect().y
+				initialX: pageX - (rect.left + window.scrollX),
+				initialY: pageY - (rect.top + window.scrollY)
 			};
 
-			const new_x = clientX - interactiveState.isDragging.initialX;
-			const new_y = clientY - interactiveState.isDragging.initialY;
+			const new_x = pageX - interactiveState.isDragging.initialX;
+			const new_y = pageY - interactiveState.isDragging.initialY;
 
 			$baseState.x = new_x;
 			$baseState.y = new_y;
+
+			document.body.style.cursor = 'grabbing';
+			draggableTargetRef.style.cursor = 'grabbing';
+			document.body.style.userSelect = 'none';
 
 			makeInvisibleDiv();
 			bringToTop(name);
@@ -203,14 +215,14 @@
 		requestAnimationFrame(startDragLoop);
 	}
 
-	function dragHandler(event: DragEvent | MouseEvent) {
+	function dragHandler(event: MouseEvent) {
 		if (interactiveState) {
 			if (interactiveState.isDragging) {
-				const clientX = event instanceof DragEvent ? event.clientX : event.clientX;
-				const clientY = event instanceof DragEvent ? event.clientY : event.clientY;
+				const pageX = event.pageX;
+				const pageY = event.pageY;
 
-				let new_x = clientX - interactiveState.isDragging.initialX;
-				let new_y = clientY - interactiveState.isDragging.initialY;
+				let new_x = pageX - interactiveState.isDragging.initialX;
+				let new_y = pageY - interactiveState.isDragging.initialY;
 
 				// ensure that new values are within bounds of the screen
 
@@ -223,7 +235,7 @@
 				}
 
 				if (new_x + $baseState.width > document.body.scrollWidth - maximize_padding_px) {
-					new_x = document.body.scrollHeight - $baseState.width - maximize_padding_px;
+					new_x = document.body.scrollWidth - $baseState.width - maximize_padding_px;
 				}
 
 				if (new_y + $baseState.height > document.body.scrollHeight - maximize_padding_px) {
@@ -249,6 +261,10 @@
 		console.debug('dragEndHandler');
 		if (interactiveState) {
 			interactiveState.isDragging = false;
+
+			document.body.style.cursor = 'default';
+			document.body.style.userSelect = 'auto';
+			draggableTargetRef.style.removeProperty('cursor');
 		}
 	}
 
