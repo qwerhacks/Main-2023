@@ -186,6 +186,7 @@
 	}
 
 	function dragStartHandler(event: MouseEvent | TouchEvent) {
+		event.preventDefault();
 		console.debug('dragStartHandler');
 		if (interactiveState && !interactiveState.isMaximized) {
 			const pageX = ('TouchEvent' in window && event instanceof TouchEvent) ? event.touches[0].pageX : event.pageX;
