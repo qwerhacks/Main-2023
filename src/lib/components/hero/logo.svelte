@@ -8,7 +8,7 @@
 		class="w-[90%]"
 	/>
 	<div class="text"> 
-		FEB 2-4, 2024 @UCLA
+		feb 2-4, 2024 @ ucla
 	</div>
 </div>
 
@@ -22,5 +22,6 @@
 		font-weight: 400;
 		line-height: normal;
 		letter-spacing: 3.2px;
+		text-shadow: #310561 0px 6px;
 	}
 </style>
