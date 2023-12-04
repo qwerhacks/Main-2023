@@ -19,6 +19,8 @@
 	export let main_bg_val: string = 'bg-white';
 
 	export let max_width: string = 'max-w-prose';
+
+	export let hide_buttons: boolean = false;
 </script>
 
 <Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div>
@@ -28,15 +30,26 @@
 		aria-hidden="true"
 	>
 		<div
-			class="flex flex-row gap-2 p-2 border-b-[5px] border-[#200B3A] text-3xl cursor-grab"
+			class="border-b-[5px] border-[#200B3A] cursor-grab"
 			bind:this={draggableTargetRef}
 			style="background: {background_val}"
 		>
-			<h4 class="blk px-2 text-2xl">{title}</h4>
-			<button class="ml-auto" bind:this={maximizeRef} tabindex="-1">O</button>
-			<button tabindex="-1">-</button>
-			<button tabindex="-1">X</button>
+			<slot name="header">
+				<div class="flex flex-row gap-2 text-3xl p-3">
+					<h4 class="font-jetbrains blk px-2 text-xl">{title}</h4>
+					<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:none={hide_buttons}>
+						<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
+					</button>
+					<button tabindex="-1" class:none={hide_buttons}>
+						<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
+					</button>
+					<button tabindex="-1" class:none={hide_buttons} class="mr-2">
+						<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
+					</button>
+				</div>
+			</slot>
 		</div>
+
 		<div
 			class="flex flex-col gap-2 p-4 md:p-8"
 			class:items-center={textCenter}

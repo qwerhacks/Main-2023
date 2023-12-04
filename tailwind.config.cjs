@@ -17,8 +17,7 @@ const config = {
       },
 
 			fontFamily: {
-				reactor7: ["Reactor7", "mono"],
-				fredoka: ["FredokaOne", "sans"],
+				fugaz: ["Fugaz One", "sans"],
 				jetbrains: ["JetBrainsMono", "mono"]
 			},
     }

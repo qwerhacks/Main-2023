@@ -3,57 +3,43 @@
 @tailwind utilities;
 
 @layer base {
-	p {
-    @apply font-jetbrains;
-  }
+	p,
+	li,
+	ul {
+		@apply font-jetbrains text-lg leading-6 md:text-2xl;
+	}
 	div,
 	h4,
 	h5,
 	h6 {
-		@apply font-reactor7 text-xl;
+		@apply font-fugaz text-xl;
 	}
 	h2,
 	h3 {
-		@apply font-fredoka;
+		@apply font-fugaz font-bold capitalize;
 	}
 	h1 {
 		@apply text-5xl;
-    @apply font-fredoka;
+		@apply font-fugaz font-bold;
 	}
-  h2 {
-    @apply text-4xl lowercase;
-  }
-  h3 {
-    @apply text-2xl lowercase;
-  }
-  h4 {
-    @apply text-2xl;
-  }
+	h2 {
+		@apply text-4xl capitalize;
+	}
+	h3 {
+		@apply text-2xl capitalize;
+	}
+	h4 {
+		@apply text-2xl;
+	}
 
 	ul {
-		@apply list-disc list-inside;
+		@apply list-inside list-disc;
 	}
-
 }
 
 @font-face {
-    font-family: 'Reactor7';
-    src: url('/font/Reactor7.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'FredokaOne';
-  src: url('/font/FredokaOne-Regular.woff') format('woff');
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'JetBrainsMono';
-  src: url('/font/JetBrainsMono-Regular.woff') format('woff');
-  font-weight: normal;
-  font-display: swap;
+	font-family: 'JetBrainsMono';
+	src: url('/font/JetBrainsMono-Regular.woff') format('woff');
+	font-weight: normal;
+	font-display: swap;
 }

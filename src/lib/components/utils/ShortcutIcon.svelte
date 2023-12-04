@@ -9,11 +9,12 @@
 </script>
 
 <Draggable {slotRef} draggableTargetRef={slotRef}>
-	<div bind:this={slotRef} class=" w-24">
-		<div class="w-24">
-			<img {src} class="unselectable w-24" aria-hidden="true" {alt} />
+	<div bind:this={slotRef} class="flex flex-col items-center">
+		<div class="w-20 relative">
+			<img {src} class="unselectable w-20 aspect-square" aria-hidden="true" {alt} />
+			<img class="absolute bottom-0 right-[-0.25rem] w-4" src="assets/hyperlink.svg" aria-hidden="true" alt="hyperlink icon"/>
 		</div>
-		<h4 class="font-reactor7 text-center line">{title}</h4>
+		<h4 class="font-jetbrains text-center text-white text-xl whitespace-nowrap leading-6">{@html title}</h4>
 	</div>
 </Draggable>
 
