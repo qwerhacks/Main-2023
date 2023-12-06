@@ -17,9 +17,8 @@
 	export let title: string;
 	export let background_val: string;
 	export let main_bg_val: string = 'bg-white';
-
+    export let style_str: string = '';
 	export let max_width: string = 'max-w-prose';
-
 	export let hide_buttons: boolean = false;
 </script>
 
@@ -54,6 +53,7 @@
 			class="flex flex-col gap-2 p-4 md:p-8"
 			class:items-center={textCenter}
 			class:text-center={textCenter}
+            style="{style_str}"
 		>
 			<slot />
 		</div>
