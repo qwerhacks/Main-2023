@@ -7,6 +7,7 @@
 	let slotRef: HTMLElement;
 	let draggableTargetRef: HTMLElement;
 	let maximizeRef: HTMLElement;
+	let closeRef: HTMLElement;
 
 	let has_invis_div: boolean = false;
 
@@ -20,12 +21,14 @@
     export let style_str: string = '';
 	export let max_width: string = 'max-w-prose';
 	export let hide_buttons: boolean = false;
+
+	export let title_text_white: boolean = false;
 </script>
 
-<Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div>
+<Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div {closeRef}>
 	<div
 		bind:this={slotRef}
-		class="min-h-20 min-w-32 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width}"
+		class="min-h-20 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width}"
 		aria-hidden="true"
 	>
 		<div
@@ -35,14 +38,14 @@
 		>
 			<slot name="header">
 				<div class="flex flex-row gap-2 text-3xl p-3">
-					<h4 class="font-jetbrains blk px-2 text-xl">{title}</h4>
+					<h4 class="font-jetbrains blk px-2 text-xl" class:text-white={title_text_white}>{title}</h4>
 					<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:none={hide_buttons}>
 						<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
 					</button>
 					<button tabindex="-1" class:none={hide_buttons}>
 						<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
 					</button>
-					<button tabindex="-1" class:none={hide_buttons} class="mr-2">
+					<button tabindex="-1" class:none={hide_buttons} class="mr-2 pointer-events-auto" bind:this={closeRef}>
 						<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
 					</button>
 				</div>

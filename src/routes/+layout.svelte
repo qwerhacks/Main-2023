@@ -7,7 +7,7 @@
 </script>
 
 <div class="gradient relative" data-sveltekit-preload-data>
-	<Header bind:height={header_height} />
+	<!-- <Header bind:height={header_height} /> -->
 	<a
 		id="mlh-trust-badge"
 		style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
@@ -19,7 +19,7 @@
 			style="width:100%"
 		/></a
 	>
-	<div style="height: calc(100% - {header_height})">
+	<div>
 		<slot />
 	</div>
 </div>

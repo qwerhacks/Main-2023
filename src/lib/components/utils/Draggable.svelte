@@ -17,7 +17,11 @@
 
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
-	import { generateUUID } from '$lib/typescript/utils';
+	import {
+		calculateInscribedRectangleDims,
+		generateUUID,
+		getRotation
+	} from '$lib/typescript/utils';
 	import { spring, type Spring } from 'svelte/motion';
 	import { get, writable } from 'svelte/store';
 
@@ -25,8 +29,11 @@
 
 	export let draggableTargetRef: HTMLElement;
 	export let maximizeRef: HTMLElement | undefined = undefined;
+	export let closeRef: HTMLElement | undefined = undefined;
 
 	export let has_invis_div: boolean = false;
+
+	export let click_callback: () => void = () => {};
 
 	const name = generateUUID();
 
@@ -100,12 +107,15 @@
 	let baseUpdatingPromisePending: boolean = false;
 	let baseUpdatingPromise: Promise<void> = Promise.resolve();
 
+	let dragStartX: number = 0;
+	let dragStartY: number = 0;
+
 	onMount(() => {
 		// Kick the loading of this onMount to after the child component
 		// https://stackoverflow.com/a/57489500/5623598
 		tick().then(() => {
 			const { top, left, width, height } = slotRef.getBoundingClientRect();
-			console.log("height", height);
+			console.log('height', height);
 			baseState.set({
 				x: left + window.scrollX,
 				y: top + window.scrollY,
@@ -119,6 +129,13 @@
 
 			if (maximizeRef !== undefined) {
 				maximizeRef.addEventListener('click', maximize);
+				maximizeRef.addEventListener('mousedown', maximize);
+			}
+
+			if (closeRef !== undefined) {
+				closeRef.addEventListener('click', close);
+				closeRef.addEventListener('mouseover', onHoverCloseStart);
+				closeRef.addEventListener('mouseout', onHoverCloseEnd);
 			}
 		});
 
@@ -130,8 +147,20 @@
 			if (maximizeRef !== undefined) {
 				maximizeRef.removeEventListener('click', maximize);
 			}
+
+			if (closeRef !== undefined) {
+				closeRef.removeEventListener('click', close);
+				closeRef.removeEventListener('mouseover', onHoverCloseStart);
+				closeRef.removeEventListener('mouseout', onHoverCloseEnd);
+			}
 		};
 	});
+
+	function close() {
+		makeInvisibleDiv();
+		console.log('Close');
+		slotRef.remove();
+	}
 
 	function makeInvisibleDiv() {
 		// Only make the invisible div if it doesn't already exist
@@ -140,14 +169,19 @@
 
 			// Set the initial height and width again
 			const { width, height } = slotRef.getBoundingClientRect();
-			$baseState.width = width;
-			$baseState.height = height;
+
+			let angle = getRotation(slotRef);
+			let dims = calculateInscribedRectangleDims(width, height, angle);
+			
+			$baseState.width = dims.width;
+			$baseState.height = dims.height;
 
 			// Switch out the div for a blank div to avoid reflow
 			const blankDiv = document.createElement('div');
 			// Force the width and height to be the same as the original div
-			blankDiv.style.width = `${$baseState.width}px`;
-			blankDiv.style.height = `${$baseState.height}px`;
+			blankDiv.style.width = `${dims.width}px`;
+			blankDiv.style.height = `${dims.height}px`;
+			blankDiv.style.transform = `rotate(${angle}deg)`;
 			slotRef.replaceWith(blankDiv);
 
 			// Add the div back to the DOM, but as a fixed-position div
@@ -189,8 +223,14 @@
 		event.preventDefault();
 		console.debug('dragStartHandler');
 		if (interactiveState && !interactiveState.isMaximized) {
-			const pageX = ('TouchEvent' in window && event instanceof TouchEvent) ? event.touches[0].pageX : event.pageX;
-			const pageY = ('TouchEvent' in window && event instanceof TouchEvent) ? event.touches[0].pageY : event.pageY;
+			const pageX =
+				'TouchEvent' in window && event instanceof TouchEvent
+					? event.touches[0].pageX
+					: event.pageX;
+			const pageY =
+				'TouchEvent' in window && event instanceof TouchEvent
+					? event.touches[0].pageY
+					: event.pageY;
 
 			const rect = slotRef.getBoundingClientRect();
 
@@ -205,6 +245,9 @@
 			$baseState.x = new_x;
 			$baseState.y = new_y;
 
+			dragStartX = $baseState.x;
+			dragStartY = $baseState.y;
+
 			document.body.style.cursor = 'grabbing';
 			draggableTargetRef.style.cursor = 'grabbing';
 			document.body.style.userSelect = 'none';
@@ -216,11 +259,17 @@
 		requestAnimationFrame(startDragLoop);
 	}
 
-	function dragHandler(event: MouseEvent) {
+	function dragHandler(event: MouseEvent | TouchEvent) {
 		if (interactiveState) {
 			if (interactiveState.isDragging) {
-				const pageX = event.pageX;
-				const pageY = event.pageY;
+				const pageX =
+					'TouchEvent' in window && event instanceof TouchEvent
+						? event.touches[0].pageX
+						: event.pageX;
+				const pageY =
+					'TouchEvent' in window && event instanceof TouchEvent
+						? event.touches[0].pageY
+						: event.pageY;
 
 				let new_x = pageX - interactiveState.isDragging.initialX;
 				let new_y = pageY - interactiveState.isDragging.initialY;
@@ -261,6 +310,21 @@
 	function dragEndHandler(event: Event) {
 		console.debug('dragEndHandler');
 		if (interactiveState) {
+			if (interactiveState.isDragging) {
+				const finalX = $baseState.x;
+				const finalY = $baseState.y;
+
+				const distanceX = finalX - dragStartX;
+				const distanceY = finalY - dragStartY;
+
+				if (Math.abs(distanceX) < 5 && Math.abs(distanceY) < 5) {
+					console.log('Triggering click instead of drag!');
+					if (hoverCloseButton) {
+						closeRef?.click();
+					}
+					click_callback();
+				}
+			}
 			interactiveState.isDragging = false;
 
 			document.body.style.userSelect = 'auto';
@@ -273,6 +337,8 @@
 		if (interactiveState) {
 			if (interactiveState.isMaximized) {
 				console.debug('unmaximize');
+
+				slotRef.style.removeProperty('maxWidth');
 
 				const { initialX, initialY, initialWidth, initialHeight } = interactiveState.isMaximized;
 
@@ -305,14 +371,34 @@
 					initialHeight: $baseState.height
 				};
 
+				// Unset max-width on the slotRef
+				slotRef.style.maxWidth = 'none';
+
+				// Get viewport width and height
+				let viewportWidth = Math.max(
+					document.documentElement.clientWidth || 0,
+					window.innerWidth || 0
+				);
+				let viewportHeight = Math.max(
+					document.documentElement.clientHeight || 0,
+					window.innerHeight || 0
+				);
+
+				// Calculate the new width and height
+				let width = viewportWidth - maximize_padding_px * 2;
+				let height = viewportHeight - maximize_padding_px * 2;
+
+				const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+				const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
 				baseUpdatingPromisePending = true;
 				baseUpdatingPromise = baseState.update((state) => {
 					return {
 						...state,
-						x: maximize_padding_px,
-						y: maximize_padding_px,
-						width: document.body.scrollWidth - maximize_padding_px * 2,
-						height: document.body.scrollHeight - maximize_padding_px * 2
+						x: scrollLeft + maximize_padding_px,
+						y: scrollTop + maximize_padding_px,
+						width: width - 80,
+						height: height
 					};
 				});
 
@@ -328,12 +414,23 @@
 	function clickAnywhere() {
 		if (has_invis_div) bringToTop(name);
 	}
+
+	let hoverCloseButton = false;
+
+	function onHoverCloseStart() {
+		hoverCloseButton = true;
+	}
+
+	function onHoverCloseEnd() {
+		hoverCloseButton = false;
+	}
 </script>
 
 <svelte:document
 	on:mouseup={dragEndHandler}
 	on:touchend={dragEndHandler}
 	on:mousemove={dragHandler}
+	on:touchmove={dragHandler}
 />
 
 <slot />

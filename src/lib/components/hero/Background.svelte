@@ -6,7 +6,7 @@
 	class="h-full w-full grid grid-cols-[repeat(auto-fill,_minmax(70px,1fr))] grid-rows-flow-dense gradient isolate"
 >
 	{#each array as i}
-		<div class="aspect-square border-t-4 border-l-4 border-solid border-[#eed] outer opacity-10" />
+		<div class="aspect-square border-t-4 border-l-4 border-solid border-[#A84FB3] outer opacity-20" />
 	{/each}
 </div>
 
@@ -16,6 +16,6 @@
 		background-size: 100px;
 	}
 	.outer {
-		mix-blend-mode: difference;
+		/* mix-blend-mode: difference; */
 	}
 </style>
