@@ -8,8 +8,13 @@
 <Hero />
 <div class="w-full" style="background: linear-gradient(180deg, #A84FB3 0%, #E689C6 99.48%);">
 	<Info />
-	<FAQ />
 </div>
 <div class="w-full" style="background: linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);">
+	<FAQ />
+</div>
+<div class="w-full" style="background: linear-gradient(180deg, #F4C0CA 0%, #C993FF 100%);
+
+
+">
 	<Donate />
 </div>

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Background from '$lib/components/hero/background.svelte';
-	import Logo from '$lib/components/hero/logo.svelte';
+	import Background from '$lib/components/hero/Background.svelte';
 	import RetroButton from './utils/RetroButton.svelte';
 	import ShortcutIcon from './utils/ShortcutIcon.svelte';
 </script>
