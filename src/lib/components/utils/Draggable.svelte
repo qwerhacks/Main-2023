@@ -184,7 +184,6 @@
 			blankDiv.style.height = `${dims.height}px`;
 			blankDiv.style.transform = `rotate(${angle}deg)`;
 			slotRef.replaceWith(blankDiv);
-
 			// Add the div back to the DOM, but as a fixed-position div
 			document.body.appendChild(slotRef);
 			slotRef.style.position = 'absolute';
@@ -192,7 +191,7 @@
 			slotRef.style.left = `${$baseState.x}px`;
 			slotRef.style.width = `${$baseState.width}px`;
 			slotRef.style.height = `${$baseState.height}px`;
-
+            slotRef.style.transform = `rotate(${angle}deg)`;
 			// Set the z-level to 10 so it's floating above the other windows
 			slotRef.style.zIndex = '10';
 		}
