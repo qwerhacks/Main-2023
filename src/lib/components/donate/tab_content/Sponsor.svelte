@@ -54,7 +54,10 @@
 	<div
 		class="flex-[2_1_0] md:border-solid md:border-black md:border-[3px] md:p-10 flex flex-col gap-4 items-center relative max-w-prose h-min"
 	>
-		<img src="assets/donate/speaker.png" />
+		<img
+			src="assets/donate/speaker.jpg"
+			alt="Three people posing with crossed arms in front of a colorful banner with abstract designs. From left to right: a person with a beard and long hair, wearing a navy shirt; a person with curly shoulder-length hair in a white T-shirt with a blue frog graphic; and a person with short wavy hair in a grey sweater. They all appear cheerful."
+		/>
 		<div class="text-center max-w-md">
 			<p style="font: 400 15px/120% 'JetBrainsMono-Regular', sans-serif">
 				“I loved connecting with the students and hearing the passion in their voices as they shared
@@ -65,13 +68,30 @@
 		</div>
 	</div>
 </div>
-
-
+<div class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] gap-8 justify-between items-center">
+	<div class="font-jetbrains text-center">
+		Need more info?
+		<br>
+		<a
+			href="https://drive.google.com/file/d/1bEVtQlb4Yw58R0a8gH0P0BWTpXJEpXQC/view"
+			class="italic underline">Read our sponsorship packet</a
+		>
+	</div>
+	<div class="hidden md:block">
+		<p class="text-center">OR</p>
+	</div>
+	<div class="font-jetbrains text-center">
+		Ready to sponsor? Email us at: <a
+			href="mailto:sponsor@qwerhacks.org"
+			class="font-extrabold italic underline">sponsor@qwerhacks.org</a
+		>
+	</div>
+</div>
 
 <style>
 	.text-gradient {
 		background: linear-gradient(90deg, #387f9e 0.09%, #4d48e3 100%);
-    background-clip: text;
+		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

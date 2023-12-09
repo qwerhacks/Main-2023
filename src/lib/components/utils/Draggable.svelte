@@ -24,6 +24,7 @@
 	} from '$lib/typescript/utils';
 	import { spring, type Spring } from 'svelte/motion';
 	import { get, writable } from 'svelte/store';
+	import { page } from '$app/stores';
 
 	export let slotRef: HTMLElement;
 
@@ -307,7 +308,7 @@
 		}
 	}
 
-	function dragEndHandler(event: Event) {
+	function dragEndHandler(event: MouseEvent | TouchEvent) {
 		console.debug('dragEndHandler');
 		if (interactiveState) {
 			if (interactiveState.isDragging) {
@@ -319,6 +320,32 @@
 
 				if (Math.abs(distanceX) < 5 && Math.abs(distanceY) < 5) {
 					console.log('Triggering click instead of drag!');
+
+					console.log(event)
+					
+					// Viewport coordinates of mouse
+					const pageX =
+						'TouchEvent' in window && event instanceof TouchEvent
+							? event.changedTouches[0].clientX
+							: event.clientX;
+					const pageY =
+						'TouchEvent' in window && event instanceof TouchEvent
+							? event.changedTouches[0].clientY
+							: event.clientY;
+
+					const elem = document.elementFromPoint(pageX, pageY);
+
+					// Construct and send a click event
+					const clickEvent = new MouseEvent('click', {
+						view: window,
+						bubbles: true,
+						cancelable: true,
+						clientX: pageX,
+						clientY: pageY
+					});
+					// Send to element
+					elem?.dispatchEvent(clickEvent);
+
 					if (hoverCloseButton) {
 						closeRef?.click();
 					}

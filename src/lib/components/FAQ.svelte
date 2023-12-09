@@ -36,7 +36,7 @@
             main_bg_val="bg-[#E7E5E5]"
             style_str="gap: 2rem"
 		>
-            <div style="display: grid; grid-template-columns: 15fr 1fr; gap: 1rem">
+            <div>
                 <div class="inner">
                     <h2 class="font-fugaz text-3xl md:text-5xl uppercase text-center">Q&A</h2>
                     {#each faqs as faq, i}
@@ -46,14 +46,14 @@
                         </div>
                     {/each}
                 </div>
-                <div class="scrollbar">
+                <!-- <div class="scrollbar">
                     <div class="arrow up" />
                     <div class="slider" />
                     <div class="arrow down" />
-                </div>
+                </div> -->
             </div>
             <div class="buttons">
-                <div>{messagebox}</div>
+                <div class="hidden sm:block">{messagebox}</div>
                 <button>apply!</button> 
             </div>
 		</WindowBase>
@@ -139,7 +139,7 @@
             background: white;
         }
         button {
-            width: 20%;
+            width: max(20%, 150px);
             box-shadow: 5px 5px 0px #200B3A;
         }
     }

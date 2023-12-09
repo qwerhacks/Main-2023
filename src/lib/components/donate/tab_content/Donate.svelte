@@ -30,7 +30,7 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 	<div
 		class="flex-[2_1_0] md:border-solid md:border-black md:border-[3px] md:p-10 flex flex-col gap-4 items-center relative max-w-prose h-min"
 	>
-		<img src="assets/donate/speaker.png" />
+		<img src="assets/donate/laughing.jpeg" alt="Three individuals in a room with a nonbinary flag in the background. The person on the left is holding a smartphone, the central individual is laughing with clasped hands, and the person on the right is covering their mouth with their hand. They are wearing similar white event t-shirts and lanyards. A water bottle and some papers are on a table in the foreground." />
 		<div class="text-center max-w-md">
 			<h4 class="text-lg">> What did you like most about QWER Hacks?</h4>
 			<p style="font: 400 15px/120% 'JetBrainsMono-Regular', sans-serif">
@@ -58,6 +58,25 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 				</p>
 			</div>
 		{/each}
+	</div>
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] gap-8 justify-between items-center">
+	<div class="font-jetbrains text-center">
+		Your company have Benevity?
+		<br>
+		<a
+			href="https://drive.google.com/file/d/1bEVtQlb4Yw58R0a8gH0P0BWTpXJEpXQC/view"
+			class="italic underline">Go here (they'll match you)</a
+		>
+	</div>
+	<div class="hidden md:block">
+		<p class="text-center">OR</p>
+	</div>
+	<div class="font-jetbrains text-center">
+		Otherwise: <a
+			href="mailto:sponsor@qwerhacks.org"
+			class="font-extrabold italic underline">Go here</a
+		> (both are tax deductable!)
 	</div>
 </div>
 

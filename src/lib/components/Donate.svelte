@@ -20,12 +20,14 @@
 				<h2 class="text-5xl uppercase">Help make qwerhacks a success!</h2>
 			</WindowBase>
 
-			<ShortcutIcon
-				title="Donation<br>Calculator"
-				src="assets/donate/calculator.svg"
-				alt="calculator icon"
-				onclick={() => (showCalculator = true)}
-			/>
+			<div class="hidden sm:block">
+				<ShortcutIcon
+					title="Donation<br>Calculator"
+					src="assets/donate/calculator.svg"
+					alt="calculator icon"
+					onclick={() => (showCalculator = true)}
+				/>
+			</div>
 		</div>
 	</div>
 
