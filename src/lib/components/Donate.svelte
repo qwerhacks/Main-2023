@@ -9,7 +9,7 @@
 
 <div class="w-full px-6 flex flex-col items-center pb-24 relative">
 	<div class="mb-10">
-		<div class="flex flex-row gap-6 md:gap-12 sm:mr-8 sm:ml-4">
+		<div class="flex flex-row gap-6 md:gap-12 sm:mr-8 sm:ml-4 items-center">
 			<WindowBase
 				title="Alert!"
 				textCenter={true}
