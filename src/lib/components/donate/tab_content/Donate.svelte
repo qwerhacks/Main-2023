@@ -33,7 +33,7 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 		<img src="assets/donate/laughing.jpeg" alt="Three individuals in a room with a nonbinary flag in the background. The person on the left is holding a smartphone, the central individual is laughing with clasped hands, and the person on the right is covering their mouth with their hand. They are wearing similar white event t-shirts and lanyards. A water bottle and some papers are on a table in the foreground." />
 		<div class="text-center max-w-md">
 			<h4 class="text-lg">> What did you like most about QWER Hacks?</h4>
-			<p style="font: 400 15px/120% 'JetBrainsMono-Regular', sans-serif">
+			<p style="font: 400 15px/120% 'JetBrainsMono', sans-serif">
 				“I loved connecting with the students and hearing the passion in their voices as they shared
 				their projects and ideas to improve the quality of life for the LGBTQIA+ community through
 				technology!”
@@ -42,7 +42,7 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 		</div>
 	</div>
 	<div class="flex-[3_1_0] flex flex-col gap-8 items-start justify-between">
-		<p class="" style="font: 400 16px/120% 'JetBrainsMono-Regular', sans-serif">
+		<p class="" style="font: 400 16px/120% 'JetBrainsMono', sans-serif">
 			As a student-run hackathon, <b>QWER Hacks relies on the generosity</b> of companies and individual
 			<b>donors like you</b>! Your donations make it possible for us to host an incredible hackathon that
 			fosters a safe space centered around queer joy, development for social good, and connection!
@@ -52,7 +52,7 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 				<h4 class="normal-case font-fugaz font-normal text-2xl">{detail.title}</h4>
 				<p
 					class="normal-case font-jetbrains max-w-prose"
-					style="font: 400 16px/120% 'JetBrainsMono-Regular', sans-serif"
+					style="font: 400 16px/120% 'JetBrainsMono', sans-serif"
 				>
 					{@html detail.description}
 				</p>

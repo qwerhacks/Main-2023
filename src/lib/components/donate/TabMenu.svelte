@@ -2,6 +2,7 @@
 	import WindowBase from '../utils/WindowBase.svelte';
 	import Donate from './tab_content/Donate.svelte';
 	import Sponsor from './tab_content/Sponsor.svelte';
+	import Volunteer from './tab_content/Volunteer.svelte';
 
 	const tabs = ['Sponsor', 'Donate', 'Volunteer'];
 
@@ -47,7 +48,7 @@
 		{:else if activeTab === 1}
 			<Donate />
 		{:else if activeTab === 2}
-			<h2 class="text-6xl">Volunteer for qwerhacks</h2>
+		<Volunteer />
 		{/if}
 	</div>
 </WindowBase>

@@ -1,23 +1,30 @@
 <script lang="ts">
 	interface Details {
-		title: string;
+		title?: string;
 		description: string;
 	}
 	const details: Details[] = [
 		{
-			title: '🤝 Connect Students to Your Company!',
+			title: '✏️ Workshop Leads ✏️',
 			description:
-				'Form connections with up-and-coming tech talent at the #1 Public University in the United States! Our hackers build projects that teach them to collaboratively ideate, adapt quickly, iterate, and problem-solve at the intersections of diverse viewpoints - skills that would make them valuable contributors to your organization!'
+				"Host a technical, identity-specific, or creative workshop. Here's some ideas we'd love to see YOU bring to life: <a href='https://bit.ly/qwerhacks-workshop-ideas' class='italics underline'>qwerhacks-workshop-ideas</a>. Sign up if you're passionate about helping beginners with anything technical or crafty, or are a member of the LGBTQIA+ community and want to share experiences and advice ❤️"
 		},
 		{
-			title: '📊 Boost Recognition of Your Products!',
-			description:
-				'Demo your products and APIs to 200+ hackers. Empower hackers to integrate your product into their projects!'
+			title: '🖥 Technical Mentors 🖥',
+			description: 'Offer technical guidance for hackathon attendees on the day-of.'
 		},
 		{
-			title: '🌟 Empower Marginalized Groups in Tech!',
+			title: '🌈 Identity Specific Mentors 🌈',
 			description:
-				'Support our mission of celebrating the LGBTQIA+ community in tech and spread the message that queer and trans individuals do belong in tech and have the support to thrive!'
+				'Mentor bi/pan/omni, queer + questioning, and trans and gender non-conforming hackers.'
+		},
+		{
+			title: '🥇 Judges 🥇',
+			description: 'Judge submissions based on predetermined criteria and choose hackathon winners.'
+		},
+		{
+			title: '🔨 Volunteers 🔨',
+			description: 'Help with setup and maintenance of the in-person portion of the hackathon.'
 		}
 	];
 </script>
@@ -26,27 +33,29 @@
 	<img class="hidden lg:block" src="assets/donate/wiki_logo.svg" alt="QWER Hacks Wiki Logo" />
 	<div class="flex flex-col flex-grow">
 		<h3 class="hidden md:block normal-case text-3xl text-center">
-			<span class="line">Why should your company</span>
-			<span class="line"><span class="text-gradient">sponsor QWER Hacks</span>?</span>
+			<span class="line">Interested in</span>
+			<span class="line"><span class="text-gradient">volunteering for QWERHacks</span>?</span>
 		</h3>
 		<h3 class="md:hidden normal-case text-3xl text-center">
-			Why sponsor <span class="text-gradient">QWERHacks</span>?
+			Interested in <span class="text-gradient">Volunteering</span>?
 		</h3>
 		<h4 class="hidden md:block normal-case font-fredoka font-normal text-lg sm:text-xl text-center">
-			We’re Looking for Companies Who Strive to Empower the LGBTQIA+ Community!
+			We’re Looking for Individuals who want to make a difference in their community!
 		</h4>
 	</div>
 </div>
 <div class="flex md:flex-row flex-col gap-12 mt-8 items-center">
-	<div class="flex-[3_1_0] flex flex-col gap-8 items-start justify-between">
+	<div class="flex-[3_1_0] flex flex-col gap-4 items-start justify-between">
 		{#each details as detail}
 			<div class="flex flex-col gap-1 items-start">
-				<h4 class="normal-case font-fugaz font-normal text-2xl">{detail.title}</h4>
+				{#if detail.title}
+					<h4 class="normal-case font-fugaz font-normal text-2xl">{detail.title}</h4>
+				{/if}
 				<p
 					class="normal-case font-jetbrains max-w-prose"
-					style="font: 400 18px/120% 'JetBrainsMono', sans-serif"
+					style="font: 400 16px/120% 'JetBrainsMono', sans-serif"
 				>
-					{detail.description}
+					{@html detail.description}
 				</p>
 			</div>
 		{/each}
@@ -68,23 +77,14 @@
 		</div>
 	</div>
 </div>
-<div class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] gap-8 justify-between items-center">
+<div class="mt-8 flex flex-row justify-center items-center">
 	<div class="font-jetbrains text-center">
-		Need more info?
-		<br>
 		<a
-			href="https://drive.google.com/file/d/1bEVtQlb4Yw58R0a8gH0P0BWTpXJEpXQC/view"
-			class="italic underline">Read our sponsorship packet</a
+			href="https://docs.google.com/forms/d/1jwJGgcg5spSpB5snfbMJrX0BIHKrWPKLKcKFCO8QFhw/viewform?edit_requested=true"
+			class="font-extrabold italic underline"
 		>
-	</div>
-	<div class="hidden md:block">
-		<p class="text-center">OR</p>
-	</div>
-	<div class="font-jetbrains text-center">
-		Ready to sponsor? Email us at: <a
-			href="mailto:sponsor@qwerhacks.org"
-			class="font-extrabold italic underline">sponsor@qwerhacks.org</a
-		>
+			Apply here!!
+		</a>
 	</div>
 </div>
 

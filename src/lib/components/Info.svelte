@@ -27,7 +27,7 @@
 		</WindowBase>
 		<div class="flex-row gap-8 px-12 md:pl-24 flex-grow hidden md:flex z-50">
 			<ShortcutIcon title="Raccoon<br>Memes" src="assets/intro/folder.svg" alt="Folder Icon" onclick="https://www.instagram.com/qwerhacks/guide/raccoon-memes/17895595787928608/?igshid=NjZiM2M3MzIxNA==" />
-			<ShortcutIcon title="Prizes" src="assets/intro/trophy.svg" alt="Folder Icon" />
+			<!-- <ShortcutIcon title="Prizes" src="assets/intro/trophy.svg" alt="Folder Icon" /> -->
 		</div>
 	</div>
 	<div class="mt-5 mr-4 md:mt-[-40px] md:mr-[8vw] z-10 self-end pointer-events-none flex flex-row items-center gap-16">

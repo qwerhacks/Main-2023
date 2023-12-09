@@ -76,7 +76,7 @@
 					Fly ~3 hackers to QWER Hacks!
 				</div>
 			</div>
-			<CalculatorButton>♥</CalculatorButton>
+			<CalculatorButton>🧡</CalculatorButton>
 			<CalculatorButton>✈️</CalculatorButton>
 			<CalculatorButton>CE</CalculatorButton>
 			<CalculatorButton>C</CalculatorButton>
@@ -96,6 +96,6 @@
 			<CalculatorButton>+</CalculatorButton>
 			<CalculatorButton classList="!col-span-2 !aspect-auto">=</CalculatorButton>
 		</div>
-		<a href="#" class="text-blue-600 hover:underline">Click here to donate {currentResult !== 0 ? `$${currentResult}` : "*amount*"}!</a>
+		<a href="https://hcb.hackclub.com/donations/start/qwer-hacks?amount={(currentResult*100).toFixed(0)}" class="text-blue-600 hover:underline">Click here to donate {currentResult !== 0 ? `$${currentResult}` : "*amount*"}!</a>
 	</div>
 </WindowBase>
