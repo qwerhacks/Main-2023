@@ -34,7 +34,7 @@
 	</div>
 	<div class="absolute left-[8vw] bottom-[7vh] md:bottom-[15vh]">
 		<ShortcutIcon
-			title="Sponsor Us!"
+			title="Support Us!"
 			src="assets/hero/sponsor.svg"
 			alt="An icon of a hand with a heart floating above it, with sparks flying out of the heart."
 			onclick="mailto:sponsor@qwerhacks.org"

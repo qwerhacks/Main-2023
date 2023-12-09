@@ -65,3 +65,18 @@ export function calculateInscribedRectangleDims(outerWidth: number, outerHeight:
 
     return { width: innerWidth, height: innerHeight };
 }
+
+
+export function debounce<T extends (...args: unknown[]) => void>(fun: T, timeout: number): (...args: Parameters<T>) => void {
+    let flag = true
+    
+    return (...args: Parameters<T>) => {
+        if (flag) {
+            flag = false
+            setTimeout(() => {
+                flag = true
+            }, timeout)
+            return fun(...args)
+        }
+    }
+}

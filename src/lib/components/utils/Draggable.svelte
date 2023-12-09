@@ -19,6 +19,7 @@
 	import { onMount, tick } from 'svelte';
 	import {
 		calculateInscribedRectangleDims,
+		debounce,
 		generateUUID,
 		getRotation
 	} from '$lib/typescript/utils';
@@ -104,7 +105,6 @@
 		}
 	);
 
-	let minimizingPromisePending: boolean = false;
 	let baseUpdatingPromisePending: boolean = false;
 	let baseUpdatingPromise: Promise<void> = Promise.resolve();
 
@@ -114,9 +114,10 @@
 	onMount(() => {
 		// Kick the loading of this onMount to after the child component
 		// https://stackoverflow.com/a/57489500/5623598
+		const debouncedMaximize = debounce(maximize, 400);
+
 		tick().then(() => {
 			const { top, left, width, height } = slotRef.getBoundingClientRect();
-			console.log('height', height);
 			baseState.set({
 				x: left + window.scrollX,
 				y: top + window.scrollY,
@@ -128,9 +129,10 @@
 			draggableTargetRef.addEventListener('touchstart', dragStartHandler);
 			slotRef.addEventListener('click', clickAnywhere);
 
+
 			if (maximizeRef !== undefined) {
-				maximizeRef.addEventListener('click', maximize);
-				maximizeRef.addEventListener('mousedown', maximize);
+				maximizeRef.addEventListener('click', debouncedMaximize);
+				maximizeRef.addEventListener('mousedown', debouncedMaximize);
 			}
 
 			if (closeRef !== undefined) {
@@ -146,7 +148,8 @@
 			slotRef.removeEventListener('click', clickAnywhere);
 
 			if (maximizeRef !== undefined) {
-				maximizeRef.removeEventListener('click', maximize);
+				maximizeRef.removeEventListener('click', debouncedMaximize);
+				maximizeRef.removeEventListener('mousedown', debouncedMaximize);
 			}
 
 			if (closeRef !== undefined) {
@@ -198,6 +201,7 @@
 	}
 
 	function startDragLoop() {
+		console.log("Animating", baseUpdatingPromisePending)
 		// The animationFrame loop that handles dragging
 		if (baseUpdatingPromisePending) {
 			slotRef.style.top = `${$baseState.y}px`;
@@ -208,6 +212,7 @@
 		} else {
 			if (interactiveState) {
 				if (interactiveState.isDragging) {
+					console.log("Is actively dragging")
 					slotRef.style.top = `${$baseState.y}px`;
 					slotRef.style.left = `${$baseState.x}px`;
 					slotRef.style.width = `${$baseState.width}px`;
@@ -359,19 +364,21 @@
 		}
 	}
 
-	function maximize() {
+	function maximize(event: Event) {
+		event.stopPropagation()
 		if (interactiveState) {
+			console.log("State:", interactiveState.isMaximized, $baseState)
 			if (interactiveState.isMaximized) {
 				console.debug('unmaximize');
 
 				slotRef.style.removeProperty('maxWidth');
 
 				const { initialX, initialY, initialWidth, initialHeight } = interactiveState.isMaximized;
-
 				interactiveState.isMaximized = false;
 
+				console.log("Setting baseState to", initialWidth, initialHeight)
+
 				baseUpdatingPromisePending = true;
-				minimizingPromisePending = true;
 				baseUpdatingPromise = baseState.update((state) => {
 					return {
 						...state,
@@ -383,12 +390,14 @@
 				});
 
 				baseUpdatingPromise.then(() => {
+					console.log("Terminating update")
 					baseUpdatingPromisePending = false;
-					minimizingPromisePending = false;
 				});
 			} else {
 				console.debug('maximize');
 				makeInvisibleDiv();
+
+				console.log("Setting base state: ", $baseState.width, $baseState.height)
 
 				interactiveState.isMaximized = {
 					initialX: $baseState.x,
