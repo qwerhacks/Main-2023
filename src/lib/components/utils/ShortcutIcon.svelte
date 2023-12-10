@@ -35,7 +35,7 @@
 				/>
 			</a>
 		{/if}
-		<h4 class="font-jetbrains text-center text-white text-xl whitespace-nowrap leading-6">
+		<h4 class="font-jetbrains text-center text-white text-xl whitespace-nowrap leading-6 addshadow">
 			{@html title}
 		</h4>
 	</div>
@@ -53,4 +53,8 @@
 	.line {
 		line-height: 22px;
 	}
+    .addshadow {
+        text-shadow: 0px 0px 7px black, 0px 0px 7px lightgrey;
+        user-select: none !important;
+    }
 </style>
