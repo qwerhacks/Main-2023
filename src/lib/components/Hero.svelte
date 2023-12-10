@@ -4,7 +4,7 @@
 	import ShortcutIcon from './utils/ShortcutIcon.svelte';
 </script>
 
-<div class="h-screen relative w-screen" style="z-index: 10000;">
+<div class="h-screen relative w-screen" style="z-index: 9;">
 	<div
 		id="content"
 		class="z-10 flex flex-col items-center justify-center h-screen w-screen py-16 px-4 gap-5"

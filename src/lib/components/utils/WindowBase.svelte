@@ -29,7 +29,7 @@
     
         <div
 		bind:this={slotRef}
-		class="min-h-20 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width}"
+		class="min-h-20 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width} box"
 		aria-hidden="true"
         >
             <div
@@ -64,10 +64,21 @@
         </div>
 </Draggable>
 
-<style>
+<style lang="scss">
     .blk {
 		margin-block: 0;
 		display: grid;
 		align-items: center;
 	}
+    .box {
+        transition: box-shadow ease 0.5s, outline-width ease 0.5s, outline-offset ease 0.2s;
+        &:hover {
+            outline-offset: 30px;
+            outline: dotted 5px rgba(255, 255, 255, 0.5);
+        }
+        &:not(:hover) {
+            outline: dotted 0px rgba(255, 255, 255, 0.1);
+        }
+        box-shadow: 5px 5px 0px black;
+    }
 </style>
