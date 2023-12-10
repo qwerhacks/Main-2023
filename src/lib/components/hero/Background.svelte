@@ -5,17 +5,48 @@
 <div
 	class="h-full w-full grid grid-cols-[repeat(auto-fill,_minmax(70px,1fr))] grid-rows-flow-dense gradient isolate"
 >
-	{#each array as i}
-		<div class="aspect-square border-t-4 border-l-4 border-solid border-[#A84FB3] outer opacity-20" />
-	{/each}
+    {#each array as sq,i}
+    <div class="aspect-square border-t-4 border-l-4 border-solid border-[#A84FB3] outer opacity-20 square-{i}" />
+    {/each}
 </div>
-
-<style>
+ 
+<style lang="scss">
 	.gradient {
-		background: linear-gradient(180deg, #180230 0%, #A84FB3 100%);
-		background-size: 100px;
+		background-image: linear-gradient(180deg, #180230bb 0%, #A84FB3de 100%), radial-gradient(#A84FB3 0%, #180230 80%);
+        background-size: cover;
+        mask: linear-gradient(180deg, black 0%, black 80%, rgba(0, 0, 0, 0.9) 85%, transparent 100%);
+        backdrop-filter: blur(25px);
 	}
-	.outer {
-		/* mix-blend-mode: difference; */
-	}
+    @for $i from 0 through 1000 { 
+        .square-#{$i} { 
+            opacity: 0.1;
+            width: 100%;
+            animation: opacity-anim 5s, gentle-rotate 1s;
+            animation-iteration-count: infinite, 1;
+            animation-fill-mode: none, forwards;
+            animation-delay: calc(($i / 100)) + s, calc(($i / 500)) + s;
+            transform: rotateX(90deg) rotateZ(45deg);
+            /*mask-image: linear-gradient($i + deg, black 0%, transparent 100%);*/
+            mix-blend-mode: lighten;
+        }
+    }
+    @keyframes opacity-anim {
+        0% {
+            opacity: 0.1;
+        }
+        50% {
+            opacity: 0.65;
+        }
+        100% {
+            opacity: 0.1;
+        }
+    }
+    @keyframes gentle-rotate {
+        0% {
+            transform: rotateX(90deg) rotateZ(45deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
 </style>
