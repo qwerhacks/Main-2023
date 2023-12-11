@@ -6,7 +6,7 @@
 	import WindowBase from './utils/WindowBase.svelte';
 </script>
 
-<div class="p-4 flex flex-col pb-24">
+<div class="p-4 flex flex-col pb-24 w-full">
 	<div
 		class="md-8 md:mt-[2vh] sm:ml-2 md:ml-[8vw] z-20 pointer-events-none flex flex-row items-center"
 	>
