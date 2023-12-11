@@ -71,14 +71,6 @@
 		align-items: center;
 	}
     .box {
-        transition: box-shadow ease 0.5s, outline-width ease 0.5s, outline-offset ease 0.2s;
-        &:hover {
-            outline-offset: 30px;
-            outline: dotted 5px rgba(255, 255, 255, 0.5);
-        }
-        &:not(:hover) {
-            outline: dotted 0px rgba(255, 255, 255, 0.1);
-        }
         box-shadow: 5px 5px 0px black;
     }
 </style>
