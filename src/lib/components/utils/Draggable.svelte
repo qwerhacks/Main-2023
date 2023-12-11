@@ -10,7 +10,7 @@
 
 	export function bringToTop(name: string) {
 		Object.values(get(component_data_map)).forEach((componentDatum) => {
-			console.log(componentDatum.name, name);
+			console.debug(componentDatum.name, name);
 			componentDatum.setZCallback(componentDatum.name === name);
 		});
 	}
@@ -45,7 +45,7 @@
 	onMount(() => {
 		internalName = name ?? generateUUID();
 
-		console.log('Added component', internalName);
+		console.debug('Added component', internalName);
 
 		// Register this component with the component_data_map
 		// so that it can be brought to the top when clicked\
@@ -170,7 +170,7 @@
 
 	function close() {
 		makeInvisibleDiv();
-		console.log('Close');
+		console.debug('Close');
 		slotRef.remove();
 	}
 
@@ -209,7 +209,7 @@
 	}
 
 	function startDragLoop() {
-		console.log('Animating', baseUpdatingPromisePending);
+		console.debug('Animating', baseUpdatingPromisePending);
 		// The animationFrame loop that handles dragging
 		if (baseUpdatingPromisePending) {
 			slotRef.style.top = `${$baseState.y}px`;
@@ -220,7 +220,7 @@
 		} else {
 			if (interactiveState) {
 				if (interactiveState.isDragging) {
-					console.log('Is actively dragging');
+					console.debug('Is actively dragging');
 					slotRef.style.top = `${$baseState.y}px`;
 					slotRef.style.left = `${$baseState.x}px`;
 					slotRef.style.width = `${$baseState.width}px`;
@@ -331,9 +331,9 @@
 				const distanceY = finalY - dragStartY;
 
 				if (Math.abs(distanceX) < 5 && Math.abs(distanceY) < 5) {
-					console.log('Triggering click instead of drag!');
+					console.debug('Triggering click instead of drag!');
 
-					console.log(event);
+					console.debug(event);
 
 					// Viewport coordinates of mouse
 					const pageX =
@@ -375,7 +375,7 @@
 	function maximize(event: Event) {
 		event.stopPropagation();
 		if (interactiveState) {
-			console.log('State:', interactiveState.isMaximized, $baseState);
+			console.debug('State:', interactiveState.isMaximized, $baseState);
 			if (interactiveState.isMaximized) {
 				console.debug('unmaximize');
 
@@ -384,7 +384,7 @@
 				const { initialX, initialY, initialWidth, initialHeight } = interactiveState.isMaximized;
 				interactiveState.isMaximized = false;
 
-				console.log('Setting baseState to', initialWidth, initialHeight);
+				console.debug('Setting baseState to', initialWidth, initialHeight);
 
 				baseUpdatingPromisePending = true;
 				baseUpdatingPromise = baseState.update((state) => {
@@ -398,14 +398,14 @@
 				});
 
 				baseUpdatingPromise.then(() => {
-					console.log('Terminating update');
+					console.debug('Terminating update');
 					baseUpdatingPromisePending = false;
 				});
 			} else {
 				console.debug('maximize');
 				makeInvisibleDiv();
 
-				console.log('Setting base state: ', $baseState.width, $baseState.height);
+				console.debug('Setting base state: ', $baseState.width, $baseState.height);
 
 				interactiveState.isMaximized = {
 					initialX: $baseState.x,

@@ -15,7 +15,6 @@
 	function showBenevityInfo() {
 		shouldShowBenevityInfo = true;
 		setTimeout(() => {
-			console.log(postItName);
 			bringToTop(postItName);
 		}, 0);
 	}

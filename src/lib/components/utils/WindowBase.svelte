@@ -12,7 +12,7 @@
 	let has_invis_div: boolean = false;
 
 	onMount(() => {
-		console.log('slotRefWindow', slotRef);
+		console.debug('slotRefWindow', slotRef);
 	});
 
 	export let title: string;
