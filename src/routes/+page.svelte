@@ -46,18 +46,18 @@
             margin-top: -15vh;
             background: linear-gradient(180deg, #A84FB3 0%, #E689C6 99.48%);
             mask-image: radial-gradient(black 30%, transparent 90%);
-            height: 100vh;
+            height: 80vh;
         }
         &.two {
             background: linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);
             mask-image: radial-gradient(black 30%, transparent 90%);
-            height: 100vh;
+            height: 80vh;
             right: 50vw;
         }
         &.three {
             background: linear-gradient(180deg, #F4C0CA 0%, #C993FF 100%);
             mask-image: radial-gradient(black 30%, transparent 90%);
-            height: 100vh;
+            height: 80vh;
             left: 25vw;
         }
         isolation: isolate;

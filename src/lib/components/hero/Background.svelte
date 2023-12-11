@@ -24,7 +24,7 @@
             animation: opacity-anim 5s, gentle-rotate 1s;
             animation-iteration-count: infinite, 1;
             animation-fill-mode: none, forwards;
-            animation-delay: calc(($i / 100)) + s, calc(($i / 500)) + s;
+            animation-delay: calc(($i / 100)) + s, calc(($i / 500) + 1.5) + s;
             transform: rotateX(90deg) rotateZ(45deg);
             /*mask-image: linear-gradient($i + deg, black 0%, transparent 100%);*/
             mix-blend-mode: lighten;
