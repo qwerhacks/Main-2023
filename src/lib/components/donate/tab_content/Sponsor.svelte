@@ -69,22 +69,17 @@
 	</div>
 </div>
 <div class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_50px_1fr] gap-8 justify-between items-center">
+	
 	<div class="font-jetbrains text-center">
-		Need more info?
-		<br>
-		<a
-			href="https://drive.google.com/file/d/1bEVtQlb4Yw58R0a8gH0P0BWTpXJEpXQC/view"
-			class="italic underline">Read our sponsorship packet</a
-		>
-	</div>
-	<div class="hidden md:block">
-		<p class="text-center">OR</p>
-	</div>
-	<div class="font-jetbrains text-center">
-		Ready to sponsor? Email us at: <a
+		Interested or want to learn more? Email us at: <a
 			href="mailto:sponsor@qwerhacks.org"
 			class="font-extrabold italic underline">sponsor@qwerhacks.org</a
 		>
+	</div>
+	<div class="font-jetbrains text-center">
+		<br>
+	</div>
+	<div class="hidden md:block">
 	</div>
 </div>
 

@@ -64,7 +64,7 @@
 		class="flex-[2_1_0] md:border-solid md:border-black md:border-[3px] md:p-10 flex flex-col gap-4 items-center relative max-w-prose h-min"
 	>
 		<img
-			src="assets/donate/speaker.jpg"
+			src="assets/donate/volunteer.jpeg"
 			alt="Three people posing with crossed arms in front of a colorful banner with abstract designs. From left to right: a person with a beard and long hair, wearing a navy shirt; a person with curly shoulder-length hair in a white T-shirt with a blue frog graphic; and a person with short wavy hair in a grey sweater. They all appear cheerful."
 		/>
 		<div class="text-center max-w-md">

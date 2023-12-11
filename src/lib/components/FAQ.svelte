@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CleanButton from "./utils/CleanButton.svelte";
 	import Postit from './q&a/Postit.svelte';
 	import ShortcutIcon from './utils/ShortcutIcon.svelte';
 	import WindowBase from './utils/WindowBase.svelte';
@@ -53,8 +54,10 @@
                 </div> -->
             </div>
             <div class="buttons">
-                <div class="hidden sm:block">{messagebox}</div>
-                <button>apply!</button> 
+                <div class="hidden sm:flex flex-col items-center justify-center"><p>{messagebox}</p></div>
+                <CleanButton>
+                    <a class="text-3xl px-10 py-4 w-fit bg-animated" href="https://forms.gle/Vgign2Y7GMq8wbuRA">apply!</a> 
+                </CleanButton>
             </div>
 		</WindowBase>
 	</div>
@@ -130,17 +133,16 @@
         justify-content: center;
         width: 80%;
         gap: 1rem;
-        * {
-            border: solid 5px #200B3A;
-            @apply p-4;
-        }
         div {
             width: 60%;
             background: white;
+            border: solid 5px #200B3A;
+            @apply p-2;
+
         }
-        button {
-            width: max(20%, 150px);
-            box-shadow: 5px 5px 0px #200B3A;
-        }
+        // a {
+        //     width: max(20%, 150px);
+        //     box-shadow: 5px 5px 0px #200B3A;
+        // }
     }
 </style>
