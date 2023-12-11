@@ -1,25 +1,65 @@
 <script lang="ts">
-	import Hero from '$lib/sections/hero.svelte';
-	import Prizes from '$lib/sections/prizes.svelte';
-	import Questions from '$lib/sections/questions.svelte';
-	import Resources from '$lib/sections/resources.svelte';
-	import Sponsorships from '$lib/sections/sponsorships.svelte';
-	import Tagline from '$lib/sections/tagline.svelte';
-	import Tracks from '$lib/sections/tracks.svelte';
-	import Volunteer from '$lib/sections/volunteer.svelte';
-    import Schedule from '$lib/sections/schedule.svelte';
+	import Donate from '$lib/components/Donate.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import Info from '$lib/components/Info.svelte';
+	import FAQ from '$lib/components/FAQ.svelte';
 </script>
 
 <Hero />
-<Schedule />
-<Tagline />
-<Resources show_links={false} />
-<Prizes />
-<Questions />
-<!-- <Volunteer /> -->
-<Sponsorships />
+<div class="w-full dots one" style="">
+    <div class="w-full h-full mask-overlay one" />
+    <Info />
+</div>
+<div class="w-full dots two" style="">
+    <div class="w-full h-full mask-overlay two" />
+	<FAQ />
+</div>
+<div class="w-full dots three">
+    <div class="w-full h-full mask-overlay three" />
+	<Donate />
+</div>
 
-
-<svelte:head>
-	<title>QWER Hacks - Home</title>
-</svelte:head>
+<style lang="scss">
+    $mask: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0) 50%);
+    .dots {
+        background-size: cover, 10px, 180px;
+        background-repeat: no-repeat, repeat, repeat; 
+        background-attachment: scroll, fixed, scroll;
+        background-blend-mode: soft-light;
+        &.one {
+            margin-top: -20vh;
+            padding-top: 20vh;
+            background-image: $mask, url("/assets/general/dot.svg"), linear-gradient(180deg, #A84FB3 0%, #E689C6 99.48%);
+        }
+        &.two {
+            background-image: $mask, url("/assets/general/dot.svg"), linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);
+            background-position-x: 40vw, 0px, center;
+        }
+        &.three {
+            background-image: $mask, url("/assets/general/dot.svg"), linear-gradient(180deg, #F4C0CA 0%, #C993FF 100%);
+            background-position-x: -50vw, 0px, center;
+        }
+    }
+    .mask-overlay {
+        position: absolute;
+        &.one {
+            margin-top: -15vh;
+            background: linear-gradient(180deg, #A84FB3 0%, #E689C6 99.48%);
+            mask-image: radial-gradient(black 30%, transparent 90%);
+            height: 80vh;
+        }
+        &.two {
+            background: linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);
+            mask-image: radial-gradient(black 30%, transparent 90%);
+            height: 80vh;
+            right: 50vw;
+        }
+        &.three {
+            background: linear-gradient(180deg, #F4C0CA 0%, #C993FF 100%);
+            mask-image: radial-gradient(black 30%, transparent 90%);
+            height: 80vh;
+            left: 25vw;
+        }
+        isolation: isolate;
+    }
+</style>
