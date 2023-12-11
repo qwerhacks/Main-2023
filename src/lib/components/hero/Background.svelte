@@ -28,17 +28,21 @@
             transform: rotateX(90deg) rotateZ(45deg) scale(5%);
             /*mask-image: linear-gradient($i + deg, black 0%, transparent 100%);*/
             mix-blend-mode: lighten;
+            box-shadow: -2px -2px 0px magenta;
         }
     }
     @keyframes opacity-anim {
         0% {
             opacity: 0.1;
+            box-shadow: 0px 0px 0px black;
         }
         50% {
             opacity: 0.65;
+            box-shadow: 0px 0px 20px magenta;
         }
         100% {
             opacity: 0.1;
+            box-shadow: 0px 0px 0px black;
         }
     }
     @keyframes gentle-rotate {
