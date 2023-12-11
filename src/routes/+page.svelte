@@ -49,9 +49,8 @@
             height: 80vh;
         }
         &.two {
-            background: red;
             background: linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);
-            mask-image: radial-gradient(black 30%, transparent 90%);
+            mask-image: radial-gradient(black 30%, transparent 70%);
             right: 50vw;
             height: 70vh;
             margin-top: 20vh;
