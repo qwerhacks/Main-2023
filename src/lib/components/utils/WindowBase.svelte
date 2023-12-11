@@ -9,8 +9,6 @@
 	let maximizeRef: HTMLElement;
 	let closeRef: HTMLElement;
 
-	let has_invis_div: boolean = false;
-
 	onMount(() => {
 		console.debug('slotRefWindow', slotRef);
 	});
@@ -27,7 +25,7 @@
     export let name: string | undefined = undefined;
 </script>
 
-<Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div {closeRef} name={name}>
+<Draggable {draggableTargetRef} {maximizeRef} {slotRef} {closeRef} name={name}>
     
         <div
 		bind:this={slotRef}

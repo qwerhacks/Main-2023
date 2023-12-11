@@ -22,7 +22,6 @@
 		<h3 class="font-jetbrains md:2xl lg:text-3xl text-white text-center textshadow">
 			MLH’s First LGBTQIA+ Hackathon!
 		</h3>
-		<!-- <Button /> -->
 	</div>
 	<div class="absolute right-[8vw] bottom-[15vh] xl:bottom-[20vh]">
 		<ShortcutIcon

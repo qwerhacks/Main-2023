@@ -1,18 +1,52 @@
 <script context="module" lang="ts">
+	import { get } from 'svelte/store';
+	import { browser } from '$app/environment';
+
 	interface ComponentDatum {
 		name: string;
 		setZCallback: (top: boolean) => void;
+		dragCallback: (event: MouseEvent | TouchEvent) => void;
+		dragEndCallback: (event: MouseEvent | TouchEvent) => void;
 	}
 
 	type ComponentDataMap = Record<string, ComponentDatum>;
 
 	let component_data_map = writable<ComponentDataMap>({});
 
+	let __component_data_map = get(component_data_map);
+
+	component_data_map.subscribe((val) => {
+		__component_data_map = val;
+	});
+
+	let component_dragging: string | undefined = undefined;
+
 	export function bringToTop(name: string) {
-		Object.values(get(component_data_map)).forEach((componentDatum) => {
+		Object.values(__component_data_map).forEach((componentDatum) => {
 			console.debug(componentDatum.name, name);
 			componentDatum.setZCallback(componentDatum.name === name);
 		});
+	}
+
+	function handleMouseMoveGlobal(event: MouseEvent | TouchEvent) {
+		event.preventDefault();
+		if (component_dragging !== undefined) {
+			__component_data_map[component_dragging].dragCallback(event);
+		}
+	}
+
+	function handleMouseUpGlobal(event: MouseEvent | TouchEvent) {
+		if (component_dragging !== undefined) {
+			__component_data_map[component_dragging].dragEndCallback(event);
+		}
+	}
+
+	if (browser) {
+		document.addEventListener('mousemove', handleMouseMoveGlobal);
+		document.addEventListener('touchmove', handleMouseMoveGlobal);
+
+		document.addEventListener('mouseup', handleMouseUpGlobal, { passive: true });
+		document.addEventListener('touchend', handleMouseUpGlobal, { passive: true });
 	}
 </script>
 
@@ -25,8 +59,7 @@
 		getRotation
 	} from '$lib/typescript/utils';
 	import { spring, type Spring } from 'svelte/motion';
-	import { get, writable } from 'svelte/store';
-	import { page } from '$app/stores';
+	import { writable } from 'svelte/store';
 
 	export let slotRef: HTMLElement;
 
@@ -38,7 +71,7 @@
 
 	export let click_callback: () => void = () => {};
 
-	export const name: string | undefined = undefined;
+	export let name: string | undefined = undefined;
 
 	let internalName: string = name ?? generateUUID();
 
@@ -59,7 +92,9 @@
 					} else {
 						slotRef.style.zIndex = '10';
 					}
-				}
+				},
+				dragCallback: dragHandler,
+				dragEndCallback: dragEndHandler
 			}
 		};
 	});
@@ -109,7 +144,7 @@
 			height: 0
 		},
 		{
-			stiffness: 0.5,
+			stiffness: 0.7,
 			damping: 0.9
 		}
 	);
@@ -133,9 +168,10 @@
 				width,
 				height
 			});
+			draggableTargetRef.style.touchAction = 'none';
 
 			draggableTargetRef.addEventListener('mousedown', dragStartHandler);
-			draggableTargetRef.addEventListener('touchstart', dragStartHandler);
+			draggableTargetRef.addEventListener('touchstart', dragStartHandler, { passive: true });
 			slotRef.addEventListener('click', clickAnywhere);
 
 			if (maximizeRef !== undefined) {
@@ -145,8 +181,6 @@
 
 			if (closeRef !== undefined) {
 				closeRef.addEventListener('click', close);
-				closeRef.addEventListener('mouseover', onHoverCloseStart);
-				closeRef.addEventListener('mouseout', onHoverCloseEnd);
 			}
 		});
 
@@ -162,8 +196,6 @@
 
 			if (closeRef !== undefined) {
 				closeRef.removeEventListener('click', close);
-				closeRef.removeEventListener('mouseover', onHoverCloseStart);
-				closeRef.removeEventListener('mouseout', onHoverCloseEnd);
 			}
 		};
 	});
@@ -266,7 +298,9 @@
 			document.body.style.userSelect = 'none';
 
 			makeInvisibleDiv();
+			
 			bringToTop(internalName);
+			component_dragging = internalName;
 		}
 
 		requestAnimationFrame(startDragLoop);
@@ -358,9 +392,6 @@
 					// Send to element
 					elem?.dispatchEvent(clickEvent);
 
-					if (hoverCloseButton) {
-						closeRef?.click();
-					}
 					click_callback();
 				}
 			}
@@ -369,6 +400,7 @@
 			document.body.style.userSelect = 'auto';
 			document.body.style.removeProperty('cursor');
 			draggableTargetRef.style.removeProperty('cursor');
+			component_dragging = undefined;
 		}
 	}
 
@@ -457,23 +489,6 @@
 	function clickAnywhere() {
 		if (has_invis_div) bringToTop(internalName);
 	}
-
-	let hoverCloseButton = false;
-
-	function onHoverCloseStart() {
-		hoverCloseButton = true;
-	}
-
-	function onHoverCloseEnd() {
-		hoverCloseButton = false;
-	}
 </script>
-
-<svelte:document
-	on:mouseup={dragEndHandler}
-	on:touchend={dragEndHandler}
-	on:mousemove={dragHandler}
-	on:touchmove={dragHandler}
-/>
 
 <slot />

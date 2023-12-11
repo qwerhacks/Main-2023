@@ -7,15 +7,15 @@
 
 <Hero />
 <div class="w-full dots one" style="">
-    <div class="w-full h-full mask-overlay one" />
+    <!-- <div class="w-full h-full mask-overlay one" /> -->
     <Info />
 </div>
 <div class="w-full dots two" style="">
-    <div class="w-full h-full mask-overlay two" />
+    <!-- <div class="w-full h-full mask-overlay two" /> -->
 	<FAQ />
 </div>
 <div class="w-full dots three">
-    <div class="w-full h-full mask-overlay three" />
+    <!-- <div class="w-full h-full mask-overlay three" /> -->
 	<Donate />
 </div>
 
