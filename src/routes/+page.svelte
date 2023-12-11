@@ -26,6 +26,7 @@
         background-repeat: no-repeat, repeat, repeat; 
         background-attachment: scroll, fixed, scroll;
         background-blend-mode: soft-light;
+        display: flex;
         &.one {
             margin-top: -20vh;
             padding-top: 20vh;
@@ -43,16 +44,17 @@
     .mask-overlay {
         position: absolute;
         &.one {
-            margin-top: -15vh;
             background: linear-gradient(180deg, #A84FB3 0%, #E689C6 99.48%);
             mask-image: radial-gradient(black 30%, transparent 90%);
             height: 80vh;
         }
         &.two {
+            background: red;
             background: linear-gradient(180deg, #E688C6 0%, #F4C1CA 100%);
             mask-image: radial-gradient(black 30%, transparent 90%);
-            height: 80vh;
             right: 50vw;
+            height: 70vh;
+            margin-top: 20vh;
         }
         &.three {
             background: linear-gradient(180deg, #F4C0CA 0%, #C993FF 100%);
