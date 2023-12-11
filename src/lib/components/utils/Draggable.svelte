@@ -8,8 +8,9 @@
 
 	let component_data_map = writable<ComponentDataMap>({});
 
-	function bringToTop(name: string) {
+	export function bringToTop(name: string) {
 		Object.values(get(component_data_map)).forEach((componentDatum) => {
+			console.log(componentDatum.name, name);
 			componentDatum.setZCallback(componentDatum.name === name);
 		});
 	}
@@ -37,23 +38,31 @@
 
 	export let click_callback: () => void = () => {};
 
-	const name = generateUUID();
+	export const name: string | undefined = undefined;
 
-	// Register this component with the component_data_map
-	// so that it can be brought to the top when clicked\
-	$component_data_map = {
-		...$component_data_map,
-		[name]: {
-			name,
-			setZCallback: (top: boolean) => {
-				if (top) {
-					slotRef.style.zIndex = '100';
-				} else {
-					slotRef.style.zIndex = '10';
+	let internalName: string = name ?? generateUUID();
+
+	onMount(() => {
+		internalName = name ?? generateUUID();
+
+		console.log('Added component', internalName);
+
+		// Register this component with the component_data_map
+		// so that it can be brought to the top when clicked\
+		$component_data_map = {
+			...$component_data_map,
+			[internalName]: {
+				name: internalName,
+				setZCallback: (top: boolean) => {
+					if (top) {
+						slotRef.style.zIndex = '100';
+					} else {
+						slotRef.style.zIndex = '10';
+					}
 				}
 			}
-		}
-	};
+		};
+	});
 
 	const maximize_padding_px = 10;
 
@@ -129,7 +138,6 @@
 			draggableTargetRef.addEventListener('touchstart', dragStartHandler);
 			slotRef.addEventListener('click', clickAnywhere);
 
-
 			if (maximizeRef !== undefined) {
 				maximizeRef.addEventListener('click', debouncedMaximize);
 				maximizeRef.addEventListener('mousedown', debouncedMaximize);
@@ -176,7 +184,7 @@
 
 			let angle = getRotation(slotRef);
 			let dims = calculateInscribedRectangleDims(width, height, angle);
-			
+
 			$baseState.width = dims.width;
 			$baseState.height = dims.height;
 
@@ -194,14 +202,14 @@
 			slotRef.style.left = `${$baseState.x}px`;
 			slotRef.style.width = `${$baseState.width}px`;
 			slotRef.style.height = `${$baseState.height}px`;
-            slotRef.style.transform = `rotate(${angle}deg)`;
+			slotRef.style.transform = `rotate(${angle}deg)`;
 			// Set the z-level to 10 so it's floating above the other windows
 			slotRef.style.zIndex = '10';
 		}
 	}
 
 	function startDragLoop() {
-		console.log("Animating", baseUpdatingPromisePending)
+		console.log('Animating', baseUpdatingPromisePending);
 		// The animationFrame loop that handles dragging
 		if (baseUpdatingPromisePending) {
 			slotRef.style.top = `${$baseState.y}px`;
@@ -212,7 +220,7 @@
 		} else {
 			if (interactiveState) {
 				if (interactiveState.isDragging) {
-					console.log("Is actively dragging")
+					console.log('Is actively dragging');
 					slotRef.style.top = `${$baseState.y}px`;
 					slotRef.style.left = `${$baseState.x}px`;
 					slotRef.style.width = `${$baseState.width}px`;
@@ -258,7 +266,7 @@
 			document.body.style.userSelect = 'none';
 
 			makeInvisibleDiv();
-			bringToTop(name);
+			bringToTop(internalName);
 		}
 
 		requestAnimationFrame(startDragLoop);
@@ -325,8 +333,8 @@
 				if (Math.abs(distanceX) < 5 && Math.abs(distanceY) < 5) {
 					console.log('Triggering click instead of drag!');
 
-					console.log(event)
-					
+					console.log(event);
+
 					// Viewport coordinates of mouse
 					const pageX =
 						'TouchEvent' in window && event instanceof TouchEvent
@@ -365,9 +373,9 @@
 	}
 
 	function maximize(event: Event) {
-		event.stopPropagation()
+		event.stopPropagation();
 		if (interactiveState) {
-			console.log("State:", interactiveState.isMaximized, $baseState)
+			console.log('State:', interactiveState.isMaximized, $baseState);
 			if (interactiveState.isMaximized) {
 				console.debug('unmaximize');
 
@@ -376,7 +384,7 @@
 				const { initialX, initialY, initialWidth, initialHeight } = interactiveState.isMaximized;
 				interactiveState.isMaximized = false;
 
-				console.log("Setting baseState to", initialWidth, initialHeight)
+				console.log('Setting baseState to', initialWidth, initialHeight);
 
 				baseUpdatingPromisePending = true;
 				baseUpdatingPromise = baseState.update((state) => {
@@ -390,14 +398,14 @@
 				});
 
 				baseUpdatingPromise.then(() => {
-					console.log("Terminating update")
+					console.log('Terminating update');
 					baseUpdatingPromisePending = false;
 				});
 			} else {
 				console.debug('maximize');
 				makeInvisibleDiv();
 
-				console.log("Setting base state: ", $baseState.width, $baseState.height)
+				console.log('Setting base state: ', $baseState.width, $baseState.height);
 
 				interactiveState.isMaximized = {
 					initialX: $baseState.x,
@@ -447,7 +455,7 @@
 	}
 
 	function clickAnywhere() {
-		if (has_invis_div) bringToTop(name);
+		if (has_invis_div) bringToTop(internalName);
 	}
 
 	let hoverCloseButton = false;

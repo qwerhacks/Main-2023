@@ -1,4 +1,6 @@
 <script lang="ts">
+	export let showBenevityInfo: (() => void);
+
 	interface Details {
 		title: string;
 		description: string;
@@ -64,9 +66,9 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 	<div class="font-jetbrains text-center">
 		Your company have Benevity?
 		<br>
-		<a
-			href="https://drive.google.com/file/d/1bEVtQlb4Yw58R0a8gH0P0BWTpXJEpXQC/view"
-			class="italic underline">Go here (they'll match you)</a
+		<button
+			on:click={() => (showBenevityInfo())}
+			class="italic underline">Go here (they'll match you)</button
 		>
 	</div>
 	<div class="hidden md:block">
@@ -79,6 +81,8 @@ If your company uses Benevity for company matching, <a>donate to our campaign</a
 		> (both are tax deductable!)
 	</div>
 </div>
+
+
 
 <style>
 	.text-gradient {

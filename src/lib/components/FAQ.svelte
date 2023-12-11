@@ -14,6 +14,10 @@
             answer: "Teams consist of 2-4 hackers! Each member should submit an application. Don’t have a team? No worries! We’ll help you find one at the hackathon!"
         },
         {
+            question: "What are the tracks?",
+            answer: "We want to see projects that matter to you and your community, so this year we're going to have a lot more topics than usual!<br>More info TBA soon, but there'll be speakers, topics, and workshops galore. For now, start thinking about what could have real impact for your or an underserved community, and know that not every project needs to be the next SAAS startup to be impactful!"
+        },
+        {
             question: "How much does attending QWER Hacks cost?",
             answer: "It's free, babey!"
         },
@@ -43,7 +47,7 @@
                     {#each faqs as faq, i}
                         <div class="item">
                             <p class="question">{faq.question}</p>
-                            <p class="answer">{faq.answer}</p>
+                            <p class="answer">{@html faq.answer}</p>
                         </div>
                     {/each}
                 </div>

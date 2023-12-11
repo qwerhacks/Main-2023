@@ -23,9 +23,11 @@
 	export let hide_buttons: boolean = false;
     export let dots: boolean = false;
 	export let title_text_white: boolean = false;
+
+    export let name: string | undefined = undefined;
 </script>
 
-<Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div {closeRef}>
+<Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div {closeRef} name={name}>
     
         <div
 		bind:this={slotRef}

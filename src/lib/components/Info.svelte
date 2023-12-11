@@ -15,7 +15,7 @@
 			textCenter={true}
 			background_val="linear-gradient(90deg, #EF5986 0.09%, #FFBFB1 16.22%, #FFE9B1 38.59%, #9FF4CB 58.37%, #92DEFF 78.14%, #C993FF 99.48%);"
 		>
-			<h2 class="font-fugaz text-3xl md:text-5xl uppercase">i'm not like other hackathons</h2>
+			<h2 class="font-fugaz text-3xl md:text-5xl uppercase">we're not like other hackathons</h2>
 			<p class="">
 				We really, actually, want to see you <span class="font-semibold">thrive</span>,
 				<span class="font-semibold">grow</span>, and <span class="font-semibold">share joy</span> with
@@ -25,7 +25,7 @@
 				<span class="font-extrabold italic">✨make something great✨</span>
 			</p>
 		</WindowBase>
-		<div class="flex-row gap-8 px-12 md:pl-24 flex-grow hidden md:flex z-50">
+		<div class="flex-row gap-8 px-12 md:pl-24 flex-grow hidden md:flex z-40">
 			<ShortcutIcon title="Raccoon<br>Memes" src="assets/intro/folder.svg" alt="Folder Icon" onclick="https://www.instagram.com/qwerhacks/guide/raccoon-memes/17895595787928608/?igshid=NjZiM2M3MzIxNA==" />
 			<!-- <ShortcutIcon title="Prizes" src="assets/intro/trophy.svg" alt="Folder Icon" /> -->
 		</div>

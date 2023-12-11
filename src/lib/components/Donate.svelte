@@ -34,7 +34,7 @@
 	<TabMenu></TabMenu>
 
 	{#if showCalculator}
-		<div class="absolute right-1/4 top-32 z-50">
+		<div class="absolute right-1/4 top-32 z-40">
 			<Calculator />
 		</div>
 	{/if}
