@@ -24,8 +24,8 @@
             animation: opacity-anim 5s, gentle-rotate 1s;
             animation-iteration-count: infinite, 1;
             animation-fill-mode: none, forwards;
-            animation-delay: calc(($i / 100)) + s, calc(($i / 500) + 1.5) + s;
-            transform: rotateX(90deg) rotateZ(45deg);
+            animation-delay: calc(($i / 100)) + s, calc(($i / 500) + 1.2) + s;
+            transform: rotateX(90deg) rotateZ(45deg) scale(5%);
             /*mask-image: linear-gradient($i + deg, black 0%, transparent 100%);*/
             mix-blend-mode: lighten;
         }
@@ -43,10 +43,10 @@
     }
     @keyframes gentle-rotate {
         0% {
-            transform: rotateX(90deg) rotateZ(45deg);
+            transform: rotateX(90deg) rotateZ(45deg) scale(5%);
         }
         100% {
-            transform: rotateX(0deg);
+            transform: rotateX(0deg) scale(100%);
         }
     }
 </style>
