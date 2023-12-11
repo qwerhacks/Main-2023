@@ -75,7 +75,8 @@
 			<Postit name={postItName}>
 				<p>
 					You can find QWER Hacks on Benevity under our fiscal sponsor, Hack Foundation (or Hack
-					Club) with EIN 81-2908499.
+					Club) with EIN 81-2908499. You'll need to find your company's private Benevity portal,
+					which can usually be found by searching your intranet!
 				</p>
 			</Postit>
 		</div>
