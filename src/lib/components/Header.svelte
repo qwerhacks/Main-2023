@@ -47,7 +47,7 @@
 </script>
 
 <div
-	class="bg-lavender fixed bottom-0 left-0 z-[200] w-full h-[80px] px-4 py-10 flex align-center whiteborder"
+	class="hidden sm:flex bg-lavender fixed bottom-0 left-0 z-[200] w-full h-[80px] px-4 py-10 align-center whiteborder"
 	bind:this={headerElement}
 >
 	<div class="flex flex-row line w-[100%]" role="navigation">

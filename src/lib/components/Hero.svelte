@@ -1,16 +1,20 @@
 <script lang="ts">
-	import Background from '$lib/components/hero/background.svelte';
-	import Logo from '$lib/components/hero/logo.svelte';
+	import Background from '$lib/components/hero/Background.svelte';
 	import RetroButton from './utils/RetroButton.svelte';
 	import ShortcutIcon from './utils/ShortcutIcon.svelte';
 </script>
 
-<div class="h-screen relative w-screen">
+<div class="h-screen relative w-screen" style="z-index: 9;">
 	<div
 		id="content"
 		class="z-10 flex flex-col items-center justify-center h-screen w-screen py-16 px-4 gap-5"
 	>
-		<img src="assets/hero/logo.svg" alt="QWERHacks Logo" class="w-full md:w-9/12" />
+		<img
+			fetchpriority="high"
+			src="assets/hero/logo.svg"
+			alt="QWERHacks Logo"
+			class="w-full lg:w-8/12"
+		/>
 		<h2 class="text uppercase text-center text-4xl md:text-5xl lg:text-7xl">
 			<span class="inline-block">feb 2-4, 2024</span> <span class="inline-block">@ ucla</span>
 		</h2>
@@ -18,14 +22,23 @@
 		<h3 class="font-jetbrains md:2xl lg:text-3xl text-white text-center textshadow">
 			MLH’s First LGBTQIA+ Hackathon!
 		</h3>
-		<!-- <Button /> -->
 	</div>
-	<div class="absolute right-[8vw] bottom-[15vh] md:bottom-[30vh]">
-		<ShortcutIcon title="Apply Now!" src="assets/hero/rainbow.svg" alt="rainbow icon" />
+	<div class="absolute right-[8vw] bottom-[15vh] xl:bottom-[20vh]">
+		<ShortcutIcon
+			title="Apply Now!"
+			src="assets/hero/rainbow.svg"
+			alt="rainbow icon"
+			onclick="https://forms.gle/Vgign2Y7GMq8wbuRA"
+		/>
 	</div>
-	<RetroButton classList="absolute top-0 left-0 m-10 z-50 bg-lavender">
-		<a class="sponsor" href="/sponsor">sponsor us!</a>
-	</RetroButton>
+	<div class="absolute left-[8vw] bottom-[7vh] md:bottom-[15vh]">
+		<ShortcutIcon
+			title="Support Us!"
+			src="assets/hero/sponsor.svg"
+			alt="An icon of a hand with a heart floating above it, with sparks flying out of the heart."
+			onclick="mailto:sponsor@qwerhacks.org"
+		/>
+	</div>
 	<div id="background" class="absolute top-0 right-0 -z-20 h-full w-full overflow-clip">
 		<Background />
 	</div>
