@@ -24,6 +24,7 @@
 	export let max_width: string = 'max-w-prose';
 
 	export let hide_buttons: boolean = false;
+	export let options: boolean = true;
 </script>
 
 <Draggable {draggableTargetRef} {maximizeRef} {slotRef} bind:has_invis_div>
@@ -39,16 +40,18 @@
 		>
 			<slot name="header">
 				<div class="flex flex-row gap-2 text-3xl p-3">
-					<h4 class="font-jetbrains blk px-2 text-base">{title}</h4>
-					<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:none={hide_buttons}>
-						<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
-					</button>
-					<button tabindex="-1" class:none={hide_buttons}>
-						<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
-					</button>
-					<button tabindex="-1" class:none={hide_buttons} class="mr-2">
-						<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
-					</button>
+					{#if options}
+						<h4 class="font-jetbrains blk px-2 text-base">{title}</h4>
+						<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:none={hide_buttons}>
+							<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
+						</button>
+						<button tabindex="-1" class:none={hide_buttons}>
+							<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
+						</button>
+						<button tabindex="-1" class:none={hide_buttons} class="mr-2">
+							<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
+						</button>
+					{/if}
 				</div>
 			</slot>
 		</div>

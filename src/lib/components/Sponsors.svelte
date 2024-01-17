@@ -3,6 +3,7 @@
 	import WindowBase from './utils/WindowBase.svelte';
 	import ProgressWindow from './ProgressWindow.svelte';
 	import SponsorWindow from './SponsorWindow.svelte';
+	import RetroButton from './utils/RetroButton.svelte';
 	import { onMount } from 'svelte';
 </script>
 
@@ -21,6 +22,9 @@
 					your support. If you'd like to consider becoming a sponsor, please check out our
 					<a href="/sponsorship" class="underline">sponsorship package</a>.
 				</p>
+			</div>
+			<div>
+				<RetroButton />
 			</div>
 		</SponsorWindow>
 	</div>

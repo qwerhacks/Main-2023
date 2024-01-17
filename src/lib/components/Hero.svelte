@@ -6,7 +6,10 @@
 </script>
 
 <div class="h-screen relative w-screen">
-	<div id="content" class="z-10 flex flex-col items-center justify-center h-screen w-screen py-16 px-4 gap-5">
+	<div
+		id="content"
+		class="z-10 flex flex-col items-center justify-center h-screen w-screen py-16 px-4 gap-5"
+	>
 		<img src="assets/hero/logo.svg" alt="QWERHacks Logo" class="w-full md:w-9/12" />
 		<h2 class="text uppercase text-center text-4xl md:text-5xl lg:text-7xl">
 			<span class="inline-block">feb 2-4, 2024</span> <span class="inline-block">@ ucla</span>

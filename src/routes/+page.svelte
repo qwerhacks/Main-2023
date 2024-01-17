@@ -3,6 +3,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Info from '$lib/components/Info.svelte';
 	import Sponsors from '$lib/components/Sponsors.svelte';
+	import Mission from '$lib/components/Mission.svelte';
 </script>
 
 <Hero />
@@ -10,4 +11,5 @@
 	<Info />
 	<Donate />
 	<Sponsors />
+	<Mission />
 </div>
