@@ -31,11 +31,9 @@
 			border-top-color: #3a0b75;
 			border-left-color: #3a0b75;
 		}
-		&.active {
-			border-bottom-color: white;
-			border-right-color: white;
-			border-top-color: #3a0b75;
-			border-left-color: #3a0b75;
+		&.apply {
+			background: #9FF4CB;
+			color: black;
 		}
 		transition: border 0.15s ease;
 		cursor: pointer;

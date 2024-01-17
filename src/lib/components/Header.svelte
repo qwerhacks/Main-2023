@@ -63,8 +63,8 @@
 			</RetroButton>
 		</div>
 		<div class="flex flex-row items-center">
-			<RetroButton classList="active">
-				<a class="apply" href="/apply">{timeUntil}</a>
+			<RetroButton classList="apply">
+				<a class="apply" href="/apply">apply!</a>
 			</RetroButton>
 		</div>
 	</div>
