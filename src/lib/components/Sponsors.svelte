@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 </script>
 
-<div class="container">
+<div class="w-full p-6 flex flex-row">
 	<div class="left">
 		<WindowBase
 			title=""
@@ -35,107 +35,22 @@
 		</WindowBase>
 	</div>
 	<div class="right justify-items-center gap-4">
-		<div>
+		<div class="px-8">
 			<WindowBase
-				title="Gold Sponsors"
+				title="Sponsors"
 				textCenter={true}
 				background_val="linear-gradient(90deg, #FDDE97 0.09%, #B79A57 100%)"
 				shadow={false}
 			>
-				<div class="content">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-						alt="Google"
-						width="60"
-						height="60"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-						alt="Grindr"
-						width="100"
-						height="40"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-						alt="Apple"
-						width="50"
-						height="50"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-						alt="LinkedIn"
-						width="200"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-						alt="Grindr"
-						width="100"
-						height="40"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-						alt="Google"
-						width="60"
-						height="60"
-					/>
-
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-						alt="LinkedIn"
-						width="200"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-						alt="Apple"
-						width="50"
-						height="50"
-					/>
-				</div>
+				<a class="content" href="https://www.stickermule.com/">
+					<img src="assets/sponsors/sticker-mule-logo-light-bg.svg" alt="StickerMule" width="400" />
+				</a>
 			</WindowBase>
-		</div>
-		<div>
-			<WindowBase
-				title="Silver Sponsors"
-				textCenter={true}
-				background_val="linear-gradient(90deg, #B1B1B0 0.09%, #F2F2F2 100%)"
-				shadow={false}
-			>
-				<div class="content">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-						alt="Google"
-						width="60"
-						height="60"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-						alt="Grindr"
-						width="100"
-						height="40"
-					/>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-						alt="LinkedIn"
-						width="200"
-					/>
-				</div>
-			</WindowBase>
-		</div>
-		<div>
-			<WindowBase
-				title="Bronze Sponsors"
-				textCenter={true}
-				background_val="linear-gradient(90deg, #98564D 0.09%, #B66E57 100%)"
-				shadow={false}
-			></WindowBase>
 		</div>
 	</div>
 </div>
 
 <style>
-	.container {
-		display: flex;
-	}
 	.left {
 		flex: 1;
 		display: flex;
@@ -143,6 +58,7 @@
 		align-items: flex-start;
 	}
 	.right {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 	}

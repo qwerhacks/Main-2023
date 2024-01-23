@@ -21,12 +21,12 @@
 	<!-- <div class="w-full h-full mask-overlay three" /> -->
 	<Donate />
 </div>
-<div class="w-full dots four">
+<div class="w-full dots four pb-24">
 	<Sponsors />
 </div>
-<div class="w-full plain first">
+<!-- <div class="w-full plain first">
 	<Mission />
-</div>
+</div> -->
 
 <style lang="scss">
 	$mask: radial-gradient(
