@@ -3,11 +3,9 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Info from '$lib/components/Info.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
-	import Donate from '$lib/components/Donate.svelte';
-	import Hero from '$lib/components/Hero.svelte';
-	import Info from '$lib/components/Info.svelte';
 	import Sponsors from '$lib/components/Sponsors.svelte';
 	import Mission from '$lib/components/Mission.svelte';
+	import Prizes from '$lib/components/Prizes.svelte';
 </script>
 
 <Hero />
@@ -22,7 +20,11 @@
 <div class="w-full dots three">
 	<!-- <div class="w-full h-full mask-overlay three" /> -->
 	<Donate />
+</div>
+<div class="w-full dots four">
 	<Sponsors />
+</div>
+<div class="w-full plain first">
 	<Mission />
 </div>
 
@@ -55,10 +57,17 @@
 				linear-gradient(180deg, #f4c0ca 0%, #c993ff 100%);
 			background-position-x: -50vw, 0px, center;
 		}
+		&.four {
+			background-image: $mask, url('/assets/general/dot.svg'),
+				linear-gradient(180deg, #c993ff 0%, #bff7f4 100%);
+			background-position-x: -50vw, 0px, center;
+		}
 	}
 	.mask-overlay {
 		position: absolute;
 		&.one {
+			margin-top: -20vh;
+			padding-top: 20vh;
 			background: linear-gradient(180deg, #a84fb3 0%, #e689c6 99.48%);
 			mask-image: radial-gradient(black 30%, transparent 90%);
 			height: 80vh;
@@ -77,5 +86,15 @@
 			left: 25vw;
 		}
 		isolation: isolate;
+	}
+	.plain {
+		background-size: cover, 100px, 180px;
+		background-repeat: no-repeat, repeat, repeat;
+		background-attachment: scroll, fixed, scroll;
+		background-blend-mode: soft-light;
+		display: flex;
+		&.first {
+			background: linear-gradient(180deg, #a84fb3 0%, #e689c6 50%, #ffbfb1 100%);
+		}
 	}
 </style>

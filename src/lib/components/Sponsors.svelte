@@ -3,120 +3,132 @@
 	import WindowBase from './utils/WindowBase.svelte';
 	import ProgressWindow from './ProgressWindow.svelte';
 	import SponsorWindow from './SponsorWindow.svelte';
-	import RetroButton from './utils/RetroButton.svelte';
+	import CleanButton from './utils/CleanButton.svelte';
 	import { onMount } from 'svelte';
 </script>
 
 <div class="container">
 	<div class="left">
-		<SponsorWindow
+		<WindowBase
 			title=""
 			textCenter={true}
 			background_val="linear-gradient(90deg, #AAD6A1 0.09%, #9FF4CB 100%)"
-			max_width="max-w-fit"
+			shadow={false}
 		>
-			<div class="sponsors-text">
+			<div class="sponsors-text grid justify-items-center">
 				<h2 class="text-4xl uppercase mb-2">Sponsors</h2>
-				<p class="text-xs max-w-lg">
+				<p class="text-xs mb-2">
 					Thank you to all our sponsors! <br /><br /> This hackathon truly could not happen without
 					your support. If you'd like to consider becoming a sponsor, please check out our
 					<a href="/sponsorship" class="underline">sponsorship package</a>.
 				</p>
 			</div>
-			<div>
-				<RetroButton />
+			<div class="justify-items-center grid">
+				<CleanButton>
+					<a href="/sponsorship">
+						<div style="width: 130px;">
+							<p class="packagelink font-jetbrains">link to package</p>
+						</div>
+					</a></CleanButton
+				>
 			</div>
-		</SponsorWindow>
+		</WindowBase>
 	</div>
-	<div class="right justify-items-center">
-		<SponsorWindow
-			title="Gold Sponsors"
-			textCenter={true}
-			background_val="linear-gradient(90deg, #FDDE97 0.09%, #B79A57 100%)"
-			max_width="max-w-lg"
-		>
-			<div class="content">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-					alt="Google"
-					width="60"
-					height="60"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-					alt="Grindr"
-					width="100"
-					height="40"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-					alt="Apple"
-					width="50"
-					height="50"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-					alt="LinkedIn"
-					width="200"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-					alt="Grindr"
-					width="100"
-					height="40"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-					alt="Google"
-					width="60"
-					height="60"
-				/>
+	<div class="right justify-items-center gap-4">
+		<div>
+			<WindowBase
+				title="Gold Sponsors"
+				textCenter={true}
+				background_val="linear-gradient(90deg, #FDDE97 0.09%, #B79A57 100%)"
+				shadow={false}
+			>
+				<div class="content">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+						alt="Google"
+						width="60"
+						height="60"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
+						alt="Grindr"
+						width="100"
+						height="40"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+						alt="Apple"
+						width="50"
+						height="50"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+						alt="LinkedIn"
+						width="200"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
+						alt="Grindr"
+						width="100"
+						height="40"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+						alt="Google"
+						width="60"
+						height="60"
+					/>
 
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-					alt="LinkedIn"
-					width="200"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-					alt="Apple"
-					width="50"
-					height="50"
-				/>
-			</div>
-		</SponsorWindow>
-		<SponsorWindow
-			title="Silver Sponsors"
-			textCenter={true}
-			background_val="linear-gradient(90deg, #B1B1B0 0.09%, #F2F2F2 100%)"
-			max_width="max-w-lg"
-		>
-			<div class="content">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-					alt="Google"
-					width="60"
-					height="60"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-					alt="Grindr"
-					width="100"
-					height="40"
-				/>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-					alt="LinkedIn"
-					width="200"
-				/>
-			</div>
-		</SponsorWindow>
-		<SponsorWindow
-			title="Bronze Sponsors"
-			textCenter={true}
-			background_val="linear-gradient(90deg, #98564D 0.09%, #B66E57 100%)"
-			max_width="max-w-lg"
-		></SponsorWindow>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+						alt="LinkedIn"
+						width="200"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+						alt="Apple"
+						width="50"
+						height="50"
+					/>
+				</div>
+			</WindowBase>
+		</div>
+		<div>
+			<WindowBase
+				title="Silver Sponsors"
+				textCenter={true}
+				background_val="linear-gradient(90deg, #B1B1B0 0.09%, #F2F2F2 100%)"
+				shadow={false}
+			>
+				<div class="content">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+						alt="Google"
+						width="60"
+						height="60"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
+						alt="Grindr"
+						width="100"
+						height="40"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+						alt="LinkedIn"
+						width="200"
+					/>
+				</div>
+			</WindowBase>
+		</div>
+		<div>
+			<WindowBase
+				title="Bronze Sponsors"
+				textCenter={true}
+				background_val="linear-gradient(90deg, #98564D 0.09%, #B66E57 100%)"
+				shadow={false}
+			></WindowBase>
+		</div>
 	</div>
 </div>
 
@@ -145,6 +157,15 @@
 	}
 	.sponsors-text {
 		width: 300px;
-		min-height: 200px;
+		min-height: 120px;
+	}
+	.packagelink {
+		color: #200b3a;
+		text-align: center;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 300%; /* 15.84px */
+		text-transform: lowercase;
 	}
 </style>

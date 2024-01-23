@@ -34,7 +34,7 @@
 		aria-hidden="true"
 	>
 		<div
-			class="border-b-[5px] border-[#200B3A] cursor-grab"
+			class="border-b-[5px] border-[#200B3A] cursor-grab justify-items-center"
 			bind:this={draggableTargetRef}
 			style="background: {background_val}"
 		>
