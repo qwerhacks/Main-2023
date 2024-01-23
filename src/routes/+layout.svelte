@@ -7,7 +7,7 @@
 	let header_height: number;
 </script>
 
-<div class="gradient relative" data-sveltekit-preload-data>
+<div class="gradient relative">
 	<!-- <Header bind:height={header_height} /> -->
 	<a
 		id="mlh-trust-badge"

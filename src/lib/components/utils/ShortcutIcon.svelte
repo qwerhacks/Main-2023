@@ -13,7 +13,10 @@
 </script>
 
 <Draggable {slotRef} draggableTargetRef={slotRef} click_callback={() => anchor.click()}>
-	<div bind:this={slotRef} class="flex flex-col justify-center items-center z-40 pointer-events-auto">
+	<div
+		bind:this={slotRef}
+		class="flex flex-col justify-center items-center z-40 pointer-events-auto"
+	>
 		{#if typeof onclick === 'function'}
 			<button class="w-20 relative" on:click={onclick} on:keydown={onclick} bind:this={anchor}>
 				<img {src} class="unselectable w-20 aspect-square" aria-hidden="true" {alt} />
@@ -53,8 +56,10 @@
 	.line {
 		line-height: 22px;
 	}
-    .addshadow {
-        text-shadow: 0px 0px 7px black, 0px 0px 7px lightgrey;
-        user-select: none !important;
-    }
+	.addshadow {
+		text-shadow:
+			0px 0px 7px black,
+			0px 0px 7px lightgrey;
+		user-select: none !important;
+	}
 </style>
