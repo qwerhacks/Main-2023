@@ -3,9 +3,14 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Info from '$lib/components/Info.svelte';
 	import FAQ from '$lib/components/FAQ.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
 </script>
 
 <Hero />
+<div class="w-full dots one" style="">
+    <div class="w-full h-full mask-overlay one" />
+    <Schedule/>
+</div>
 <div class="w-full dots one" style="">
     <div class="w-full h-full mask-overlay one" />
     <Info />
