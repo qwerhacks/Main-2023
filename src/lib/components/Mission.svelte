@@ -32,7 +32,12 @@
 		</WindowBase>
 	</div>
 	<div class="absolute right-96">
-		<ShortcutIcon title="Raccoon<br>Memes" src="assets/hero/raccoonmemes.svg" alt="raccoon" />
+		<ShortcutIcon
+			title="Raccoon<br>Memes"
+			src="assets/intro/folder.svg"
+			alt="Folder Icon"
+			onclick="https://www.instagram.com/qwerhacks/guide/raccoon-memes/17895595787928608/?igshid=NjZiM2M3MzIxNA=="
+		/>
 	</div>
 	<div class="pt-20 pr-20 pb-20 mr-2 self-end">
 		<WindowBase
