@@ -30,13 +30,14 @@
 <Draggable {draggableTargetRef} {maximizeRef} {slotRef} {closeRef} {name}>
 	<div
 		bind:this={slotRef}
-		class="min-h-20 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width} {shadow
-			? 'box'
-			: ''} {rounded ? 'rounded-lg' : ''}"
+		class="min-h-20 {main_bg_val} flex flex-col relative shadow-xl border-[5px] border-[#200B3A] pointer-events-auto {max_width}"
+		class:box={shadow}
+		class:rounded-lg={rounded}
 		aria-hidden="true"
 	>
 		<div
-			class="border-b-[5px] border-[#200B3A] cursor-grab {rounded ? 'rounded-t-[3px]' : ''}"
+			class="border-b-[5px] border-[#200B3A] cursor-grab"
+			class:rounded-t-[3px]={rounded}
 			bind:this={draggableTargetRef}
 			style="background: {background_val}; isolation: isolate;"
 		>
@@ -45,23 +46,22 @@
 					<h4 class="font-jetbrains blk px-2 text-xl" class:text-white={title_text_white}>
 						{title}
 					</h4>
-					{#if !hide_buttons}
-						<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:none={hide_buttons}>
-							<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
-						</button>
-						<button tabindex="-1" class:none={hide_buttons}>
-							<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
-						</button>
 
-						<button
-							tabindex="-1"
-							class:none={hide_buttons}
-							class="mr-2 pointer-events-auto"
-							bind:this={closeRef}
-						>
-							<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
-						</button>
-					{/if}
+					<button class="ml-auto" bind:this={maximizeRef} tabindex="-1" class:hidden={hide_buttons}>
+						<img src="assets/general/O.svg" class="aspect-square w-4" alt="Close icon" />
+					</button>
+					<button tabindex="-1" class:hidden={hide_buttons}>
+						<img src="assets/general/_.svg" class="aspect-square w-4" alt="Minimize icon" />
+					</button>
+
+					<button
+						tabindex="-1"
+						class:hidden={hide_buttons}
+						class="mr-2 pointer-events-auto"
+						bind:this={closeRef}
+					>
+						<img src="assets/general/x.svg" class="aspect-square w-4" alt="Close icon" />
+					</button>
 				</div>
 			</slot>
 		</div>

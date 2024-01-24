@@ -22,10 +22,10 @@
 	<Donate />
 </div>
 <div class="w-full dots four">
-	<Sponsors />
-</div>
-<div class="w-full plain first">
 	<Mission />
+</div>
+<div class="w-full dots five">
+	<Sponsors />
 </div>
 
 <style lang="scss">
@@ -62,6 +62,11 @@
 				linear-gradient(180deg, #c993ff 0%, #bff7f4 100%);
 			background-position-x: -50vw, 0px, center;
 		}
+		&.five {
+			background-image: $mask, url('/assets/general/dot.svg'),
+				linear-gradient(180deg, #bff3f4 0%, #99f1c7 100%);
+			background-position-x: -50vw, 0px, center;
+		}
 	}
 	.mask-overlay {
 		position: absolute;
@@ -95,6 +100,9 @@
 		display: flex;
 		&.first {
 			background: linear-gradient(180deg, #a84fb3 0%, #e689c6 50%, #ffbfb1 100%);
+		}
+		&.second {
+			background: linear-gradient(180deg, #bff3f4 0%, #99f1c7 100%);
 		}
 	}
 </style>

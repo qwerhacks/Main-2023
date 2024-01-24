@@ -11,8 +11,8 @@
 	let has_invis_div: boolean = false;
 </script>
 
-<div class="">
-	<div class="pt-20 pl-20">
+<div class="w-full flex flex-col flex-grow">
+	<div class="pl-20">
 		<WindowBase
 			title=""
 			textCenter={true}
@@ -31,15 +31,15 @@
 			</div>
 		</WindowBase>
 	</div>
-	<div class="absolute right-[8vw] bottom-[15vh] xl:bottom-[20vh]">
-		<ShortcutIcon title="Raccoon Memes" src="assets/hero/raccoonmemes.svg" alt="raccoon" />
+	<div class="absolute right-96">
+		<ShortcutIcon title="Raccoon<br>Memes" src="assets/hero/raccoonmemes.svg" alt="raccoon" />
 	</div>
-	<div class="pt-20 pl-20 pb-20 justify-self-end">
+	<div class="pt-20 pr-20 pb-20 mr-2 self-end">
 		<WindowBase
 			title=""
 			textCenter={true}
 			background_val="linear-gradient(90deg, #75ABE7 0%, #F1A4E5 100%)"
-			max_width="max-w-lg"
+			max_width="w-[50vw] flex flex-row-reverse"
 			hide_buttons={true}
 			rounded={true}
 		>
@@ -72,5 +72,10 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 72%;
+	}
+	.wrapper {
+		margin: 10vw 10vw 0vw 0vw;
+		display: flex;
+		flex-direction: row-reverse;
 	}
 </style>

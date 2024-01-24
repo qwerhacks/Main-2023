@@ -121,7 +121,7 @@
 				</div>
 			</WindowBase>
 		</div>
-		<div>
+		<div class="pb-10">
 			<WindowBase
 				title="Bronze Sponsors"
 				textCenter={true}
