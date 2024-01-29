@@ -42,7 +42,7 @@
 				background_val="linear-gradient(90deg, #FDDE97 0.09%, #B79A57 100%)"
 				shadow={false}
 			>
-				<a class="content" href="https://www.stickermule.com/">
+				<a class="content" href="https://mule.to/p5i8">
 					<img src="assets/sponsors/sticker-mule-logo-light-bg.svg" alt="StickerMule" width="400" />
 				</a>
 			</WindowBase>
