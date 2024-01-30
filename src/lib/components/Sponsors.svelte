@@ -45,6 +45,9 @@
 				<a class="content" href="https://mule.to/p5i8">
 					<img src="assets/sponsors/sticker-mule-logo-light-bg.svg" alt="StickerMule" width="400" />
 				</a>
+				<a class="content" href="https://aerospace.org/">
+					<img src="assets/sponsors/aerospace.svg" alt="Aerospace Corp" width="400" />
+				</a>
 			</WindowBase>
 		</div>
 	</div>
