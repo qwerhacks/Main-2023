@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 </script>
 
-<div class="w-full p-6 flex flex-row">
+<div class="w-full flex flex-col md:flex-row gap-8 m-12">
 	<div class="left">
 		<WindowBase
 			title=""
@@ -50,6 +50,42 @@
 				</a>
 			</WindowBase>
 		</div>
+		<div>
+			<WindowBase
+				title="Silver Sponsors"
+				textCenter={true}
+				background_val="linear-gradient(90deg, #B1B1B0 0.09%, #F2F2F2 100%)"
+				shadow={false}
+			>
+				<div class="content">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+						alt="Google"
+						width="60"
+						height="60"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/9/99/Lockheed_Martin_logo.svg"
+						alt="Lockheed"
+						width="100"
+						height="40"
+					/>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/3/36/Northrop_Grumman_logo_blue-on-clear_2020.svg"
+						alt="Northrup"
+						width="200"
+					/>
+				</div>
+			</WindowBase>
+		</div>
+		<div class="pb-10">
+			<WindowBase
+				title="Bronze Sponsors"
+				textCenter={true}
+				background_val="linear-gradient(90deg, #98564D 0.09%, #B66E57 100%)"
+				shadow={false}
+			></WindowBase>
+		</div>
 	</div>
 </div>
 
@@ -66,7 +102,6 @@
 		flex-direction: column;
 	}
 	.content {
-		max-width: 450px;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -75,7 +110,7 @@
 		gap: 25px;
 	}
 	.sponsors-text {
-		width: 300px;
+		max-width: 300px;
 		min-height: 120px;
 	}
 	.packagelink {

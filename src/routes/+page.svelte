@@ -21,11 +21,14 @@
 	<!-- <div class="w-full h-full mask-overlay three" /> -->
 	<Donate />
 </div>
-<div class="w-full dots four pb-24">
+<div class="w-full dots four">
 	<Sponsors />
 </div>
 <!-- <div class="w-full plain first">
 	<Mission />
+</div> -->
+
+<!-- <div class="w-full dots five">
 </div> -->
 
 <style lang="scss">
