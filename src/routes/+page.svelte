@@ -22,11 +22,11 @@
 	<Donate />
 </div>
 <div class="w-full dots four">
-	<Mission />
-</div>
-<div class="w-full dots five">
 	<Sponsors />
 </div>
+
+<!-- <div class="w-full dots five">
+</div> -->
 
 <style lang="scss">
 	$mask: radial-gradient(

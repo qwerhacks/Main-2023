@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 </script>
 
-<div class="container">
+<div class="w-full flex flex-col md:flex-row gap-8 m-12">
 	<div class="left">
 		<WindowBase
 			title=""
@@ -108,14 +108,14 @@
 						height="60"
 					/>
 					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/5/58/GRINDR_Logo_Yellow.png"
-						alt="Grindr"
+						src="https://upload.wikimedia.org/wikipedia/commons/9/99/Lockheed_Martin_logo.svg"
+						alt="Lockheed"
 						width="100"
 						height="40"
 					/>
 					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
-						alt="LinkedIn"
+						src="https://upload.wikimedia.org/wikipedia/commons/3/36/Northrop_Grumman_logo_blue-on-clear_2020.svg"
+						alt="Northrup"
 						width="200"
 					/>
 				</div>
@@ -147,7 +147,6 @@
 		flex-direction: column;
 	}
 	.content {
-		max-width: 450px;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -156,7 +155,7 @@
 		gap: 25px;
 	}
 	.sponsors-text {
-		width: 300px;
+		max-width: 300px;
 		min-height: 120px;
 	}
 	.packagelink {
