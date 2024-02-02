@@ -3,7 +3,7 @@ $hour-scale: 150px;
 $inset-margin: 2px; // how much the box should be squished inwards
 $outline-width: 3px; // width of background-colored border
 $shorten-margin: 5px; // how much should be taken off the bottom (a la google calendar)
-$tracker-height: ($hour-scale * 32);
+$tracker-height: ($hour-scale * 50);
 
 $bg: white;
 $bg-dark: white;
@@ -196,7 +196,7 @@ $lavender: #C993FF;
 				visibility: hidden;
 			}
 		}
-		@for $tensofminutes from 0 through 192 {
+		@for $tensofminutes from 0 through 288 {
 			.event.h#{$tensofminutes} {
 				top: ($tensofminutes) * $hour-scale * (1/6) + $inset-margin; // + ($tensofminutes * (1/6))
 				&[class*='c0'] {
