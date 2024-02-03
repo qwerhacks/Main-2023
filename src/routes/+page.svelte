@@ -6,12 +6,17 @@
 	import Sponsors from '$lib/components/Sponsors.svelte';
 	import Mission from '$lib/components/Mission.svelte';
 	import Prizes from '$lib/components/Prizes.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
 </script>
 
 <Hero />
+<div class="w-full dots sched" style="">
+	<div class="w-full h-full mask-overlay one" />
+    <Schedule />
+</div>
 <div class="w-full dots one" style="">
-	<!-- <div class="w-full h-full mask-overlay one" /> -->
-	<Info />
+    <div class="w-full h-full mask-overlay one" />
+    <Info />
 </div>
 <div class="w-full dots two" style="">
 	<!-- <div class="w-full h-full mask-overlay two" /> -->
@@ -44,6 +49,15 @@
 		background-attachment: scroll, fixed, scroll;
 		background-blend-mode: soft-light;
 		display: flex;
+
+		&.sched {
+			margin-top: -20vh;
+			padding-top: 35vh;
+			padding-left: 10vh;
+			height: 100vh;
+			background-image: $mask, url('/assets/general/dot.svg'),
+				linear-gradient(180deg, #a84fb3 0%, #a84fb3 99.48%);
+		}
 		&.one {
 			margin-top: -20vh;
 			padding-top: 20vh;
