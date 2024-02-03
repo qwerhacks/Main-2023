@@ -124,8 +124,8 @@
 
 🎓 Plus, get pumped up for a Team Formation activity after! 🤝👩‍💻👨‍💻 If you haven't yet, assemble your dream team for the coding crusade! 🚀💻"`,
 			location: ``,
-			hour_start: 4,
-			minute_start: 30,
+			hour_start: 5,
+			minute_start: 0,
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 1,
@@ -134,9 +134,9 @@
 		{
 			title: 'Team Formation',
 			description: ``,
-			location: ``,
-			hour_start: 5,
-			minute_start: 0,
+			location: `Hermosa room!`,
+			hour_start: 4,
+			minute_start: 30,
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 0,
@@ -147,7 +147,7 @@
 			description: ``,
 			location: ``,
 			hour_start: 5,
-			minute_start: 30,
+			minute_start: 0,
 			length_minutes: 30,
 			display_width: 1,
 			display_column: 0,
@@ -200,7 +200,7 @@
 		{
 			title: 'Cloud Computing Workshop',
 			description: `given by ACM Cloud!`,
-			location: ``,
+			location: `Hermosa room!`,
 			hour_start: 18,
 			minute_start: 0,
 			length_minutes: 60,
@@ -211,7 +211,7 @@
 		{
 			title: 'Building a Portfolio',
 			description: `presented by Katie from Out in Tech`,
-			location: `in the Hermosa Room`,
+			location: `Hermosa Room!`,
 			hour_start: 19,
 			minute_start: 0,
 			length_minutes: 60,
@@ -383,6 +383,17 @@
 			display_width: 2,
 			display_column: 1,
 			category: 'workshop'
+		},
+		{
+			title: 'Live Demos',
+			description: ``,
+			location: ``,
+			hour_start: 42,
+			minute_start: 0,
+			length_minutes: 60,
+			display_width: 2,
+			display_column: 0,
+			category: 'other'
 		},
 		{
 			title: 'Closing Presentation',
