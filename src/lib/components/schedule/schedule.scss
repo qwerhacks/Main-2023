@@ -196,7 +196,7 @@ $lavender: #C993FF;
 				visibility: hidden;
 			}
 		}
-		@for $tensofminutes from 0 through 288 {
+		@for $tensofminutes from 0 through 300 {
 			.event.h#{$tensofminutes} {
 				top: ($tensofminutes) * $hour-scale * (1/6) + $inset-margin; // + ($tensofminutes * (1/6))
 				&[class*='c0'] {

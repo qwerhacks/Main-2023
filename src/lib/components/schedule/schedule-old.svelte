@@ -459,7 +459,7 @@
 	let trackerTime = 0;
 	let content: HTMLDivElement;
 
-	let startDate = new Date('February 2, 2024 17:00 GMT-08');
+	let startDate = new Date('February 2, 2024 16:00 GMT-08');
 	let endDate = new Date('February 4, 2024 22:00 GMT-08');
 	let hackathonPassed = Date.now() > endDate.getTime();
 
