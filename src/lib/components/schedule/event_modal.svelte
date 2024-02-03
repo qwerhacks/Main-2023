@@ -11,6 +11,8 @@
 
 	export let modal_open = writable(false);
 
+	hour_start += 8;
+
 	let time_start = `${(hour_start + 8) % 12 == 0 ? '12' : (hour_start + 8) % 12}:${
 		minute_start < 10 ? '0' + minute_start : minute_start
 	} ${(hour_start + 8) % 24 < 12 ? 'am' : 'pm'}`;
@@ -24,12 +26,12 @@
 
 <div
 	aria-modal="{$modal_open}"
-	class="bg-white/1 fixed inset-0 z-[300] flex items-center justify-center overflow-y-auto backdrop-blur-[10px]"
+	class=" bg-white/1 fixed inset-0 flex items-center justify-center overflow-y-auto backdrop-blur-[10px] z-[100000]"
 	role="dialog"
 >
 	<div class="max-h-[80%] max-w-[90%] lg:max-w-[60%]">
 		<div
-			class="container divide-y-2 divide-dashed flex flex-col gap-3 bg-bg p-10 sm:p-24 sm:pt-20 sm:pb-20"
+			class="modal container divide-y-2 divide-dashed flex flex-col gap-3 bg-bg p-10 sm:p-24 sm:pt-20 sm:pb-20"
 			on:click={(e) => {
 				e.stopPropagation();
 			}}
@@ -44,7 +46,7 @@
 				<h3>{title}</h3>
 				<span>{time_start} to {time_end}</span>
 			</div>
-			{#if location !== undefined}
+			{#if location !== ''}
 				<p class="whitespace-pre-line">Location: {@html location}</p>
 			{/if}
 			{#if description !== undefined}
@@ -61,5 +63,11 @@
 		flex-direction: column;
 		z-index: 199 !important;
 		outline: solid 1px black;
+		background: white;
 	}
+
+	.modal {
+		background: white !important;
+	}
+
 </style>
