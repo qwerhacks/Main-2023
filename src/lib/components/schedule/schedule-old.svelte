@@ -500,15 +500,16 @@
 	onMount(() => {
 		updateTrackerTime();
 
-		// update tracker every 1 minutes
+		// update tracker every 5 minutes
 		interval = setInterval(
 			() => {
 				if (!eventIsHovered) {
-					trackerTime += 1;
-					content.scrollTop = trackerTime * 150 * (1 / 6) - 100;
+					updateTrackerTime()
+					//trackerTime += 10;
+					//content.scrollTop = trackerTime * 150 * (1 / 6) - 100;
 				}
 			},
-			1000 * 60 * 1
+			1000 * 60 * 5
 		) as unknown as number;
 	});
 
