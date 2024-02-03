@@ -9,7 +9,7 @@
 		workshop: 'lightblue',
 		talk: 'coral',
 		fun: 'yellow',
-		other: 'plum',
+		other: 'plum'
 	} as const;
 
 	type Categories = keyof typeof ColorMap;
@@ -18,7 +18,7 @@
 	type EventType = {
 		title: string;
 		description?: string;
-		location?: "hermosa room" | "main room" | string;
+		location?: 'hermosa room' | 'main room' | string;
 		hour_start: number;
 		minute_start: number;
 		length_minutes: number;
@@ -37,7 +37,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'other',
+			category: 'other'
 		},
 		{
 			title: 'Dinner',
@@ -48,7 +48,7 @@
 			length_minutes: 60,
 			display_width: 1,
 			display_column: 2,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'Opening Presentation',
@@ -59,7 +59,7 @@
 			length_minutes: 40,
 			display_width: 2,
 			display_column: 0,
-			category: 'other',
+			category: 'other'
 		},
 		{
 			title: 'Keynote (Rochelle Diamond)',
@@ -70,7 +70,7 @@
 			length_minutes: 20,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'Health Equity (Danielle Ehsanipour)',
@@ -81,7 +81,7 @@
 			length_minutes: 20,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'Sustainability (Annie Chien)',
@@ -92,7 +92,7 @@
 			length_minutes: 20,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'Art & Technology (Shane Denson)',
@@ -103,7 +103,7 @@
 			length_minutes: 20,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'Outdoor Diversity Alliance Workshop',
@@ -114,7 +114,7 @@
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Hackathon Survival Workshop',
@@ -129,7 +129,7 @@
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 1,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Team Formation',
@@ -140,7 +140,7 @@
 			length_minutes: 30,
 			display_width: 2,
 			display_column: 0,
-			category: 'other',
+			category: 'other'
 		},
 		{
 			title: 'HACKING BEGINS',
@@ -151,7 +151,7 @@
 			length_minutes: 30,
 			display_width: 1,
 			display_column: 0,
-			category: 'other',
+			category: 'other'
 		},
 		{
 			title: 'Creative Coding with Generative Art',
@@ -162,7 +162,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 1,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Crafts!!1!',
@@ -173,7 +173,7 @@
 			length_minutes: 90,
 			display_width: 2,
 			display_column: 0,
-			category: 'fun',
+			category: 'fun'
 		},
 		{
 			title: 'Breakfast',
@@ -184,7 +184,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'Intro to Deep Learning',
@@ -193,9 +193,9 @@
 			hour_start: 17,
 			minute_start: 0,
 			length_minutes: 60,
-			display_width: 3,
+			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Cloud Computing Workshop',
@@ -205,8 +205,8 @@
 			minute_start: 0,
 			length_minutes: 60,
 			display_width: 2,
-			display_column: 0,
-			category: 'workshop',
+			display_column: 1,
+			category: 'workshop'
 		},
 		{
 			title: 'Building a Portfolio',
@@ -217,7 +217,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Lunch',
@@ -228,7 +228,7 @@
 			length_minutes: 75,
 			display_width: 2,
 			display_column: 0,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'User Research',
@@ -239,7 +239,7 @@
 			length_minutes: 45,
 			display_width: 2,
 			display_column: 1,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Identity Panel',
@@ -250,7 +250,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'Cybersecurity & Privacy for Hackers',
@@ -259,9 +259,9 @@
 			hour_start: 24,
 			minute_start: 30,
 			length_minutes: 60,
-			display_width: 3,
-			display_column: 0,
-			category: 'workshop',
+			display_width: 2,
+			display_column: 1,
+			category: 'workshop'
 		},
 		{
 			title: 'Incident Response Workshop',
@@ -272,7 +272,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Crochet!',
@@ -283,7 +283,7 @@
 			length_minutes: 60,
 			display_width: 1,
 			display_column: 2,
-			category: 'fun',
+			category: 'fun'
 		},
 		{
 			title: 'Dinner',
@@ -294,7 +294,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'MLH Mini Event',
@@ -305,7 +305,7 @@
 			length_minutes: 60,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
+			category: 'talk'
 		},
 		{
 			title: 'CTF',
@@ -314,9 +314,9 @@
 			hour_start: 30,
 			minute_start: 0,
 			length_minutes: 60,
-			display_width: 3,
+			display_width: 2,
 			display_column: 0,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Snacks',
@@ -327,7 +327,7 @@
 			length_minutes: 60,
 			display_width: 1,
 			display_column: 1,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'Tie Dye',
@@ -338,7 +338,7 @@
 			length_minutes: 60,
 			display_width: 1,
 			display_column: 2,
-			category: 'fun',
+			category: 'fun'
 		},
 		{
 			title: 'Movie',
@@ -349,7 +349,7 @@
 			length_minutes: 120,
 			display_width: 1,
 			display_column: 0,
-			category: 'fun',
+			category: 'fun'
 		},
 		{
 			title: 'Breakfast',
@@ -360,7 +360,7 @@
 			length_minutes: 60,
 			display_width: 2,
 			display_column: 0,
-			category: 'food',
+			category: 'food'
 		},
 		{
 			title: 'HACKING ENDS',
@@ -371,7 +371,7 @@
 			length_minutes: 30,
 			display_width: 1,
 			display_column: 0,
-			category: 'other',
+			category: 'other'
 		},
 		{
 			title: 'How to Pitch',
@@ -382,7 +382,7 @@
 			length_minutes: 45,
 			display_width: 2,
 			display_column: 1,
-			category: 'workshop',
+			category: 'workshop'
 		},
 		{
 			title: 'Closing Presentation',
@@ -393,8 +393,8 @@
 			length_minutes: 45,
 			display_width: 3,
 			display_column: 0,
-			category: 'talk',
-		},
+			category: 'talk'
+		}
 	];
 
 	interface Hour {
@@ -452,16 +452,16 @@
 		{ index: 46, string: '2pm' },
 		{ index: 47, string: '3pm' },
 		{ index: 48, string: '4pm' },
-		{ index: 49, string: '5pm' },
-	]
+		{ index: 49, string: '5pm' }
+	];
 
 	let eventIsHovered = false;
 	let trackerTime = 0;
 	let content: HTMLDivElement;
 
-    let startDate = new Date('February 2, 2024 17:00 GMT-08');
-    let endDate = new Date('February 4, 2024 22:00 GMT-08');
-    let hackathonPassed = Date.now() > endDate.getTime();
+	let startDate = new Date('February 2, 2024 17:00 GMT-08');
+	let endDate = new Date('February 4, 2024 22:00 GMT-08');
+	let hackathonPassed = Date.now() > endDate.getTime();
 
 	function updateTrackerTime() {
 		// let startDate = new Date(`January 24, 2023 08:00 GMT-08`);
@@ -475,7 +475,7 @@
 			console.log(content);
 			content.scroll({
 				top: timeSinceStartTenMinutes * 150 * (1 / 6) - 130,
-				behavior: 'smooth',
+				behavior: 'smooth'
 			});
 		}
 		trackerTime = timeSinceStartTenMinutes;
@@ -490,12 +490,15 @@
 		updateTrackerTime();
 
 		// update tracker every 10 minutes
-		interval = setInterval(() => {
-			if (!eventIsHovered) {
-				trackerTime += 1;
-				content.scrollTop = trackerTime * 150 * (1 / 6) - 100;
-			}
-		}, 1000 * 60 * 10) as unknown as number;
+		interval = setInterval(
+			() => {
+				if (!eventIsHovered) {
+					trackerTime += 1;
+					content.scrollTop = trackerTime * 150 * (1 / 6) - 100;
+				}
+			},
+			1000 * 60 * 10
+		) as unknown as number;
 	});
 
 	onDestroy(() => {
@@ -536,10 +539,10 @@
 				/>
 			{/each}
 		</div>
-		{#if !hackathonPassed} 
-        <div class="tracker h{trackerTime} {trackerTime < 0 ? ' hidden' : ''}">
-			<div class="circle" />
-		</div>
-        {/if}
+		{#if !hackathonPassed}
+			<div class="tracker h{trackerTime} {trackerTime < 0 ? ' hidden' : ''}">
+				<div class="circle" />
+			</div>
+		{/if}
 	</div>
 </div>
