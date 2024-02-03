@@ -22,7 +22,7 @@ while(i < events.length && events[i]?.time > currentTime) {
         <WindowBase
 			title=""
             textCenter={true}
-            max_width={'w-[75vw]'}
+            max_width={'w-[75vw] mobilebreakdown'}
 			background_val="linear-gradient(90deg, #EF5986 0.09%, #FFBFB1 16.22%, #FFE9B1 38.59%, #9FF4CB 58.37%, #92DEFF 78.14%, #C993FF 99.48%);"
         >
 			<h1>SCHEDULE</h1>

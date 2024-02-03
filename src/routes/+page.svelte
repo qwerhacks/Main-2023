@@ -55,6 +55,10 @@
 			padding-top: 35vh;
 			padding-left: 10vh;
 			height: 100vh;
+			@media screen and (max-width: 600px) {
+				padding: 0;
+				width: 100%;
+			}
 			background-image: $mask, url('/assets/general/dot.svg'),
 				linear-gradient(180deg, #a84fb3 0%, #a84fb3 99.48%);
 		}

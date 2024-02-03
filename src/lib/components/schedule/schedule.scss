@@ -32,6 +32,7 @@ $lavender: #C993FF;
 .schedule-container {
 	height: $hour-scale * 4;
     width: 90%;
+
 	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
@@ -235,7 +236,7 @@ $lavender: #C993FF;
 @media screen and (max-width: 600px) {
 	.schedule-container {
 		padding: 3.5rem 0;
-		width: 100%;
+		width: 100vw;
 	}
 	.content {
 		width: 90% !important;

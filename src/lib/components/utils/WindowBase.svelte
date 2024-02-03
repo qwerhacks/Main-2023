@@ -86,4 +86,13 @@
 	.box {
 		box-shadow: 5px 5px 0px black;
 	}
+
+	.mobilebreakdown {
+		@media screen and (max-width: 600px) {
+			width: 100vw;
+			margin-top: 15vh;
+			margin-left: -3vw;
+		}
+	}
+
 </style>
