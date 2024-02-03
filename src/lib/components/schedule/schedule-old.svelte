@@ -154,14 +154,14 @@
 			category: 'other'
 		},
 		{
-			title: 'Creative Coding with Generative Art',
+			title: 'Creative Coding and Generative Art (Not AI)',
 			description: ``,
 			location: `Hermosa Room`,
 			hour_start: 5,
 			minute_start: 30,
 			length_minutes: 60,
-			display_width: 2,
-			display_column: 1,
+			display_width: 3,
+			display_column: 0,
 			category: 'workshop'
 		},
 		{
